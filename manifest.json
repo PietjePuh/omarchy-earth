@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "io.github.pietjepuh.earth",
-  "name": "Earth & World Monitor",
+  "name": "Earth Monitor — Live World Map, Flights, Weather & News",
   "version": "2.2.0",
   "description": "All-in-one interactive world map: live weather, radar, civil & military aircraft, geopolitical hotspots, chokepoints, and live RSS news",
   "author": "PietjePuh",

@@ -1,4 +1,4 @@
-# Earth & World Monitor
+# Earth Monitor — Live World Map, Flights, Weather & News
 
 A single, always-available bar widget for [Omarchy](https://omarchy.org) that puts a full interactive world map, live weather, aircraft, ships, trains, cyber threat intel, breaking news, and 50+ optional live-data layers behind one click.
 
