@@ -4,6 +4,9 @@ A single, always-available bar widget for [Omarchy](https://omarchy.org) that pu
 
 ![status](https://img.shields.io/badge/status-active-brightgreen) ![license](https://img.shields.io/badge/license-MIT-blue)
 
+![Earth Monitor screenshot](assets/screenshot-map.png)
+
+
 ## Features
 
 - **Interactive world map** (Leaflet) with multiple base layers: dark, OpenStreetMap, topo, Google Maps/Satellite/Hybrid/Terrain, Esri Satellite, light.
