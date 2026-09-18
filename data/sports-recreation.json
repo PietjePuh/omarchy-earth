@@ -1,0 +1,137 @@
+[
+  {
+    "id": "POOL-01",
+    "type": "pool",
+    "name": "De Mirandabad",
+    "city": "Amsterdam",
+    "lat": 52.3385,
+    "lon": 4.8992,
+    "description": "Subtropisch golfslagbad, 50m buitenbad en wedstrijdbad."
+  },
+  {
+    "id": "POOL-02",
+    "type": "pool",
+    "name": "Noorderparkbad",
+    "city": "Amsterdam Noord",
+    "lat": 52.3912,
+    "lon": 4.9185,
+    "description": "Duurzaamste zwembad van Europa met binnen- en buitenbaden."
+  },
+  {
+    "id": "POOL-03",
+    "type": "pool",
+    "name": "Zwemcentrum Rotterdam",
+    "city": "Rotterdam Zuid",
+    "lat": 51.8845,
+    "lon": 4.4912,
+    "description": "Olympisch 50m topsportzwembad."
+  },
+  {
+    "id": "POOL-04",
+    "type": "pool",
+    "name": "Zwembad Den Hommel",
+    "city": "Utrecht",
+    "lat": 52.0845,
+    "lon": 5.0921,
+    "description": "Groot wedstrijdbad, recreatiebad en glijbaan."
+  },
+  {
+    "id": "DART-01",
+    "type": "darts",
+    "name": "Café De Vrijbuiter Darts Arena",
+    "city": "Nijmegen",
+    "lat": 51.8385,
+    "lon": 5.8612,
+    "description": "Legendarische dartslocatie van Nederlandse kampioenen (o.a. Raymond van Barneveld & Michael van Gerwen)."
+  },
+  {
+    "id": "DART-02",
+    "type": "darts",
+    "name": "Dartcenter De Schakel",
+    "city": "Vlaardingen",
+    "lat": 51.9125,
+    "lon": 4.3412,
+    "description": "Regionaal dartscompetitie centrum met 18 professionele banen."
+  },
+  {
+    "id": "SKI-01",
+    "type": "ski",
+    "name": "SnowWorld Landgraaf",
+    "city": "Landgraaf",
+    "lat": 50.8712,
+    "lon": 6.0185,
+    "description": "Grootste overdekte wintersportresort ter wereld met 5 pistes en FIS-afdaling."
+  },
+  {
+    "id": "SKI-02",
+    "type": "ski",
+    "name": "SnowWorld Zoetermeer",
+    "city": "Zoetermeer",
+    "lat": 52.0612,
+    "lon": 4.4685,
+    "description": "Steilste overdekte piste van Europa (20% hellingspercentage)."
+  },
+  {
+    "id": "SKI-03",
+    "type": "ski",
+    "name": "Val Thorens (Les 3 Vallées)",
+    "city": "Savoie, Frankrijk",
+    "lat": 45.2985,
+    "lon": 6.5812,
+    "description": "Hoogstgelegen skiresort van Europa (2300m - 3200m)."
+  },
+  {
+    "id": "SKY-01",
+    "type": "skydive",
+    "name": "National Paracentrum Teuge",
+    "city": "Teuge (nabij Apeldoorn)",
+    "lat": 52.2415,
+    "lon": 6.0485,
+    "description": "Grootste parachutespringcentrum van Nederland. Tandemsprongen vanaf 12.000 ft."
+  },
+  {
+    "id": "SKY-02",
+    "type": "skydive",
+    "name": "Paracentrum Texel",
+    "city": "De Cocksdorp, Texel",
+    "lat": 53.1185,
+    "lon": 4.8312,
+    "description": "Skydive boven het waddengebied en de Noordzeekust."
+  },
+  {
+    "id": "SKY-03",
+    "type": "skydive",
+    "name": "Skydive Breda (Seppe Airport)",
+    "city": "Breda International Airport",
+    "lat": 51.5585,
+    "lon": 4.5512,
+    "description": "Tandemsprongen en vrije val opleidingen."
+  },
+  {
+    "id": "SAIL-01",
+    "type": "sail",
+    "name": "Koninklijke Nederlandsche Zeil- & Roeivereeniging",
+    "city": "Muiden",
+    "lat": 52.3312,
+    "lon": 5.0685,
+    "description": "Historische jachthaven bij het Muiderslot met directe toegang tot het IJmeer."
+  },
+  {
+    "id": "SAIL-02",
+    "type": "sail",
+    "name": "Compagnieshaven Enkhuizen",
+    "city": "Enkhuizen",
+    "lat": 52.7015,
+    "lon": 5.2912,
+    "description": "Toonaangevende jachthaven aan het IJsselmeer met 700 ligplaatsen."
+  },
+  {
+    "id": "SAIL-03",
+    "type": "sail",
+    "name": "Jachthaven Sneekerhof",
+    "city": "Sneek (Sneekermeer)",
+    "lat": 53.0312,
+    "lon": 5.7185,
+    "description": "Hart van de Friese zeilsport en de Sneekweek."
+  }
+]

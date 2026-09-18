@@ -1,0 +1,192 @@
+[
+  {
+    "name": "ASML Wereldwijde Campus",
+    "industry": "Semiconductors & Lithografie",
+    "city": "Veldhoven",
+    "employees": 42000,
+    "lat": 51.4085,
+    "lon": 5.4185,
+    "website": "https://www.asml.com",
+    "description": "Exclusieve producent van geavanceerde EUV-lithografiemachines voor de wereldwijde chipindustrie."
+  },
+  {
+    "name": "High Tech Campus Eindhoven (HTCE)",
+    "industry": "Tech R&D & AI Ecosystem",
+    "city": "Eindhoven",
+    "employees": 12500,
+    "lat": 51.4112,
+    "lon": 5.4612,
+    "website": "https://www.hightechcampus.com",
+    "description": "Slimste vierkante kilometer van Europa: Philips, NXP, Intel, Shimano en 280 techbedrijven."
+  },
+  {
+    "name": "Booking.com Global Headquarters",
+    "industry": "Travel Tech & E-Commerce",
+    "city": "Amsterdam Oosterdokseiland",
+    "employees": 6000,
+    "lat": 52.3762,
+    "lon": 4.9085,
+    "website": "https://www.booking.com",
+    "description": "Hoofdkantoor van het wereldwijde online reisplatform."
+  },
+  {
+    "name": "Adyen Global Headquarters",
+    "industry": "Fintech & Global Payments",
+    "city": "Amsterdam Rokin",
+    "employees": 4000,
+    "lat": 52.3685,
+    "lon": 4.8912,
+    "website": "https://www.adyen.com",
+    "description": "Wereldwijd betalingsplatform voor Meta, Uber, Spotify en Microsoft."
+  },
+  {
+    "name": "Havenbedrijf Rotterdam (World Port Center)",
+    "industry": "Maritieme Logistiek & Energiehub",
+    "city": "Rotterdam Wilhelminapier",
+    "employees": 1300,
+    "lat": 51.9052,
+    "lon": 4.4852,
+    "website": "https://www.portofrotterdam.com",
+    "description": "Grootste zeehaven van Europa, overslag van 440 miljoen ton goederen per jaar."
+  },
+  {
+    "name": "ESA ESTEC Space Tech Centre",
+    "industry": "Ruimtevaart & Satellietontwikkeling",
+    "city": "Noordwijk",
+    "employees": 2800,
+    "lat": 52.2185,
+    "lon": 4.4215,
+    "website": "https://www.esa.int",
+    "description": "Grootste faciliteit van de Europese Ruimtevaartorganisatie (ESA)."
+  },
+  {
+    "name": "NXP Semiconductors (Automotive & Secure Tech)",
+    "industry": "Semiconductors & Chip Design",
+    "city": "Eindhoven High Tech Campus",
+    "employees": 34000,
+    "lat": 51.4125,
+    "lon": 5.4595,
+    "website": "https://www.nxp.com",
+    "description": "Wereldleider in automotive halfgeleiders, radar, secure NFC en industriële IoT-chips."
+  },
+  {
+    "name": "TomTom Global Headquarters",
+    "industry": "Geospatial Data, AI Maps & Navigation",
+    "city": "Amsterdam De Ruijterkade",
+    "employees": 4500,
+    "lat": 52.3785,
+    "lon": 4.9035,
+    "website": "https://www.tomtom.com",
+    "description": "Pionier in digitale kaarten, realtime verkeersinformatie en autonome navigatieplatforms."
+  },
+  {
+    "name": "Mollie Payments",
+    "industry": "Fintech & Payment Gateway",
+    "city": "Amsterdam Keizersgracht",
+    "employees": 1000,
+    "lat": 52.3652,
+    "lon": 4.8885,
+    "website": "https://www.mollie.com",
+    "description": "Een van Europa's snelst groeiende betalingsverwerkers en fintech unicorn."
+  },
+  {
+    "name": "Uber International Headquarters",
+    "industry": "Mobility & Platform Tech",
+    "city": "Amsterdam Mr. Treublaan",
+    "employees": 2000,
+    "lat": 52.3482,
+    "lon": 4.9185,
+    "website": "https://www.uber.com",
+    "description": "Internationaal hoofdkantoor van Uber buiten de VS (EMEA en APAC operations)."
+  },
+  {
+    "name": "Netflix EMEA Headquarters",
+    "industry": "Streaming Media & Production",
+    "city": "Amsterdam Karperstraat",
+    "employees": 1200,
+    "lat": 52.3512,
+    "lon": 4.8565,
+    "website": "https://www.netflix.com",
+    "description": "Europees hoofdkantoor van de streaminggigant voor contentproductie en distributie."
+  },
+  {
+    "name": "bunq Bank (Bank of The Free)",
+    "industry": "Neobanking & Mobile Finance",
+    "city": "Amsterdam Naritaweg",
+    "employees": 800,
+    "lat": 52.3895,
+    "lon": 4.8325,
+    "website": "https://www.bunq.com",
+    "description": "Innovatieve mobiele Europese internetbank met eigen bankvergunning."
+  },
+  {
+    "name": "Coolblue Hoofdkantoor",
+    "industry": "E-Commerce & Logistiek",
+    "city": "Rotterdam Weena",
+    "employees": 6000,
+    "lat": 51.9238,
+    "lon": 4.4725,
+    "website": "https://www.coolblue.nl",
+    "description": "Klantgerichte consumentenelektronica gigant met eigen bezorgnetwerk en laadpaaldiensten."
+  },
+  {
+    "name": "Bol.com Hoofdkantoor",
+    "industry": "E-Commerce & Cloud Marketplace",
+    "city": "Utrecht Papendorp",
+    "employees": 3000,
+    "lat": 52.0672,
+    "lon": 5.0845,
+    "website": "https://www.bol.com",
+    "description": "Grootste online winkelplatform van Nederland en België met miljoenen artikelen."
+  },
+  {
+    "name": "Picnic Online Supermarket Tech Hub",
+    "industry": "Automated Retail & Robotics",
+    "city": "Amsterdam / Utrecht",
+    "employees": 5000,
+    "lat": 52.3395,
+    "lon": 4.9275,
+    "website": "https://picnic.app",
+    "description": "Slimme online supermarkt met geautomatiseerde robotische distributiecentra en elektrische vloot."
+  },
+  {
+    "name": "Thales Nederland (Naval Radar Systems)",
+    "industry": "Defensie & Radartechnologie",
+    "city": "Hengelo",
+    "employees": 2500,
+    "lat": 52.2612,
+    "lon": 6.7845,
+    "website": "https://www.thalesgroup.com",
+    "description": "Producent van geavanceerde marinieradars, vuurleidingssystemen en APAR active phased array radars."
+  },
+  {
+    "name": "DAF Trucks N.V. Hoofdfabriek",
+    "industry": "Zware Voertuigen & Elektrische Trucks",
+    "city": "Eindhoven",
+    "employees": 10000,
+    "lat": 51.4285,
+    "lon": 5.5015,
+    "website": "https://www.daf.nl",
+    "description": "Vooraanstaande Europese truckfabrikant (onderdeel van PACCAR) met R&D en assemblage."
+  },
+  {
+    "name": "Damen Shipyards Group",
+    "industry": "Scheepsbouw & Maritieme Techniek",
+    "city": "Gorinchem",
+    "employees": 12000,
+    "lat": 51.8315,
+    "lon": 4.9685,
+    "website": "https://www.damen.com",
+    "description": "Wereldwijd scheepsbouwconcern voor sleepboten, patrouilleschepen, fregatten en jachten."
+  },
+  {
+    "name": "Unilever Global Foods Innovation Centre (Hive)",
+    "industry": "Voedseltechnologie & Agritech",
+    "city": "Wageningen University Campus",
+    "employees": 1500,
+    "lat": 51.9865,
+    "lon": 5.6712,
+    "website": "https://www.unilever.com",
+    "description": "Toonaangevend innovatiecentrum voor duurzame en plantaardige voeding in Foodvalley."
+  }
+]

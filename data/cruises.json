@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Passenger Terminal Amsterdam (PTA)",
+    "type": "terminal",
+    "city": "Amsterdam",
+    "lat": 52.3775,
+    "lon": 4.9185,
+    "capacity": "350.000 passagiers/jaar",
+    "description": "Centrale cruiseterminal aan het IJ voor oceaancruiseschepen en riviercruises.",
+    "url": "https://www.ptamsterdam.nl"
+  },
+  {
+    "name": "Cruise Port Rotterdam",
+    "type": "terminal",
+    "city": "Rotterdam Wilhelminapier",
+    "lat": 51.9035,
+    "lon": 4.4851,
+    "capacity": "Aanlegplaats voor schepen tot 360m",
+    "description": "Historische vertreklocatie van de Holland-Amerika Lijn (HAL).",
+    "url": "https://www.cruiseportrotterdam.com"
+  },
+  {
+    "name": "Rotterdam (Holland America Line)",
+    "type": "ship",
+    "operator": "Holland America Line",
+    "passengers": 2668,
+    "route": "Noorse Fjorden & Baltische Staten",
+    "lat": 54.2185,
+    "lon": 5.6512,
+    "status": "Op open zee (19.4 knopen, koers 020°)"
+  },
+  {
+    "name": "MSC Euribia",
+    "type": "ship",
+    "operator": "MSC Cruises",
+    "passengers": 6334,
+    "route": "West-Europa Metropolen & Noordzee",
+    "lat": 52.8512,
+    "lon": 3.4215,
+    "status": "Onderweg naar Rotterdam (18.1 knopen)"
+  }
+]

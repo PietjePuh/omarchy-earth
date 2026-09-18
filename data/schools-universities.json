@@ -1,0 +1,176 @@
+[
+  {
+    "id": "uni-tudelft",
+    "name": "Technische Universiteit Delft (TU Delft)",
+    "type": "University of Technology",
+    "city": "Delft",
+    "lat": 52.0022,
+    "lon": 4.3724,
+    "students": 27500,
+    "ranking": "Top 10 Wereldwijd Engineering",
+    "faculties": [
+      "Luchtvaart- & Ruimtevaart",
+      "Bouwkunde",
+      "Elektrotechniek, Wiskunde & Informatica",
+      "Civiele Techniek"
+    ],
+    "url": "https://www.tudelft.nl",
+    "campus_library": "TU Delft Library met iconisch grasdak"
+  },
+  {
+    "id": "uni-uva-science",
+    "name": "Universiteit van Amsterdam (UvA) Science Park",
+    "type": "Research University",
+    "city": "Amsterdam",
+    "lat": 52.3548,
+    "lon": 4.9542,
+    "students": 42000,
+    "ranking": "#58 QS World Ranking",
+    "faculties": [
+      "Faculteit der Natuurwetenschappen",
+      "Informatica & AI",
+      "FNWI"
+    ],
+    "url": "https://www.uva.nl",
+    "campus_library": "Science Park Bibliotheek"
+  },
+  {
+    "id": "uni-vu",
+    "name": "Vrije Universiteit Amsterdam (VU)",
+    "type": "University",
+    "city": "Amsterdam (Zuidas)",
+    "lat": 52.3339,
+    "lon": 4.8656,
+    "students": 31500,
+    "ranking": "Top 125 Wereldwijd",
+    "faculties": [
+      "Geneeskunde (VUmc)",
+      "Rechtsgeleerdheid",
+      "Economie & Bedrijfskunde",
+      "Sociale Wetenschappen"
+    ],
+    "url": "https://www.vu.nl",
+    "campus_library": "VU Hoofdgebouw Campus Bibliotheek"
+  },
+  {
+    "id": "uni-utrecht",
+    "name": "Universiteit Utrecht (Utrecht Science Park)",
+    "type": "Research University",
+    "city": "Utrecht",
+    "lat": 52.0862,
+    "lon": 5.1742,
+    "students": 38000,
+    "ranking": "#1 van Nederland (Shanghai Ranking)",
+    "faculties": [
+      "Diergeneeskunde",
+      "Geowetenschappen",
+      "Geneeskunde (UMC Utrecht)",
+      "Bètawetenschappen"
+    ],
+    "url": "https://www.uu.nl",
+    "campus_library": "Universiteitsbibliotheek De Uithof"
+  },
+  {
+    "id": "uni-erasmus",
+    "name": "Erasmus Universiteit Rotterdam (EUR)",
+    "type": "University",
+    "city": "Rotterdam",
+    "lat": 51.9182,
+    "lon": 4.5262,
+    "students": 33000,
+    "ranking": "Rotterdam School of Management Top 10 EU",
+    "faculties": [
+      "Erasmus School of Economics",
+      "Rotterdam School of Management (RSM)",
+      "Erasmus MC"
+    ],
+    "url": "https://www.eur.nl",
+    "campus_library": "Universiteitsbibliotheek Woudestein"
+  },
+  {
+    "id": "uni-tue",
+    "name": "Technische Universiteit Eindhoven (TU/e)",
+    "type": "University of Technology",
+    "city": "Eindhoven",
+    "lat": 51.4485,
+    "lon": 5.4905,
+    "students": 14000,
+    "ranking": "Brainport High-Tech Hub",
+    "faculties": [
+      "Werktuigbouwkunde",
+      "Biomedische Technologie",
+      "Electrical Engineering",
+      "Applied Physics"
+    ],
+    "url": "https://www.tue.nl",
+    "campus_library": "MetaForum Bibliotheek"
+  },
+  {
+    "id": "uni-wageningen",
+    "name": "Wageningen University & Research (WUR)",
+    "type": "Agriculture & Life Sciences",
+    "city": "Wageningen",
+    "lat": 51.9852,
+    "lon": 5.6642,
+    "students": 13200,
+    "ranking": "#1 Wereldwijd Agriculture & Forestry",
+    "faculties": [
+      "Agrotechnologie",
+      "Milieuwetenschappen",
+      "Levensmiddelentechnologie"
+    ],
+    "url": "https://www.wur.nl",
+    "campus_library": "Forum Bibliotheek Wageningen Campus"
+  },
+  {
+    "id": "uni-leiden",
+    "name": "Universiteit Leiden (Oudste van NL)",
+    "type": "Research University",
+    "city": "Leiden",
+    "lat": 52.1572,
+    "lon": 4.4821,
+    "students": 34000,
+    "ranking": "Opgericht 1575 door Willem van Oranje",
+    "faculties": [
+      "Archeologie",
+      "Geesteswetenschappen",
+      "Rechtsgeleerdheid",
+      "LUMC Geneeskunde"
+    ],
+    "url": "https://www.universiteitleiden.nl",
+    "campus_library": "Universiteitsbibliotheek Leiden (UB)"
+  },
+  {
+    "id": "school-barlaeus",
+    "name": "Barlaeus Gymnasium",
+    "type": "Gymnasium (VWO)",
+    "city": "Amsterdam",
+    "lat": 52.3621,
+    "lon": 4.8821,
+    "students": 850,
+    "ranking": "Top categoraal gymnasium",
+    "faculties": [
+      "Klassieke talen (Latijn & Grieks)",
+      "VWO"
+    ],
+    "url": "https://www.barlaeus.nl",
+    "campus_library": "Weteringschans Bibliotheek"
+  },
+  {
+    "id": "school-isa",
+    "name": "International School of Amsterdam (ISA)",
+    "type": "International School (IB)",
+    "city": "Amstelveen",
+    "lat": 52.2895,
+    "lon": 4.8621,
+    "students": 1300,
+    "ranking": "International Baccalaureate World School",
+    "faculties": [
+      "Primary Years",
+      "Middle Years",
+      "IB Diploma"
+    ],
+    "url": "https://www.isa.nl",
+    "campus_library": "ISA Media Center"
+  }
+]

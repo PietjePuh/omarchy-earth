@@ -1,0 +1,291 @@
+[
+  {
+    "id": "tunnel-chunnel",
+    "name": "Channel Tunnel (Eurotunnel / Kanaaltunnel)",
+    "link_route": "Folkestone (UK) ⇄ Coquelles / Calais (France) ⇄ London & Brussels",
+    "type": "Rail & Eurostar Shuttle",
+    "length_km": 50.45,
+    "underwater_length_km": 37.9,
+    "max_depth_m": 75,
+    "year_opened": 1994,
+    "country": "UK / France",
+    "path": [
+      [
+        51.0934,
+        1.1524
+      ],
+      [
+        51.0742,
+        1.2584
+      ],
+      [
+        51.0312,
+        1.4521
+      ],
+      [
+        50.9624,
+        1.6821
+      ],
+      [
+        50.9242,
+        1.8105
+      ]
+    ],
+    "description": "Onderzeese spoorwegtunnel onder Het Kanaal. Verbindt Londen rechtstreeks met Brussel en Parijs via Eurostar.",
+    "url": "https://www.getlinkgroup.com"
+  },
+  {
+    "id": "tunnel-fehmarnbelt",
+    "name": "Fehmarnbelt Fixed Link (Fehmarnbelttunnel)",
+    "link_route": "Rødbyhavn (Denmark) ⇄ Puttgarden (Germany)",
+    "type": "Immersed Road & Rail Tunnel",
+    "length_km": 18.1,
+    "underwater_length_km": 17.6,
+    "max_depth_m": 40,
+    "year_opened": 2029,
+    "country": "Denmark / Germany",
+    "path": [
+      [
+        54.6542,
+        11.3524
+      ],
+      [
+        54.5821,
+        11.2821
+      ],
+      [
+        54.5024,
+        11.2215
+      ]
+    ],
+    "description": "In aanbouw zijnde langste afgezonken tunnel ter wereld. Verkort de treinreis Hamburg-Kopenhagen naar 2,5 uur.",
+    "url": "https://femern.com"
+  },
+  {
+    "id": "tunnel-great-belt",
+    "name": "Great Belt Fixed Link (Storebælt Spoorwegtunnel)",
+    "link_route": "Halsskov (Zealand) ⇄ Sprogø Island ⇄ Funen (Denmark)",
+    "type": "Subsea Bored Rail Tunnel",
+    "length_km": 8.02,
+    "underwater_length_km": 8.0,
+    "max_depth_m": 75,
+    "year_opened": 1997,
+    "country": "Denmark",
+    "path": [
+      [
+        55.3421,
+        11.0821
+      ],
+      [
+        55.3342,
+        11.0121
+      ],
+      [
+        55.3312,
+        10.9524
+      ]
+    ],
+    "description": "Onderzeese geboorde dubbelbuizige spoortunnel onder de Grote Belt in Denemarken.",
+    "url": "https://storebaelt.dk"
+  },
+  {
+    "id": "tunnel-oresund-drogden",
+    "name": "Øresund Drogden Tunnel",
+    "link_route": "Kastrup / Kopenhagen (Denmark) ⇄ Peberholm Island ⇄ Malmö (Sweden)",
+    "type": "Immersed Motorway & Rail Tunnel",
+    "length_km": 4.05,
+    "underwater_length_km": 3.51,
+    "max_depth_m": 22,
+    "year_opened": 2000,
+    "country": "Denmark / Sweden",
+    "path": [
+      [
+        55.6212,
+        12.6582
+      ],
+      [
+        55.6021,
+        12.7121
+      ],
+      [
+        55.5892,
+        12.7682
+      ]
+    ],
+    "description": "Afgezonken tunnelverbinding die Denemarken met Zweden verbindt, eindigend op het kunstmatige eiland Peberholm.",
+    "url": "https://www.oresundsbron.com"
+  },
+  {
+    "id": "tunnel-westerschelde",
+    "name": "Westerscheldetunnel",
+    "link_route": "Borsele (Zuid-Beveland) ⇄ Terneuzen (Zeeuws-Vlaanderen)",
+    "type": "Road (N62, 2x2)",
+    "length_km": 6.6,
+    "underwater_length_km": 5.8,
+    "max_depth_m": 60,
+    "year_opened": 2003,
+    "country": "Netherlands",
+    "path": [
+      [
+        51.4621,
+        3.8214
+      ],
+      [
+        51.4112,
+        3.8285
+      ],
+      [
+        51.3652,
+        3.8342
+      ]
+    ],
+    "description": "Langste verkeerstunnel van Nederland onder de Westerschelde, tot 60 meter diep onder NAP.",
+    "url": "https://www.westerscheldetunnel.nl"
+  },
+  {
+    "id": "tunnel-maasdeltatunnel",
+    "name": "Maasdeltatunnel (Blankenburgverbinding A24)",
+    "link_route": "Vlaardingen ⇄ Rozenburg (Rotterdam Haven)",
+    "type": "Road (A24 Motorway)",
+    "length_km": 0.945,
+    "underwater_length_km": 0.9,
+    "max_depth_m": 26,
+    "year_opened": 2024,
+    "country": "Netherlands",
+    "path": [
+      [
+        51.8985,
+        4.2821
+      ],
+      [
+        51.8892,
+        4.2912
+      ]
+    ],
+    "description": "Nieuwste afgezonken snelwegtunnel onder Het Scheur bij Rotterdam ter ontlasting van de Beneluxtunnel.",
+    "url": "https://www.blankenburgverbinding.nl"
+  },
+  {
+    "id": "tunnel-ijtunnel",
+    "name": "IJtunnel Amsterdam",
+    "link_route": "Centrum Amsterdam ⇄ Amsterdam-Noord",
+    "type": "Road (s116)",
+    "length_km": 1.68,
+    "underwater_length_km": 1.04,
+    "max_depth_m": 20,
+    "year_opened": 1968,
+    "country": "Netherlands",
+    "path": [
+      [
+        52.3732,
+        4.9085
+      ],
+      [
+        52.3842,
+        4.9182
+      ]
+    ],
+    "description": "Historische verkeerstunnel onder het IJ in Amsterdam.",
+    "url": "https://amsterdam.nl"
+  },
+  {
+    "id": "tunnel-beneluxtunnel",
+    "name": "Beneluxtunnel Rotterdam",
+    "link_route": "Schiedam / Vlaardingen ⇄ Pernis / Hoogvliet",
+    "type": "Road (A4), Metro & Fiets",
+    "length_km": 1.3,
+    "underwater_length_km": 1.05,
+    "max_depth_m": 23,
+    "year_opened": 1967,
+    "country": "Netherlands",
+    "path": [
+      [
+        51.9021,
+        4.3821
+      ],
+      [
+        51.8885,
+        4.3892
+      ]
+    ],
+    "description": "Multimodale tunnel onder de Nieuwe Maas met snelwegbuizen, metrotunnel en fietstunnel.",
+    "url": "https://rws.nl"
+  },
+  {
+    "id": "tunnel-seikan",
+    "name": "Seikan Tunnel (Japan)",
+    "link_route": "Honshu Island ⇄ Hokkaido Island (Tsugaru Strait)",
+    "type": "High Speed Rail (Shinkansen)",
+    "length_km": 53.85,
+    "underwater_length_km": 23.3,
+    "max_depth_m": 240,
+    "year_opened": 1988,
+    "country": "Japan",
+    "path": [
+      [
+        41.1821,
+        140.3521
+      ],
+      [
+        41.2542,
+        140.2821
+      ],
+      [
+        41.4212,
+        140.2215
+      ]
+    ],
+    "description": "Op een na langste onderzeese spoortunnel ter wereld, 100m onder de zeebodem van de Tsugaru-straat.",
+    "url": "https://www.jrhokkaido.co.jp"
+  },
+  {
+    "id": "tunnel-ryfast",
+    "name": "Ryfylke Tunnel / Ryfast (Norway)",
+    "link_route": "Stavanger ⇄ Strand (Hidle & Tau)",
+    "type": "Road (National Road 13)",
+    "length_km": 14.4,
+    "underwater_length_km": 14.0,
+    "max_depth_m": 292,
+    "year_opened": 2019,
+    "country": "Norway",
+    "path": [
+      [
+        58.9821,
+        5.7521
+      ],
+      [
+        59.0212,
+        5.8214
+      ],
+      [
+        59.0542,
+        5.9121
+      ]
+    ],
+    "description": "Diepste onderzeese wegtunnel ter wereld op 292 meter onder zeeniveau.",
+    "url": "https://vegvesen.no"
+  },
+  {
+    "id": "tunnel-marmaray",
+    "name": "Marmaray Tunnel (Istanbul)",
+    "link_route": "Kazlıçeşme (Europe) ⇄ Ayrılık Çeşmesi (Asia)",
+    "type": "Immersed Rail (Bosphorus)",
+    "length_km": 13.5,
+    "underwater_length_km": 1.4,
+    "max_depth_m": 60,
+    "year_opened": 2013,
+    "country": "Turkey",
+    "path": [
+      [
+        41.0021,
+        28.9821
+      ],
+      [
+        40.9985,
+        29.0185
+      ]
+    ],
+    "description": "Diepste afgezonken spoortunnel ter wereld onder de Bosporus, die Europa met Azië verbindt.",
+    "url": "https://marmaray.gov.tr"
+  }
+]

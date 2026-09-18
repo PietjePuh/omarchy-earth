@@ -1,0 +1,265 @@
+[
+  {
+    "id": "gas-shell-amstel",
+    "brand": "Shell",
+    "name": "Shell Amstelveenseweg",
+    "address": "Amstelveenseweg 598",
+    "city": "Amsterdam",
+    "lat": 52.3321,
+    "lon": 4.8564,
+    "highway": "A10 West",
+    "prices": {
+      "e10": 1.979,
+      "e5": 2.189,
+      "diesel": 1.719,
+      "lpg": 0.849,
+      "ev_kwh": 0.69
+    },
+    "has_carwash": true,
+    "has_shop": true,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Shell Select",
+      "Deli2Go",
+      "EV Recharge 150kW",
+      "Carwash"
+    ]
+  },
+  {
+    "id": "gas-bp-zuidas",
+    "brand": "BP",
+    "name": "BP De Lucht (A2)",
+    "address": "Rijksweg A2 Oostzijde",
+    "city": "Bruchem / Zaltbommel",
+    "lat": 51.7821,
+    "lon": 5.2894,
+    "highway": "A2",
+    "prices": {
+      "e10": 2.019,
+      "e5": 2.229,
+      "diesel": 1.749,
+      "lpg": 0.899,
+      "ev_kwh": 0.69
+    },
+    "has_carwash": false,
+    "has_shop": true,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Wild Bean Cafe",
+      "Truck Diesel",
+      "Fastned 300kW",
+      "Bakkerij"
+    ]
+  },
+  {
+    "id": "gas-fastned-sloterdijk",
+    "brand": "Fastned",
+    "name": "Fastned Snellaadstation Sloterdijk",
+    "address": "Basisweg 2",
+    "city": "Amsterdam",
+    "lat": 52.3912,
+    "lon": 4.8405,
+    "highway": "A10 / N200",
+    "prices": {
+      "e10": null,
+      "e5": null,
+      "diesel": null,
+      "lpg": null,
+      "ev_kwh": 0.59
+    },
+    "has_carwash": false,
+    "has_shop": true,
+    "has_air": false,
+    "open_24h": true,
+    "services": [
+      "300kW HPC Chargers",
+      "Solar Canopy",
+      "Autocharge",
+      "Coffee"
+    ]
+  },
+  {
+    "id": "gas-total-rotterdam",
+    "brand": "TotalEnergies",
+    "name": "TotalEnergies Maasboulevard",
+    "address": "Maasboulevard 100",
+    "city": "Rotterdam",
+    "lat": 51.9162,
+    "lon": 4.4985,
+    "highway": "Centrum",
+    "prices": {
+      "e10": 1.969,
+      "e5": 2.169,
+      "diesel": 1.699,
+      "lpg": null,
+      "ev_kwh": 0.65
+    },
+    "has_carwash": true,
+    "has_shop": true,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Bonjour Café",
+      "WashTec Carwash",
+      "Excellium Brandstof"
+    ]
+  },
+  {
+    "id": "gas-tango-utrecht",
+    "brand": "Tango",
+    "name": "Tango Onbemand Utrecht Noord",
+    "address": "Einsteindreef 12",
+    "city": "Utrecht",
+    "lat": 52.1185,
+    "lon": 5.1092,
+    "highway": "N230 / Zuilense Ring",
+    "prices": {
+      "e10": 1.889,
+      "e5": 2.079,
+      "diesel": 1.639,
+      "lpg": 0.799,
+      "ev_kwh": null
+    },
+    "has_carwash": false,
+    "has_shop": false,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Goedkoop tanken",
+      "Onbemand voordeel",
+      "Contactloos pinnen"
+    ]
+  },
+  {
+    "id": "gas-tinq-eindhoven",
+    "brand": "TinQ",
+    "name": "TinQ Eindhoven Meerenakker",
+    "address": "Meerenakkerweg 1",
+    "city": "Eindhoven",
+    "lat": 51.4182,
+    "lon": 5.4385,
+    "highway": "N2 / A67",
+    "prices": {
+      "e10": 1.879,
+      "e5": 2.069,
+      "diesel": 1.629,
+      "lpg": null,
+      "ev_kwh": null
+    },
+    "has_carwash": true,
+    "has_shop": false,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "TinQ Maxkorting",
+      "Carwash boxen",
+      "Pinnen aan de pomp"
+    ]
+  },
+  {
+    "id": "gas-esso-denhaag",
+    "brand": "Esso",
+    "name": "Esso Schenkkade",
+    "address": "Schenkkade 45",
+    "city": "Den Haag",
+    "lat": 52.0792,
+    "lon": 4.3385,
+    "highway": "A12 Utrechtsebaan",
+    "prices": {
+      "e10": 1.959,
+      "e5": 2.159,
+      "diesel": 1.699,
+      "lpg": 0.839,
+      "ev_kwh": 0.65
+    },
+    "has_carwash": true,
+    "has_shop": true,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Synergy Fuel",
+      "Tijgerbrood Shop",
+      "Carwash Express"
+    ]
+  },
+  {
+    "id": "gas-fastned-haarlem",
+    "brand": "Fastned",
+    "name": "Fastned Haarlem Schipholweg",
+    "address": "Schipholweg 1",
+    "city": "Haarlem",
+    "lat": 52.3685,
+    "lon": 4.6542,
+    "highway": "N205",
+    "prices": {
+      "e10": null,
+      "e5": null,
+      "diesel": null,
+      "lpg": null,
+      "ev_kwh": 0.59
+    },
+    "has_carwash": false,
+    "has_shop": false,
+    "has_air": false,
+    "open_24h": true,
+    "services": [
+      "4x 300kW CCS",
+      "100% Groene Stroom"
+    ]
+  },
+  {
+    "id": "gas-shell-breukelen",
+    "brand": "Shell",
+    "name": "Shell Haarrijn (A2)",
+    "address": "Rijksweg A2 Oostzijde km 47.3",
+    "city": "Breukelen",
+    "lat": 52.1712,
+    "lon": 4.9985,
+    "highway": "A2 Amsterdam-Utrecht",
+    "prices": {
+      "e10": 2.029,
+      "e5": 2.239,
+      "diesel": 1.759,
+      "lpg": 0.889,
+      "ev_kwh": 0.69
+    },
+    "has_carwash": true,
+    "has_shop": true,
+    "has_air": true,
+    "open_24h": true,
+    "services": [
+      "Starbucks",
+      "Burger King",
+      "Shell Recharge 300kW",
+      "Douches"
+    ]
+  },
+  {
+    "id": "gas-ionity-zevenaar",
+    "brand": "IONITY",
+    "name": "IONITY Zevenaar (A12)",
+    "address": "Doesburgseweg 41",
+    "city": "Zevenaar",
+    "lat": 51.9385,
+    "lon": 6.0821,
+    "highway": "A12 / Grens Duitsland",
+    "prices": {
+      "e10": null,
+      "e5": null,
+      "diesel": null,
+      "lpg": null,
+      "ev_kwh": 0.65
+    },
+    "has_carwash": false,
+    "has_shop": true,
+    "has_air": false,
+    "open_24h": true,
+    "services": [
+      "350kW Ultra Fast Charging",
+      "Restaurant",
+      "Grensstop"
+    ]
+  }
+]

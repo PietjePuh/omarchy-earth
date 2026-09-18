@@ -1,0 +1,112 @@
+[
+  {
+    "id": "RADIO-NPO1",
+    "name": "NPO Radio 1",
+    "frequency": "98.9 FM / DAB+",
+    "genre": "Nieuws, Achtergronden & Sport",
+    "stream_url": "https://icecast.omroep.nl/radio1-bb-mp3",
+    "transmitter": "Lopik (Gerbrandytoren)",
+    "power_kw": 100,
+    "lat": 52.0115,
+    "lon": 5.0538
+  },
+  {
+    "id": "RADIO-NPO2",
+    "name": "NPO Radio 2",
+    "frequency": "92.6 FM / DAB+",
+    "genre": "Pop, Rock & Top 2000",
+    "stream_url": "https://icecast.omroep.nl/radio2-bb-mp3",
+    "transmitter": "Lopik (Gerbrandytoren)",
+    "power_kw": 100,
+    "lat": 52.0115,
+    "lon": 5.0538
+  },
+  {
+    "id": "RADIO-3FM",
+    "name": "NPO 3FM",
+    "frequency": "96.8 FM / DAB+",
+    "genre": "Alternative & Pop",
+    "stream_url": "https://icecast.omroep.nl/3fm-bb-mp3",
+    "transmitter": "Lopik (Gerbrandytoren)",
+    "power_kw": 100,
+    "lat": 52.0115,
+    "lon": 5.0538
+  },
+  {
+    "id": "RADIO-538",
+    "name": "Radio 538",
+    "frequency": "102.1 FM / DAB+",
+    "genre": "Hits, Dance & Top 40",
+    "stream_url": "https://stream.talparadio.nl/538/mp3",
+    "transmitter": "Hilversum",
+    "power_kw": 50,
+    "lat": 52.2351,
+    "lon": 5.1785
+  },
+  {
+    "id": "RADIO-QMUSIC",
+    "name": "Qmusic Nederland",
+    "frequency": "100.4 FM / DAB+",
+    "genre": "Pop & Foute Uur",
+    "stream_url": "https://stream.qmusic.nl/qmusic/mp3",
+    "transmitter": "Amsterdam",
+    "power_kw": 80,
+    "lat": 52.3385,
+    "lon": 4.9285
+  },
+  {
+    "id": "RADIO-SKY",
+    "name": "Sky Radio",
+    "frequency": "101.2 FM / DAB+",
+    "genre": "Non-stop Hits & Pop",
+    "stream_url": "https://stream.talparadio.nl/skyradio/mp3",
+    "transmitter": "Lopik",
+    "power_kw": 100,
+    "lat": 52.0115,
+    "lon": 5.0538
+  },
+  {
+    "id": "RADIO-SLAM",
+    "name": "SLAM!",
+    "frequency": "DAB+ / Online",
+    "genre": "EDM, Dance & Club",
+    "stream_url": "https://stream.slam.nl/slam-mp3",
+    "transmitter": "Naarden",
+    "power_kw": 25,
+    "lat": 52.2985,
+    "lon": 5.1612
+  },
+  {
+    "id": "RADIO-STU BRU",
+    "name": "Studio Brussel",
+    "frequency": "100.9 FM / DAB+",
+    "genre": "Alternative & Rock (België)",
+    "stream_url": "https://icecast.vrtcdn.be/stubru-high.mp3",
+    "transmitter": "Brussel / Schoten",
+    "power_kw": 50,
+    "lat": 51.2685,
+    "lon": 4.5125
+  },
+  {
+    "id": "RADIO-BBC1",
+    "name": "BBC Radio 1",
+    "frequency": "97-99 FM UK / Online",
+    "genre": "Current UK Pop & Electronic",
+    "stream_url": "https://stream.live.vc.bbcmedia.co.uk/bbc_radio_one",
+    "transmitter": "London Crystal Palace",
+    "power_kw": 250,
+    "lat": 51.4242,
+    "lon": -0.0752
+  },
+  {
+    "id": "RADIO-SOMAFM",
+    "name": "SomaFM: Groove Salad",
+    "frequency": "Worldwide Ambient / Downtempo",
+    "genre": "Ambient & Chillout",
+    "stream_url": "https://ice1.somafm.com/groovesalad-128-mp3",
+    "transmitter": "San Francisco, CA",
+    "power_kw": 0,
+    "lat": 37.7749,
+    "lon": -122.4194
+  }
+]

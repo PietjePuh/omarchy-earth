@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Pieterpad Pelgrims- & Wandelroute",
+    "type": "pilgrim_way",
+    "distance_km": 500,
+    "start": "Pieterburen (Groningen)",
+    "end": "Sint-Pietersberg (Maastricht)",
+    "coords": [
+      [
+        53.4012,
+        6.4512
+      ],
+      [
+        53.2195,
+        6.5662
+      ],
+      [
+        52.9912,
+        6.5612
+      ],
+      [
+        52.6812,
+        6.7812
+      ],
+      [
+        52.3512,
+        6.6512
+      ],
+      [
+        52.0112,
+        6.3212
+      ],
+      [
+        51.8412,
+        5.8612
+      ],
+      [
+        51.5212,
+        6.0812
+      ],
+      [
+        50.8352,
+        5.6912
+      ]
+    ],
+    "description": "Bekendste lange-afstandswandelpad en hedendaagse pelgrimsroute van Nederland."
+  },
+  {
+    "name": "Sint-Janskathedraal",
+    "type": "cathedral",
+    "city": "'s-Hertogenbosch",
+    "lat": 51.6885,
+    "lon": 5.3085,
+    "description": "Hoogtepunt van de Brabantse gotiek met de befaamde Zoete Moeder van Den Bosch."
+  },
+  {
+    "name": "Domkerk & Domtoren",
+    "type": "cathedral",
+    "city": "Utrecht",
+    "lat": 52.0908,
+    "lon": 5.1215,
+    "description": "Historisch hart van kerkelijk Nederland met de hoogste kerktoren van het land (112m)."
+  },
+  {
+    "name": "Westerkerk",
+    "type": "church",
+    "city": "Amsterdam",
+    "lat": 52.3745,
+    "lon": 4.8835,
+    "description": "Beroemde kerk aan de Prinsengracht naast het Anne Frank Huis, begraafplaats van Rembrandt."
+  },
+  {
+    "name": "Ulu Moskee Utrecht",
+    "type": "mosque",
+    "city": "Utrecht Lombok",
+    "lat": 52.0915,
+    "lon": 5.1012,
+    "description": "Moderne islamitische gebedsruimte met een glazen minaret en interreligieuze ontmoetingsruimte."
+  },
+  {
+    "name": "Portugese Synagoge (Esnoga)",
+    "type": "synagogue",
+    "city": "Amsterdam",
+    "lat": 52.3672,
+    "lon": 4.9045,
+    "description": "17e-eeuwse monumentale synagoge, verlicht met duizend kaarsen."
+  },
+  {
+    "name": "Fo Guang Shan He Hua Tempel",
+    "type": "temple",
+    "city": "Amsterdam Zeedijk",
+    "lat": 52.3735,
+    "lon": 4.9012,
+    "description": "Grootste boeddhistische tempel in traditionele Chinese paleisstijl in Europa."
+  }
+]

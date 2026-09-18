@@ -1,0 +1,58 @@
+[
+  {
+    "id": "fb-ijhallen",
+    "name": "IJ-Hallen Vlooienmarkt (Grootste van Europa)",
+    "category": "Market & Vintage",
+    "venue": "NDSM-Plein 1",
+    "city": "Amsterdam",
+    "lat": 52.4012,
+    "lon": 4.8932,
+    "schedule": "Eens per maand weekend (09:00 - 16:30)",
+    "attending": 12500,
+    "url": "https://ijhallen.nl",
+    "fb_search_url": "https://www.facebook.com/events/search/?q=IJ-Hallen%20Amsterdam",
+    "description": "Met 750 kramen de grootste vlooienmarkt van Europa in de monumentale scheepsbouwhallen van NDSM."
+  },
+  {
+    "id": "fb-swan-market",
+    "name": "Swan Market Rotterdam",
+    "category": "Lifestyle & Food",
+    "venue": "Museumpark / Binnenrotte",
+    "city": "Rotterdam",
+    "lat": 51.9135,
+    "lon": 4.4721,
+    "schedule": "Zondagen maandelijks (11:00 - 17:00)",
+    "attending": 6200,
+    "url": "https://swanmarket.nl",
+    "fb_search_url": "https://www.facebook.com/events/search/?q=Swan%20Market%20Rotterdam",
+    "description": "Creatieve lifestyle markt met handgemaakte sieraden, kunst, mode, live muziek en foodtrucks."
+  },
+  {
+    "id": "fb-rollende-keukens",
+    "name": "Het Weekend van de Rollende Keukens",
+    "category": "Food & Festival",
+    "venue": "Westergasfabriek",
+    "city": "Amsterdam",
+    "lat": 52.3858,
+    "lon": 4.8712,
+    "schedule": "Hemelvaartweekend jaarlijks (13:00 - 23:00)",
+    "attending": 45000,
+    "url": "https://rollendekeukens.amsterdam",
+    "fb_search_url": "https://www.facebook.com/events/search/?q=Rollende%20Keukens%20Amsterdam",
+    "description": "Honderden mobiele keukens en foodtrucks toveren het Westerpark om tot één groot openluchtrestaurant."
+  },
+  {
+    "id": "fb-feelgood-eindhoven",
+    "name": "FeelGood Market Strijp-S",
+    "category": "Design & Music",
+    "venue": "Klokgebouw / Ketelhuisplein",
+    "city": "Eindhoven",
+    "lat": 51.4485,
+    "lon": 5.4572,
+    "schedule": "Elke 3e zondag van de maand (12:00 - 18:00)",
+    "attending": 7500,
+    "url": "https://feelgoodmarket.nl",
+    "fb_search_url": "https://www.facebook.com/events/search/?q=FeelGood%20Market%20Eindhoven",
+    "description": "Bruisende markt met duurzame streekproducten, design, workshops en live optredens op Strijp-S."
+  }
+]

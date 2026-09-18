@@ -1,0 +1,123 @@
+[
+  {
+    "id": "wl-oostvaardersplassen",
+    "name": "Oostvaardersplassen",
+    "country": "Nederland",
+    "lat": 52.4500,
+    "lon": 5.3667,
+    "category": "Wetland & Rewilding",
+    "species": ["Zeearend (Haliaeetus albicilla)", "Edelhert (Cervus elaphus)", "Konikpaard", "Heckrund", "Lepelaar", "Roerdomp"],
+    "desc": "Uniek Nederlands moeras- en grazersgebied. Broedplaats voor de majestueuze zeearend ('vliegende deur') en duizenden trekkende watervogels.",
+    "desc_en": "Famous Dutch rewilding wetland and primary breeding territory for the White-tailed Sea Eagle and herds of wild horses and red deer."
+  },
+  {
+    "id": "wl-hoge-veluwe",
+    "name": "Nationaal Park De Hoge Veluwe",
+    "country": "Nederland",
+    "lat": 52.0833,
+    "lon": 5.8333,
+    "category": "Bos, Heide & Zandverstuiving",
+    "species": ["Europese Wolf (Canis lupus)", "Edelhert", "Wild Zwijn", "Moeflon", "Kaketoe", "Zandhagedis", "Adder"],
+    "desc": "Grootste aaneengesloten natuurgebied van Noordwest-Europa met actieve wolvenroedels, bronstige edelherten en heidevelden.",
+    "desc_en": "Largest lowland nature reserve in NW Europe, home to resident wolf packs, rutting red deer stags and wild boar."
+  },
+  {
+    "id": "wl-waddenzee",
+    "name": "Waddenzee (UNESCO)",
+    "country": "Nederland / Duitsland / Denemarken",
+    "lat": 53.3000,
+    "lon": 5.7000,
+    "category": "Marien Werelderfgoed",
+    "species": ["Gewone Zeehond (Phoca vitulina)", "Grijze Zeehond (Halichoerus grypus)", "Bruinvis", "Kanoetstrandloper", "Lepelaar", "Bergeend"],
+    "desc": "Grootste getijdengebied ter wereld. Onmisbare pleisterplaats voor 10-12 miljoen trekvogels en rustgebied voor duizenden zeehonden op zandbanken.",
+    "desc_en": "The world's largest unbroken tidal flat system. Vital migratory flyway hub for 12M birds and breeding ground for harbor seals."
+  },
+  {
+    "id": "wl-serengeti",
+    "name": "Serengeti & Maasai Mara",
+    "country": "Tanzania / Kenia",
+    "lat": -2.3333,
+    "lon": 34.8333,
+    "category": "Savanne & Grote Trek",
+    "species": ["Gnoe (Connochaetes)", "Afrikaanse Leeuw (Panthera leo)", "Cheeta", "Afrikaanse Olifant", "Zebra", "Nijlpaard", "Nijlkrokodil"],
+    "desc": "Het toneel van de Grote Trek: meer dan 1,5 miljoen gnoes en zebra's steken de kolkende Mara-rivier over omringd door roofdieren.",
+    "desc_en": "Stage of the Great Migration: over 1.5M wildebeest and zebras crossing predator-filled rivers across endless savannas."
+  },
+  {
+    "id": "wl-kruger",
+    "name": "Kruger National Park",
+    "country": "Zuid-Afrika",
+    "lat": -23.9884,
+    "lon": 31.5547,
+    "category": "Afrikaanse Wildernis",
+    "species": ["Afrikaanse Olifant (Loxodonta)", "Witte & Zwarte Neushoorn", "Afrikaanse Leeuw", "Luipaard", "Afrikaanse Buffel", "Wilde Hond"],
+    "desc": "Het hart van het Afrikaanse dierenrijk met alle leden van de iconische Big Five en een van de grootste neushoornpopulaties.",
+    "desc_en": "Iconic African sanctuary home to the Big Five and the planet's highest concentration of wild rhinoceros and leopards."
+  },
+  {
+    "id": "wl-galapagos",
+    "name": "Galápagos Eilanden (UNESCO)",
+    "country": "Ecuador",
+    "lat": -0.6000,
+    "lon": -90.5500,
+    "category": "Vulkanische Biodiversiteit",
+    "species": ["Galápagosreuzenschildpad (Chelonoidis)", "Zeeleguaan (Amblyrhynchus)", "Blauwvoetgent", "Galápagospinguïn", "Walvishaai", "Hamerhaai"],
+    "desc": "De levende inspiratiebron van Charles Darwin. Unieke endemische diersoorten die nergens anders op aarde voorkomen en geen angst voor mensen kennen.",
+    "desc_en": "Darwin's living laboratory of evolution with endemic marine iguanas, giant tortoises and equatorial penguins."
+  },
+  {
+    "id": "wl-pantanal",
+    "name": "Pantanal Wetland",
+    "country": "Brazilië",
+    "lat": -17.5000,
+    "lon": -56.5000,
+    "category": "Tropisch Moerasland",
+    "species": ["Jaguar (Panthera onca)", "Capibara (Hydrochoerus)", "Reuzenotter", "Kaaiman", "Reuzenmiereneter", "Hyacintara"],
+    "desc": "Grootste tropische wetland ter wereld met de hoogste dichtheid aan jaguars op aarde, duizenden kaaimannen en 's werelds grootste knaagdieren.",
+    "desc_en": "The world's largest tropical wetland harboring the dense jaguar populations, capybaras and giant river otters."
+  },
+  {
+    "id": "wl-great-barrier-reef",
+    "name": "Great Barrier Reef",
+    "country": "Australië",
+    "lat": -18.2871,
+    "lon": 147.6992,
+    "category": "Koraalrif & Oceaan",
+    "species": ["Soepschildpad (Chelonia mydas)", "Mantarog (Mobula)", "Koraalduivel", "Bultrugwalvis", "Witpuntrifhaai", "Zeekoe (Dugong)"],
+    "desc": "Grootste levende structuur op aarde, zelfs zichtbaar vanuit de ruimte. Rijkdom aan duizenden vissoorten, zeeschildpadden en koraaltuinen.",
+    "desc_en": "Earth's largest living coral organism, visible from orbit and teeming with sea turtles, manta rays and cetaceans."
+  },
+  {
+    "id": "wl-svalbard",
+    "name": "Svalbard / Spitsbergen",
+    "country": "Noorwegen",
+    "lat": 78.2232,
+    "lon": 15.6267,
+    "category": "Arctische Toendra & Pakijs",
+    "species": ["IJsbeer (Ursus maritimus)", "Walrus (Odobenus rosmarus)", "Poolvos (Vulpes lagopus)", "Spitsbergenrendier", "Beloega (Witte dolfijn)"],
+    "desc": "Rijk van de ijsbeer hoog boven de noordpoolcirkel. Walrussen op de ijsschotsen, rendieren op de toendra en walvissen in de fjorden.",
+    "desc_en": "Realm of the polar bear high in the high Arctic with walrus haul-outs, arctic foxes and beluga pods."
+  },
+  {
+    "id": "wl-yellowstone",
+    "name": "Yellowstone National Park",
+    "country": "Verenigde Staten",
+    "lat": 44.4280,
+    "lon": -110.5885,
+    "category": "Geothermisch & Mega-Fauna",
+    "species": ["Grizzlybeer (Ursus arctos horribilis)", "Grijze Wolf (Canis lupus)", "Amerikaanse Bizon", "Wapiti", "Visarend", "Veelvraat"],
+    "desc": "Eerste nationale park ter wereld met actieve geisers, de beroemde wolvenherintroductie en de grootste wilde bizonkudde van Noord-Amerika.",
+    "desc_en": "America's premier geothermal wildlife caldera with recovering wolf packs, grizzly bears and free-roaming bison herds."
+  },
+  {
+    "id": "wl-bwindi",
+    "name": "Bwindi Impenetrable Forest",
+    "country": "Oeganda",
+    "lat": -1.0500,
+    "lon": 29.6167,
+    "category": "Nevelwoud & Primaten",
+    "species": ["Berggorilla (Gorilla beringei beringei)", "Chimpansee", "L'Hoëstmeerkat", "Afrikaanse Bosolifant", "Zwart-witte Franjeaap"],
+    "desc": "Oeroud nevelwoud met bijna de helft van alle overgebleven berggorilla's ter wereld, levend in hechte familiegroepen geleid door zilverruggen.",
+    "desc_en": "Ancient mist-shrouded Afro-montane jungle protecting nearly half of Earth's critically endangered mountain gorillas."
+  }
+]

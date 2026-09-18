@@ -1,0 +1,181 @@
+{
+  "$comment": "Curated set of major submarine telecom cables for the dashboard Intel Map. Cable names, landing cities, years and owners are real; the LineString paths are APPROXIMATE v1 great-circle-ish polylines through a few ocean waypoints, not surveyed routes. Coordinates are GeoJSON [lon, lat]. Bundled static asset — no network fetch, no API key.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "MAREA", "from": "Virginia Beach, USA", "to": "Bilbao, Spain", "year": 2017, "owners": "Microsoft, Meta, Telxius" },
+      "geometry": { "type": "LineString", "coordinates": [[-75.97, 36.85], [-50.0, 38.5], [-20.0, 41.5], [-2.94, 43.26]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Grace Hopper", "from": "Shirley (NY), USA", "to": "Bude, UK", "year": 2022, "owners": "Google" },
+      "geometry": { "type": "LineString", "coordinates": [[-72.87, 40.75], [-50.0, 42.5], [-25.0, 47.0], [-4.55, 50.83]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Dunant", "from": "Virginia Beach, USA", "to": "Saint-Hilaire-de-Riez, France", "year": 2021, "owners": "Google" },
+      "geometry": { "type": "LineString", "coordinates": [[-75.97, 36.85], [-45.0, 38.5], [-15.0, 44.0], [-1.95, 46.72]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Amitié", "from": "Lynn (MA), USA", "to": "Bude, UK", "year": 2023, "owners": "Meta, Microsoft, Vodafone" },
+      "geometry": { "type": "LineString", "coordinates": [[-70.94, 42.46], [-45.0, 45.0], [-15.0, 48.5], [-4.55, 50.83]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Havfrue / AEC-2", "from": "Wall (NJ), USA", "to": "Blaabjerg, Denmark", "year": 2020, "owners": "Google, Meta, Aqua Comms, Bulk" },
+      "geometry": { "type": "LineString", "coordinates": [[-74.06, 40.13], [-45.0, 48.0], [-20.0, 55.0], [-5.0, 59.0], [8.10, 55.70]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Atlantic Crossing-1 (AC-1)", "from": "Shirley (NY), USA", "to": "Whitesands Bay, UK", "year": 1998, "owners": "Lumen (Level 3)" },
+      "geometry": { "type": "LineString", "coordinates": [[-72.87, 40.79], [-40.0, 45.0], [-15.0, 49.5], [-4.75, 50.35]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "EllaLink", "from": "Sines, Portugal", "to": "Fortaleza, Brazil", "year": 2021, "owners": "EllaLink Group" },
+      "geometry": { "type": "LineString", "coordinates": [[-8.87, 37.95], [-16.0, 33.0], [-25.0, 15.0], [-33.0, 3.0], [-38.52, -3.72]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "MainOne", "from": "Seixal, Portugal", "to": "Lagos, Nigeria", "year": 2010, "owners": "MainOne (Equinix)" },
+      "geometry": { "type": "LineString", "coordinates": [[-9.10, 38.64], [-12.0, 30.0], [-17.5, 14.7], [-4.0, 5.0], [-0.20, 5.55], [3.40, 6.42]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Equiano", "from": "Sesimbra, Portugal", "to": "Melkbosstrand, South Africa", "year": 2023, "owners": "Google" },
+      "geometry": { "type": "LineString", "coordinates": [[-9.10, 38.44], [-15.0, 25.0], [-17.5, 14.0], [1.25, 6.13], [3.40, 6.42], [9.0, -5.0], [13.0, -20.0], [14.52, -22.68], [18.44, -33.72]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "SAT-3/WASC", "from": "Sesimbra, Portugal", "to": "Melkbosstrand, South Africa", "year": 2002, "owners": "SAT-3/WASC consortium" },
+      "geometry": { "type": "LineString", "coordinates": [[-9.10, 38.44], [-17.44, 14.72], [-4.02, 5.28], [3.40, 6.42], [13.23, -8.80], [18.44, -33.72]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "WACS", "from": "Highbridge, UK", "to": "Yzerfontein, South Africa", "year": 2012, "owners": "WACS consortium" },
+      "geometry": { "type": "LineString", "coordinates": [[-3.00, 51.20], [-9.10, 38.64], [-15.60, 27.80], [-17.44, 14.72], [-0.20, 5.55], [13.23, -8.80], [18.15, -33.35]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "2Africa", "from": "Bude, UK", "to": "Marseille, France (around Africa)", "year": 2024, "owners": "Meta, Vodafone, MTN, Orange, China Mobile, others" },
+      "geometry": { "type": "LineString", "coordinates": [[-4.55, 50.83], [-9.50, 38.50], [-17.50, 14.70], [-0.20, 5.55], [9.0, -8.0], [13.0, -20.0], [18.44, -33.90], [28.0, -35.0], [40.0, -15.0], [39.66, -4.05], [43.15, 11.60], [38.0, 20.0], [33.0, 28.0], [29.92, 31.20], [20.0, 34.0], [5.36, 43.30]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "SEA-ME-WE 6", "from": "Marseille, France", "to": "Singapore", "year": 2025, "owners": "SMW6 consortium (Bharti, Orange, Singtel, Telecom Egypt, others)" },
+      "geometry": { "type": "LineString", "coordinates": [[5.36, 43.30], [18.0, 35.0], [29.92, 31.20], [32.55, 29.90], [39.10, 21.50], [43.15, 11.60], [60.0, 12.0], [72.80, 18.90], [80.0, 6.0], [95.0, 6.0], [103.80, 1.29]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "AAE-1", "from": "Marseille, France", "to": "Hong Kong", "year": 2017, "owners": "AAE-1 consortium (China Unicom, Etisalat, Omantel, others)" },
+      "geometry": { "type": "LineString", "coordinates": [[5.36, 43.30], [20.0, 34.0], [29.92, 31.20], [32.55, 29.90], [43.15, 11.60], [58.0, 13.0], [66.99, 24.80], [72.80, 18.90], [80.0, 5.0], [97.0, 7.0], [103.80, 1.29], [107.07, 10.35], [114.17, 22.25]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "FLAG Europe-Asia", "from": "Porthcurno, UK", "to": "Miura, Japan", "year": 1997, "owners": "Global Cloud Xchange" },
+      "geometry": { "type": "LineString", "coordinates": [[-5.65, 50.04], [-9.50, 38.00], [-5.50, 36.00], [10.0, 37.5], [29.92, 31.20], [32.55, 29.90], [39.10, 21.50], [60.0, 15.0], [72.80, 18.90], [80.0, 5.0], [100.25, 5.35], [108.0, 6.0], [114.17, 22.25], [128.0, 29.0], [139.62, 35.14]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "PEACE", "from": "Marseille, France", "to": "Karachi, Pakistan", "year": 2022, "owners": "PEACE Cable (HMN Tech / Hengtong)" },
+      "geometry": { "type": "LineString", "coordinates": [[5.36, 43.30], [20.0, 34.0], [29.92, 31.20], [32.55, 29.90], [43.15, 11.60], [58.0, 14.0], [66.99, 24.80]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "SEACOM", "from": "Mtunzini, South Africa", "to": "Mumbai, India", "year": 2009, "owners": "SEACOM" },
+      "geometry": { "type": "LineString", "coordinates": [[31.75, -28.95], [33.50, -26.50], [39.28, -6.82], [39.66, -4.05], [43.15, 11.60], [60.0, 14.0], [72.80, 18.90]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "EASSy", "from": "Mtunzini, South Africa", "to": "Port Sudan, Sudan", "year": 2010, "owners": "EASSy consortium (WIOCC, others)" },
+      "geometry": { "type": "LineString", "coordinates": [[31.75, -28.95], [39.28, -6.82], [39.66, -4.05], [43.15, 11.60], [37.22, 19.62]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "INDIGO-West", "from": "Perth, Australia", "to": "Singapore", "year": 2019, "owners": "Google, Singtel, Telstra, AARNet, Indosat, SubPartners" },
+      "geometry": { "type": "LineString", "coordinates": [[115.75, -32.05], [110.0, -20.0], [105.0, -8.0], [106.80, -6.10], [104.0, 0.0], [103.80, 1.29]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Southern Cross NEXT", "from": "Sydney, Australia", "to": "Los Angeles, USA", "year": 2022, "owners": "Southern Cross Cables (Spark, Singtel, Verizon, Telstra)" },
+      "geometry": { "type": "LineString", "coordinates": [[151.21, -33.85], [174.77, -36.85], [178.44, -18.14], [-171.0, -9.0], [-157.5, 1.90], [-140.0, 15.0], [-118.40, 33.90]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Hawaiki", "from": "Sydney, Australia", "to": "Pacific City (OR), USA", "year": 2018, "owners": "Hawaiki (BW Digital)" },
+      "geometry": { "type": "LineString", "coordinates": [[151.21, -33.85], [165.0, -33.0], [174.60, -36.10], [-170.0, -20.0], [-157.86, 21.30], [-140.0, 35.0], [-123.96, 45.20]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Unity", "from": "Chikura, Japan", "to": "Redondo Beach, USA", "year": 2010, "owners": "Google, Bharti, SingTel, KDDI, Global Transit, Pacnet" },
+      "geometry": { "type": "LineString", "coordinates": [[139.95, 34.95], [160.0, 36.0], [-170.0, 38.0], [-140.0, 36.0], [-118.39, 33.84]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "FASTER", "from": "Shima, Japan", "to": "Bandon (OR), USA", "year": 2016, "owners": "Google, KDDI, China Mobile, China Telecom, Global Transit, SingTel" },
+      "geometry": { "type": "LineString", "coordinates": [[136.83, 34.30], [150.0, 36.0], [-175.0, 40.0], [-140.0, 44.0], [-124.41, 43.12]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "JUPITER", "from": "Maruyama, Japan", "to": "Hermosa Beach, USA", "year": 2020, "owners": "Amazon, Meta, NTT, PLDT, PCCW, SoftBank" },
+      "geometry": { "type": "LineString", "coordinates": [[139.98, 35.10], [160.0, 38.0], [-170.0, 40.0], [-135.0, 37.0], [-118.40, 33.86]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "PLCN", "from": "El Segundo (LA), USA", "to": "Toucheng, Taiwan", "year": 2022, "owners": "Google, Meta" },
+      "geometry": { "type": "LineString", "coordinates": [[-118.42, 33.92], [-150.0, 28.0], [-175.0, 24.0], [170.0, 20.0], [140.0, 18.0], [121.82, 24.85]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bifrost", "from": "Singapore", "to": "Grover Beach (CA), USA", "year": 2024, "owners": "Meta, Keppel, Telin" },
+      "geometry": { "type": "LineString", "coordinates": [[103.80, 1.29], [106.80, -6.10], [125.0, 3.0], [144.80, 13.46], [170.0, 18.0], [-160.0, 25.0], [-120.62, 35.12]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Echo", "from": "Eureka (CA), USA", "to": "Singapore", "year": 2025, "owners": "Google, Meta" },
+      "geometry": { "type": "LineString", "coordinates": [[-124.16, 40.80], [-150.0, 30.0], [175.0, 18.0], [144.80, 13.46], [120.0, 5.0], [103.80, 1.29]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Apricot", "from": "Shima, Japan", "to": "Singapore", "year": 2024, "owners": "Google, Meta, NTT, PLDT, Chunghwa Telecom" },
+      "geometry": { "type": "LineString", "coordinates": [[136.83, 34.30], [128.0, 26.0], [121.82, 24.85], [121.56, 15.76], [128.0, 5.0], [115.0, -3.0], [103.80, 1.29]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Asia-America Gateway (AAG)", "from": "Mersing, Malaysia", "to": "San Luis Obispo (CA), USA", "year": 2009, "owners": "AAG consortium (AT&T, Telstra, PLDT, others)" },
+      "geometry": { "type": "LineString", "coordinates": [[103.84, 2.43], [107.07, 10.35], [114.17, 22.25], [120.49, 18.02], [144.80, 13.46], [175.0, 16.0], [-157.86, 21.30], [-135.0, 30.0], [-120.63, 35.18]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Trans-Pacific Express (TPE)", "from": "Nedonna Beach (OR), USA", "to": "Qingdao, China", "year": 2008, "owners": "TPE consortium (Verizon, China Telecom, China Unicom, KT, others)" },
+      "geometry": { "type": "LineString", "coordinates": [[-123.94, 45.63], [-155.0, 42.0], [175.0, 40.0], [139.98, 35.10], [128.60, 34.80], [120.32, 36.07]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Curie", "from": "El Segundo (LA), USA", "to": "Valparaíso, Chile", "year": 2019, "owners": "Google" },
+      "geometry": { "type": "LineString", "coordinates": [[-118.42, 33.92], [-105.0, 15.0], [-85.0, -5.0], [-75.0, -20.0], [-71.63, -33.05]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Monet", "from": "Boca Raton (FL), USA", "to": "Santos, Brazil", "year": 2017, "owners": "Google, Algar, Angola Cables, Antel" },
+      "geometry": { "type": "LineString", "coordinates": [[-80.08, 26.35], [-70.0, 15.0], [-55.0, 5.0], [-38.52, -3.72], [-42.0, -15.0], [-46.33, -23.96]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "BRUSA", "from": "Virginia Beach, USA", "to": "Rio de Janeiro, Brazil", "year": 2018, "owners": "Telxius" },
+      "geometry": { "type": "LineString", "coordinates": [[-75.97, 36.85], [-66.10, 18.45], [-52.0, 5.0], [-38.52, -3.72], [-40.0, -15.0], [-43.20, -22.90]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "AMX-1", "from": "Jacksonville (FL), USA", "to": "Rio de Janeiro, Brazil", "year": 2014, "owners": "América Móvil" },
+      "geometry": { "type": "LineString", "coordinates": [[-81.50, 30.30], [-86.85, 21.15], [-75.50, 10.40], [-55.0, 3.0], [-38.52, -3.72], [-40.0, -15.0], [-43.20, -22.90]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Topaz", "from": "Port Alberni, Canada", "to": "Ibaraki, Japan", "year": 2023, "owners": "Google" },
+      "geometry": { "type": "LineString", "coordinates": [[-124.80, 49.24], [-150.0, 48.0], [175.0, 42.0], [140.60, 36.35]] }
+    }
+  ]
+}

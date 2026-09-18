@@ -1,0 +1,657 @@
+{
+  "municipalities": [
+    {
+      "name": "Gemeente Amsterdam",
+      "city": "Amsterdam",
+      "phone": "14020",
+      "office_lat": 52.3675,
+      "office_lon": 4.9015,
+      "afval_schema": {
+        "restafval": "Ondergrondse containers 24/7 met afvalpas",
+        "papier": "Woensdag (karton & papier)",
+        "gft": "Vrijdag",
+        "grofvuil": "Op afspraak of vaste inzameldag per buurt"
+      },
+      "markten": [
+        {
+          "name": "Albert Cuypmarkt",
+          "days": "Maandag t/m Zaterdag 09:30-17:00",
+          "lat": 52.3558,
+          "lon": 4.8942,
+          "type": "Algemene dagmarkt (260 kramen)"
+        },
+        {
+          "name": "Dappermarkt",
+          "days": "Maandag t/m Zaterdag 09:00-17:00",
+          "lat": 52.3615,
+          "lon": 4.9282,
+          "type": "Wereldmarkt"
+        },
+        {
+          "name": "Noordermarkt",
+          "days": "Maandag (vintage) & Zaterdag (biologische boerenmarkt)",
+          "lat": 52.3795,
+          "lon": 4.8865,
+          "type": "Biologisch & Antiek"
+        }
+      ],
+      "police_stations": [
+        {
+          "name": "Politiebureau Nieuwezijds Voorburgwal",
+          "address": "Nieuwezijds Voorburgwal 104",
+          "phone": "0900-8844",
+          "lat": 52.3735,
+          "lon": 4.8912
+        },
+        {
+          "name": "Politiebureau Linnaeusstraat",
+          "address": "Linnaeusstraat 221",
+          "phone": "0900-8844",
+          "lat": 52.3552,
+          "lon": 4.9285
+        },
+        {
+          "name": "Politiebureau Flierbosdreef Zuidoost",
+          "address": "Flierbosdreef 1",
+          "phone": "0900-8844",
+          "lat": 52.3165,
+          "lon": 4.9721
+        }
+      ]
+    },
+    {
+      "name": "Gemeente Rotterdam",
+      "city": "Rotterdam",
+      "phone": "14010",
+      "office_lat": 51.9225,
+      "office_lon": 4.4792,
+      "afval_schema": {
+        "restafval": "Ondergrondse restafvalcontainers",
+        "papier": "Donderdag",
+        "gft": "Dinsdag",
+        "grofvuil": "Gratis inleveren milieupark of ophaalafspraak"
+      },
+      "markten": [
+        {
+          "name": "Binnenrotte Centrummarkt",
+          "days": "Dinsdag & Zaterdag 08:00-17:30",
+          "lat": 51.9205,
+          "lon": 4.4885,
+          "type": "Grootste warenmarkt van Nederland (400 kramen)"
+        },
+        {
+          "name": "Markthal Rotterdam",
+          "days": "Dagelijks 10:00-20:00",
+          "lat": 51.9201,
+          "lon": 4.4871,
+          "type": "Overdekte food- en versmarkt"
+        }
+      ],
+      "police_stations": [
+        {
+          "name": "Hoofdbureau Politie Doelwater",
+          "address": "Doelwater 5",
+          "phone": "0900-8844",
+          "lat": 51.9235,
+          "lon": 4.4785
+        },
+        {
+          "name": "Politiebureau Zuidplein",
+          "address": "Zuidplein 111",
+          "phone": "0900-8844",
+          "lat": 51.8862,
+          "lon": 4.4895
+        }
+      ]
+    },
+    {
+      "name": "Gemeente Utrecht",
+      "city": "Utrecht",
+      "phone": "14030",
+      "office_lat": 52.0902,
+      "office_lon": 5.1219,
+      "afval_schema": {
+        "restafval": "Ondergronds / tweewekelijks kliko",
+        "papier": "Dinsdag (even weken)",
+        "gft": "Vrijdag",
+        "grofvuil": "Meldpunt openbare ruimte of afvalscheidingsstation"
+      },
+      "markten": [
+        {
+          "name": "Vredenburg Warenmarkt",
+          "days": "Woensdag, Vrijdag & Zaterdag 10:00-17:00",
+          "lat": 52.0915,
+          "lon": 5.1145,
+          "type": "Kleding, vis, kaas & bloemen"
+        },
+        {
+          "name": "Bloemenmarkt Janskerkhof",
+          "days": "Zaterdag 08:00-17:00",
+          "lat": 52.0935,
+          "lon": 5.1221,
+          "type": "Grootste bloemen- en plantenmarkt"
+        }
+      ],
+      "police_stations": [
+        {
+          "name": "Politiebureau Kroonstraat (Centrum)",
+          "address": "Kroonstraat 25",
+          "phone": "0900-8844",
+          "lat": 52.0945,
+          "lon": 5.1121
+        },
+        {
+          "name": "Politiebureau Paardenveld",
+          "address": "Paardenveld 1",
+          "phone": "0900-8844",
+          "lat": 52.0965,
+          "lon": 5.1115
+        }
+      ]
+    },
+    {
+      "name": "Gemeente Den Haag",
+      "city": "Den Haag",
+      "phone": "14070",
+      "office_lat": 52.0785,
+      "office_lon": 4.3185,
+      "afval_schema": {
+        "restafval": "Ondergrondse restafvalcontainers",
+        "papier": "Maandag",
+        "gft": "Donderdag",
+        "grofvuil": "Gratis ophaalafspraak via denhaag.nl"
+      },
+      "markten": [
+        {
+          "name": "De Haagse Markt",
+          "days": "Maandag, Woensdag, Vrijdag, Zaterdag 09:00-17:00",
+          "lat": 52.0612,
+          "lon": 4.2985,
+          "type": "Grootste onoverdekte markt van Europa (500 kramen)"
+        }
+      ],
+      "police_stations": [
+        {
+          "name": "Hoofdbureau Jan Hendrikstraat",
+          "address": "Jan Hendrikstraat 10",
+          "phone": "0900-8844",
+          "lat": 52.0775,
+          "lon": 4.3075
+        }
+      ]
+    }
+  ],
+  "markets": [
+    {
+      "name": "Albert Cuypmarkt",
+      "days": "Maandag t/m Zaterdag 09:30-17:00",
+      "lat": 52.3558,
+      "lon": 4.8942,
+      "type": "Algemene dagmarkt (260 kramen)",
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Dappermarkt",
+      "days": "Maandag t/m Zaterdag 09:00-17:00",
+      "lat": 52.3615,
+      "lon": 4.9282,
+      "type": "Wereldmarkt",
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Noordermarkt",
+      "days": "Maandag (vintage) & Zaterdag (biologische boerenmarkt)",
+      "lat": 52.3795,
+      "lon": 4.8865,
+      "type": "Biologisch & Antiek",
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Binnenrotte Centrummarkt",
+      "days": "Dinsdag & Zaterdag 08:00-17:30",
+      "lat": 51.9205,
+      "lon": 4.4885,
+      "type": "Grootste warenmarkt van Nederland (400 kramen)",
+      "city": "Rotterdam"
+    },
+    {
+      "name": "Markthal Rotterdam",
+      "days": "Dagelijks 10:00-20:00",
+      "lat": 51.9201,
+      "lon": 4.4871,
+      "type": "Overdekte food- en versmarkt",
+      "city": "Rotterdam"
+    },
+    {
+      "name": "Vredenburg Warenmarkt",
+      "days": "Woensdag, Vrijdag & Zaterdag 10:00-17:00",
+      "lat": 52.0915,
+      "lon": 5.1145,
+      "type": "Kleding, vis, kaas & bloemen",
+      "city": "Utrecht"
+    },
+    {
+      "name": "Bloemenmarkt Janskerkhof",
+      "days": "Zaterdag 08:00-17:00",
+      "lat": 52.0935,
+      "lon": 5.1221,
+      "type": "Grootste bloemen- en plantenmarkt",
+      "city": "Utrecht"
+    },
+    {
+      "name": "De Haagse Markt",
+      "days": "Maandag, Woensdag, Vrijdag, Zaterdag 09:00-17:00",
+      "lat": 52.0612,
+      "lon": 4.2985,
+      "type": "Grootste onoverdekte markt van Europa (500 kramen)",
+      "city": "Den Haag"
+    },
+    {
+      "name": "Grote Markt & Vismarkt Groningen",
+      "city": "Groningen",
+      "days": "Dinsdag, Vrijdag & Zaterdag 09:00-17:00",
+      "lat": 53.2192,
+      "lon": 6.5675,
+      "hours": "09:00 - 17:00",
+      "stalls": "150+ kramen",
+      "type": "Noordelijke versmarkt (vis, kaas, streekproducten)",
+      "description": "Grootste en gezelligste warenmarkt van het Noorden aan de voet van de Martinitoren."
+    },
+    {
+      "name": "Woenselse Markt Eindhoven",
+      "city": "Eindhoven",
+      "days": "Zaterdag 10:00-17:00",
+      "lat": 51.4495,
+      "lon": 5.4742,
+      "hours": "10:00 - 17:00",
+      "stalls": "120 kramen",
+      "type": "Levendige multiculturele warenmarkt",
+      "description": "Langgerekte marktstraat in Woensel met groenten, stoffen, specerijen en bloemen."
+    },
+    {
+      "name": "Grote Markt Breda",
+      "city": "Breda",
+      "days": "Dinsdag & Vrijdag 09:00-14:00",
+      "lat": 51.5885,
+      "lon": 4.7762,
+      "hours": "09:00 - 14:00",
+      "stalls": "60 kramen",
+      "type": "Historische centrummarkt",
+      "description": "Gezellige warenmarkt met uitzicht op de Grote Kerk van Breda."
+    },
+    {
+      "name": "Markt Maastricht",
+      "city": "Maastricht",
+      "days": "Woensdag (kleine markt) & Vrijdag (grote markt)",
+      "lat": 50.8512,
+      "lon": 5.6912,
+      "hours": "09:00 - 15:00",
+      "stalls": "200 kramen",
+      "type": "Bourgondische versmarkt",
+      "description": "Befaamde vrijdagmarkt rondom het stadhuis met verse vis, stoffen en Limburgse vlaaien."
+    }
+  ],
+  "benches": [
+    {
+      "name": "Vondelpark Rozentuin Bank",
+      "city": "Amsterdam",
+      "location": "Vondelpark bij Rozentuin",
+      "lat": 52.3575,
+      "lon": 4.8712,
+      "view": "Parkzicht & Rozentuin",
+      "material": "Gietijzer & Hout (Klassiek Amsterdams)",
+      "description": "Rustig bankje tussen de geurende rozenstruiken midden in het Vondelpark."
+    },
+    {
+      "name": "Prinsengracht Grachtenbankje",
+      "city": "Amsterdam",
+      "location": "Prinsengracht t.o. Noorderkerk",
+      "lat": 52.3792,
+      "lon": 4.8858,
+      "view": "Prinsengracht grachtenpanden & bootjes",
+      "material": "Hout",
+      "description": "Typisch Amsterdams groen bankje langs de kademuur met uitzicht over de gracht."
+    },
+    {
+      "name": "Amstelzicht Bankje bij Magere Brug",
+      "city": "Amsterdam",
+      "location": "Amstelkade / Kerkstraat",
+      "lat": 52.3635,
+      "lon": 4.9038,
+      "view": "Magere Brug & Amstelrivier",
+      "material": "Gietijzer & Hardhout",
+      "description": "Iconische zitplek met uitzicht op de verlichte ophaalbrug en Carre."
+    },
+    {
+      "name": "Kralingse Bos Skyline Panorama Bank",
+      "city": "Rotterdam",
+      "location": "Kralingse Plas Noordzijde",
+      "lat": 51.9325,
+      "lon": 5.5125,
+      "view": "Kralingse Plas en skyline van Rotterdam",
+      "material": "Robuust eikenhout",
+      "description": "Spectaculair weids uitzicht over het water op de hoogbouw van Rotterdam."
+    },
+    {
+      "name": "Euromast Park Rustbank",
+      "city": "Rotterdam",
+      "location": "Het Park bij de Euromast",
+      "lat": 51.9055,
+      "lon": 4.4695,
+      "view": "Euromast & historische bomen",
+      "material": "Klassiek parkbankje",
+      "description": "Beschutte zitplek onder monumentale beuken in Het Park van Zocher."
+    },
+    {
+      "name": "Scheveningen Boulevard Zeezicht Bank",
+      "city": "Den Haag",
+      "location": "Strandboulevard t.h.v. De Pier",
+      "lat": 52.1175,
+      "lon": 4.2815,
+      "view": "Noordzee, branding & zonsondergang",
+      "material": "Zeewindbestendig hardhout",
+      "description": "Geniet van de zilte zeelucht, meeuwen en de ondergaande zon boven de golven."
+    },
+    {
+      "name": "Clingendael Japanse Tuin Bankje",
+      "city": "Den Haag",
+      "location": "Landgoed Clingendael",
+      "lat": 52.0965,
+      "lon": 4.3485,
+      "view": "Mos, Japanse esdoorns & stenen lantaarns",
+      "material": "Traditioneel bamboe & ceder",
+      "description": "Serene meditatieplek in de oudste en meest authentieke Japanse tuin van Nederland."
+    },
+    {
+      "name": "Oudegracht Werfbankje Utrecht",
+      "city": "Utrecht",
+      "location": "Oudegracht a/d Werf t.h.v. Bezembrug",
+      "lat": 52.0885,
+      "lon": 5.1195,
+      "view": "Werven, kano's en werfkelders",
+      "material": "Werfhout",
+      "description": "Vlak boven de waterspiegel zitten op de historische werven van Utrecht."
+    },
+    {
+      "name": "Griftpark Heuvelbankje Utrecht",
+      "city": "Utrecht",
+      "location": "Heuvel Griftpark",
+      "lat": 52.0995,
+      "lon": 5.1275,
+      "view": "Domtoren en skyline Utrecht",
+      "material": "Staal & hout",
+      "description": "Hoogste punt in het park met panoramisch zicht op de Domstad."
+    },
+    {
+      "name": "Noorderplantsoen Vijverbank",
+      "city": "Groningen",
+      "location": "Noorderplantsoen bij Muziekkoepel",
+      "lat": 53.2235,
+      "lon": 6.5562,
+      "view": "Slingerende gracht & fontein",
+      "material": "Hout",
+      "description": "Geliefd bankje onder treurwilgen bij de historische muziekkoepel."
+    },
+    {
+      "name": "Onze Lieve Vrouweplein Maastricht",
+      "city": "Maastricht",
+      "location": "OLV Plein bij Basiliek",
+      "lat": 50.8475,
+      "lon": 5.6925,
+      "view": "Bourgondisch plein & platanen",
+      "material": "Smeedijzer & hout",
+      "description": "Rustpunt in de schaduw van de monumentale Basiliek van Onze Lieve Vrouw."
+    },
+    {
+      "name": "Posbank Panorama Bank Veluwe",
+      "city": "Rheden",
+      "location": "Nationaal Park Veluwezoom",
+      "lat": 52.0285,
+      "lon": 6.0215,
+      "view": "Golvende heidevelden en IJsseldal",
+      "material": "Natuurlijk eiken stamhout",
+      "description": "Beroemdste uitzichtpunt van Gelderland tot wel 20 kilometer ver over het heidelandschap."
+    }
+  ],
+  "waste": [
+    {
+      "municipality": "Gemeente Amsterdam",
+      "city": "Amsterdam",
+      "lat": 52.3675,
+      "lon": 4.9015,
+      "rest": "Ondergrondse containers 24/7 met afvalpas",
+      "papier": "Woensdag (karton & papier)",
+      "gft": "Vrijdag",
+      "grofvuil": "Op afspraak of vaste inzameldag per buurt",
+      "pmd": "Tweewekelijks / verzamelcontainer",
+      "url": "https://www.amsterdam.nl/afval"
+    },
+    {
+      "municipality": "Gemeente Rotterdam",
+      "city": "Rotterdam",
+      "lat": 51.9225,
+      "lon": 4.4792,
+      "rest": "Ondergrondse restafvalcontainers",
+      "papier": "Donderdag",
+      "gft": "Dinsdag",
+      "grofvuil": "Gratis inleveren milieupark of ophaalafspraak",
+      "pmd": "Tweewekelijks / verzamelcontainer",
+      "url": "https://www.rotterdam.nl/afval"
+    },
+    {
+      "municipality": "Gemeente Utrecht",
+      "city": "Utrecht",
+      "lat": 52.0902,
+      "lon": 5.1219,
+      "rest": "Ondergronds / tweewekelijks kliko",
+      "papier": "Dinsdag (even weken)",
+      "gft": "Vrijdag",
+      "grofvuil": "Meldpunt openbare ruimte of afvalscheidingsstation",
+      "pmd": "Tweewekelijks / verzamelcontainer",
+      "url": "https://www.utrecht.nl/afval"
+    },
+    {
+      "municipality": "Gemeente Den Haag",
+      "city": "Den Haag",
+      "lat": 52.0785,
+      "lon": 4.3185,
+      "rest": "Ondergrondse restafvalcontainers",
+      "papier": "Maandag",
+      "gft": "Donderdag",
+      "grofvuil": "Gratis ophaalafspraak via denhaag.nl",
+      "pmd": "Tweewekelijks / verzamelcontainer",
+      "url": "https://www.denhaag.nl/afval"
+    }
+  ],
+  "police": [
+    {
+      "name": "Politiebureau Nieuwezijds Voorburgwal",
+      "address": "Nieuwezijds Voorburgwal 104",
+      "phone": "0900-8844",
+      "lat": 52.3735,
+      "lon": 4.8912,
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Politiebureau Linnaeusstraat",
+      "address": "Linnaeusstraat 221",
+      "phone": "0900-8844",
+      "lat": 52.3552,
+      "lon": 4.9285,
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Politiebureau Flierbosdreef Zuidoost",
+      "address": "Flierbosdreef 1",
+      "phone": "0900-8844",
+      "lat": 52.3165,
+      "lon": 4.9721,
+      "city": "Amsterdam"
+    },
+    {
+      "name": "Hoofdbureau Politie Doelwater",
+      "address": "Doelwater 5",
+      "phone": "0900-8844",
+      "lat": 51.9235,
+      "lon": 4.4785,
+      "city": "Rotterdam"
+    },
+    {
+      "name": "Politiebureau Zuidplein",
+      "address": "Zuidplein 111",
+      "phone": "0900-8844",
+      "lat": 51.8862,
+      "lon": 4.4895,
+      "city": "Rotterdam"
+    },
+    {
+      "name": "Politiebureau Kroonstraat (Centrum)",
+      "address": "Kroonstraat 25",
+      "phone": "0900-8844",
+      "lat": 52.0945,
+      "lon": 5.1121,
+      "city": "Utrecht"
+    },
+    {
+      "name": "Politiebureau Paardenveld",
+      "address": "Paardenveld 1",
+      "phone": "0900-8844",
+      "lat": 52.0965,
+      "lon": 5.1115,
+      "city": "Utrecht"
+    },
+    {
+      "name": "Hoofdbureau Jan Hendrikstraat",
+      "address": "Jan Hendrikstraat 10",
+      "phone": "0900-8844",
+      "lat": 52.0775,
+      "lon": 4.3075,
+      "city": "Den Haag"
+    }
+  ],
+  "hospitality": [
+    {
+      "name": "Café de Jaren",
+      "type": "restaurant",
+      "city": "Amsterdam",
+      "address": "Nieuwe Doelenstraat 20-22",
+      "lat": 52.3678,
+      "lon": 4.8962,
+      "cuisine": "Grand Café & Terras aan de Amstel",
+      "description": "Ruim en licht grand café met spectaculair terras direct aan de Amstel.",
+      "url": "https://cafedejaren.nl"
+    },
+    {
+      "name": "Restaurant De Kas",
+      "type": "restaurant",
+      "city": "Amsterdam",
+      "address": "Kamerlingh Onneslaan 3",
+      "lat": 52.3525,
+      "lon": 4.9315,
+      "cuisine": "Farm-to-table (1 Michelinster & Groene Ster)",
+      "description": "Dineren in een 8 meter hoge glazen kweekkas uit 1926 met groenten uit eigen tuin.",
+      "url": "https://restaurantdekas.com"
+    },
+    {
+      "name": "Hotel De L'Europe Amsterdam",
+      "type": "hotel",
+      "city": "Amsterdam",
+      "address": "Nieuwe Doelenstraat 2-14",
+      "lat": 52.3671,
+      "lon": 4.8942,
+      "stars": "5-Star Luxury",
+      "description": "Historisch 5-sterrenhotel aan de Amstel sinds 1896 met met sterren bekroond restaurant Flore.",
+      "url": "https://deleurope.com"
+    },
+    {
+      "name": "Grand Hotel Amrâth Amsterdam",
+      "type": "hotel",
+      "city": "Amsterdam",
+      "address": "Prins Hendrikkade 108",
+      "lat": 52.3735,
+      "lon": 4.9042,
+      "stars": "5-Star Monument",
+      "description": "Gehuisvest in het monumentale Scheepvaarthuis, meesterwerk van de Amsterdamse School.",
+      "url": "https://amrathamsterdam.com"
+    },
+    {
+      "name": "Hotel New York & Restaurant",
+      "type": "hotel",
+      "city": "Rotterdam",
+      "address": "Koninginnenhoofd 1",
+      "lat": 51.9035,
+      "lon": 4.4852,
+      "stars": "4-Star Iconic",
+      "cuisine": "Oesterbar & Fruits de Mer",
+      "description": "Voormalig hoofdkantoor van de Holland-Amerika Lijn op de Kop van Zuid.",
+      "url": "https://hotelnewyork.nl"
+    },
+    {
+      "name": "Dudok Rotterdam",
+      "type": "restaurant",
+      "city": "Rotterdam",
+      "address": "Meent 88",
+      "lat": 51.9228,
+      "lon": 4.4842,
+      "cuisine": "Grand Café & Beroemde Dudok Appeltaart",
+      "description": "Klassieke ontmoetingsplek in naoorlogs wederopbouwpand van architect Willem Dudok.",
+      "url": "https://dudok.nl"
+    },
+    {
+      "name": "Restaurant Parkheuvel",
+      "type": "restaurant",
+      "city": "Rotterdam",
+      "address": "Heuvellaan 21",
+      "lat": 51.9052,
+      "lon": 4.4715,
+      "cuisine": "Franse Haute Cuisine (2 Michelinsterren)",
+      "description": "Rond paviljoen aan de Nieuwe Maas met uitzicht op voorbijglijdende zeeschepen.",
+      "url": "https://parkheuvel.nl"
+    },
+    {
+      "name": "Grand Hotel Kurhaus Scheveningen",
+      "type": "hotel",
+      "city": "Den Haag",
+      "address": "Gevers Deynootplein 30",
+      "lat": 52.1132,
+      "lon": 4.2818,
+      "stars": "5-Star Historic Spa",
+      "description": "Statig 19e-eeuws kuurhotel aan het strand met de beroemde monumentale Kurzaal.",
+      "url": "https://amrathkurhaus.com"
+    },
+    {
+      "name": "Grand Hotel Karel V",
+      "type": "hotel",
+      "city": "Utrecht",
+      "address": "Geertebolwerk 1",
+      "lat": 52.0862,
+      "lon": 5.1172,
+      "stars": "5-Star Urban Resort",
+      "cuisine": "Restaurant Karel 5 (1 Michelinster)",
+      "description": "Voormalig 14e-eeuws klooster van de Duitse Orde met monumentale binnentuin in centrum Utrecht.",
+      "url": "https://karelv.nl"
+    },
+    {
+      "name": "De Librije Zwolle",
+      "type": "restaurant",
+      "city": "Zwolle",
+      "address": "Spinhuisplein 1",
+      "lat": 52.5135,
+      "lon": 6.0965,
+      "cuisine": "Moderne Gastronomie (3 Michelinsterren)",
+      "description": "Wereldberoemd driesterrenrestaurant van Jonnie en Thérèse Boer in een 18e-eeuwse vrouwengevangenis.",
+      "url": "https://librije.com"
+    },
+    {
+      "name": "Kruisherenhotel Maastricht",
+      "type": "hotel",
+      "city": "Maastricht",
+      "address": "Kruisherengang 19-23",
+      "lat": 50.8485,
+      "lon": 5.6842,
+      "stars": "5-Star Design Hotel",
+      "description": "Voormalig 15e-eeuws gotisch klooster getransformeerd tot spectaculair designhotel.",
+      "url": "https://oostwegelcollection.nl/kruisherenhotel-maastricht"
+    }
+  ]
+}

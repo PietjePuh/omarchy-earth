@@ -1,0 +1,576 @@
+{
+  "$comment": "Curated Dutch & European UAS / Drone Geozones (No-Fly and Restricted zones) based on LVNL, EASA, PDOK, and Dutch Aviation Act. Points with radius_km for circular zones and boundary descriptions. Zero API keys.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schiphol CTR (EHAM)",
+        "type": "CTR Civiel",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 15.0,
+        "max_altitude_m": 0,
+        "description": "Gecontroleerd luchtruim Amsterdam Airport Schiphol. Dronevluchten in Open Categorie zijn strikt verboden.",
+        "authority": "LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.7639, 52.3086] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rotterdam The Hague CTR (EHRD)",
+        "type": "CTR Civiel",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 12.0,
+        "max_altitude_m": 0,
+        "description": "Gecontroleerd luchtruim Rotterdam The Hague Airport. Strikt verboden voor drones zonder LVNL-klaring.",
+        "authority": "LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.4372, 51.9569] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eindhoven CTR (EHEH)",
+        "type": "CTR Militair/Civiel",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 12.0,
+        "max_altitude_m": 0,
+        "description": "Gecombineerde burger- en militaire vliegbasis Eindhoven. No-fly zone voor drones.",
+        "authority": "LVNL / Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.3745, 51.4501] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maastricht Aachen CTR (EHBK)",
+        "type": "CTR Civiel",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 10.0,
+        "max_altitude_m": 0,
+        "description": "Gecontroleerd luchtruim Maastricht Aachen Airport. No-fly zone.",
+        "authority": "LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.7701, 50.9111] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Groningen Airport Eelde CTR (EHGG)",
+        "type": "CTR Civiel",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 10.0,
+        "max_altitude_m": 0,
+        "description": "Luchthavengebied en CTR Groningen Eelde. Vliegen met drones verboden.",
+        "authority": "LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.5884, 53.1250] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vliegbasis Volkel (EHVK)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 12.0,
+        "max_altitude_m": 0,
+        "description": "Koninklijke Luchtmacht F-35 vliegbasis & QRA. Strikt militair verboden gebied.",
+        "authority": "Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.7086, 51.6572] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vliegbasis Leeuwarden (EHLW)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 12.0,
+        "max_altitude_m": 0,
+        "description": "F-35 jachtvliegtuigen en MQ-9 Reaper drones. Strikt militair verboden gebied.",
+        "authority": "Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.7602, 53.2287] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vliegbasis Gilze-Rijen (EHGR)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 12.0,
+        "max_altitude_m": 0,
+        "description": "Defensie Helikopter Commando (Apache, Chinook, Cougar). Extreem veel laagvliegende helikopters.",
+        "authority": "Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.9318, 51.5674] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vliegbasis Woensdrecht (EHWO)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 10.0,
+        "max_altitude_m": 0,
+        "description": "Militaire vliegopleidingen en F-35 onderhoudsdepot.",
+        "authority": "Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.3422, 51.4489] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Militair Luchtvaartterrein Deelen (EHDL)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 9.0,
+        "max_altitude_m": 0,
+        "description": "Militair oefenterrein Luchtmobiele Brigade & helikopterdroppings.",
+        "authority": "Defensie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.8894, 52.0603] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marinevliegkamp De Kooy (EHKD)",
+        "type": "CTR Militair",
+        "level": "prohibited",
+        "color": "#dc2626",
+        "radius_km": 10.0,
+        "max_altitude_m": 0,
+        "description": "NH90 marinehelikopters en offshore helikopterverkeer Den Helder.",
+        "authority": "Defensie / LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.7803, 52.9231] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lelystad Airport (EHLE)",
+        "type": "Luchthavengebied",
+        "level": "prohibited",
+        "color": "#ef4444",
+        "radius_km": 8.0,
+        "max_altitude_m": 0,
+        "description": "Drukste general aviation vliegveld van Nederland, vlieglessen.",
+        "authority": "Lelystad TWR / LVNL",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.5272, 52.4603] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hilversum Vliegveld (EHHV)",
+        "type": "Sportvliegveld",
+        "level": "prohibited",
+        "color": "#f97316",
+        "radius_km": 4.0,
+        "max_altitude_m": 0,
+        "description": "Grasbaanvliegveld met intensief les- en rondvluchtverkeer.",
+        "authority": "Vliegveld Hilversum",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.1483, 52.1911] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Teuge Vliegveld (EHTE)",
+        "type": "Sportvliegveld",
+        "level": "prohibited",
+        "color": "#f97316",
+        "radius_km": 4.5,
+        "max_altitude_m": 0,
+        "description": "Intensief valschermspringen (paracentrum) en sportvliegtuigen.",
+        "authority": "Havenmeester Teuge",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.0461, 52.2453] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Breda Airport / Seppe (EHSE)",
+        "type": "Sportvliegveld",
+        "level": "prohibited",
+        "color": "#f97316",
+        "radius_km": 4.0,
+        "max_altitude_m": 0,
+        "description": "Algemene luchtvaart en vliegscholen.",
+        "authority": "Havenmeester Breda Airport",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.5533, 51.5550] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Erasmus MC Traumahelipad (Lifeliner 2)",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "24/7 spoedaanvliegroute voor MMT traumahelikopter Lifeliner 2. Drones levensgevaarlijk.",
+        "authority": "Inspectie Leefomgeving en Transport (ILT)",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.4691, 51.9112] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "UMC Utrecht Heliport",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Aanvliegroute traumaheli Utrecht Science Park.",
+        "authority": "ILT",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.1783, 52.0850] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amsterdam UMC Locatie AMC (Lifeliner 1)",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Basis en landingsplaats traumahelikopter Lifeliner 1.",
+        "authority": "ILT",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.9583, 52.2961] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Radboudumc Nijmegen Heliport",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Aanvliegroute MMT helikopter Nijmegen.",
+        "authority": "ILT",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.8622, 51.8231] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "UMCG Groningen (Lifeliner 4)",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Aanvliegroute traumahelikopter Noord-Nederland.",
+        "authority": "ILT",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.5772, 53.2203] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Isala Klinieken Zwolle Heliport",
+        "type": "Traumahelipad",
+        "level": "prohibited",
+        "color": "#e11d48",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Traumacentrum helipad Zwolle.",
+        "authority": "ILT",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [6.1261, 52.5183] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PI Vught (Extra Beveiligde Inrichting)",
+        "type": "Gevangenis",
+        "level": "prohibited",
+        "color": "#b91c1c",
+        "radius_km": 1.5,
+        "max_altitude_m": 0,
+        "description": "Strikte no-fly zone ter voorkoming van smokkel van wapens/drugs en ontsnappingspogingen.",
+        "authority": "Dienst Justitiële Inrichtingen (DJI)",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.2753, 51.6442] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PI Alphen aan den Rijn",
+        "type": "Gevangenis",
+        "level": "prohibited",
+        "color": "#b91c1c",
+        "radius_km": 1.2,
+        "max_altitude_m": 0,
+        "description": "Justitiële inrichting no-fly zone.",
+        "authority": "DJI",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.6750, 52.1150] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PI Zaanstad",
+        "type": "Gevangenis",
+        "level": "prohibited",
+        "color": "#b91c1c",
+        "radius_km": 1.2,
+        "max_altitude_m": 0,
+        "description": "Penitentiaire Inrichting Zaanstad no-fly zone.",
+        "authority": "DJI",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.7700, 52.4280] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PI De Schie Rotterdam",
+        "type": "Gevangenis",
+        "level": "prohibited",
+        "color": "#b91c1c",
+        "radius_km": 1.2,
+        "max_altitude_m": 0,
+        "description": "Penitentiaire Inrichting De Schie no-fly zone.",
+        "authority": "DJI",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.4300, 51.9350] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haven Rotterdam / Maasvlakte & Europoort",
+        "type": "Petrochemie/Industrie",
+        "level": "prohibited",
+        "color": "#ea580c",
+        "radius_km": 6.5,
+        "max_altitude_m": 0,
+        "description": "ISPS-beveiligde haven, LNG-terminals en zware chemie. Dronevluchten verboden zonder havenmeestertoestemming.",
+        "authority": "Havenbedrijf Rotterdam / Zeehavenpolitie",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.0700, 51.9540] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haven Rotterdam / Botlek & Pernis",
+        "type": "Petrochemie/Industrie",
+        "level": "prohibited",
+        "color": "#ea580c",
+        "radius_km": 5.0,
+        "max_altitude_m": 0,
+        "description": "Grootste olieraffinaderijen en chemiecomplex van Europa (Shell Pernis e.a.). Hoog explosie- en veiligheidsrisico.",
+        "authority": "Havenbedrijf Rotterdam",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.3100, 51.8840] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chemelot Geleen",
+        "type": "Petrochemie/Industrie",
+        "level": "prohibited",
+        "color": "#ea580c",
+        "radius_km": 3.0,
+        "max_altitude_m": 0,
+        "description": "Grootschalig chemie- en kunststoffencomplex. Seveso-inrichting met strikte no-fly restricties.",
+        "authority": "Chemelot / Veiligheidsregio",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.8050, 50.9650] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moerdijk Industriegebied",
+        "type": "Petrochemie/Industrie",
+        "level": "prohibited",
+        "color": "#ea580c",
+        "radius_km": 3.0,
+        "max_altitude_m": 0,
+        "description": "Chemieclusters en havenbekkens Moerdijk.",
+        "authority": "Port of Moerdijk",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.6100, 51.6850] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kerncentrale Borssele",
+        "type": "Nucleair",
+        "level": "prohibited",
+        "color": "#9333ea",
+        "radius_km": 3.0,
+        "max_altitude_m": 0,
+        "description": "Kerncentrale en COVRA opslag radioactief afval. Permanente no-fly zone.",
+        "authority": "ANVS (Autoriteit Nucleaire Veiligheid)",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [3.7175, 51.4314] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kerncentrale Doel (BE grens)",
+        "type": "Nucleair",
+        "level": "prohibited",
+        "color": "#9333ea",
+        "radius_km": 3.5,
+        "max_altitude_m": 0,
+        "description": "Belgische kerncentrale Doel nabij Antwerpse haven en NL grens.",
+        "authority": "FANC / DGLV België",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.2600, 51.3250] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paleis Huis ten Bosch & Noordeinde",
+        "type": "Koninklijk/Regering",
+        "level": "prohibited",
+        "color": "#4338ca",
+        "radius_km": 1.8,
+        "max_altitude_m": 0,
+        "description": "Residentie Koning Willem-Alexander en regeringszetel Den Haag.",
+        "authority": "Koninklijke Marechaussee / NCTV",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.3430, 52.0930] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waddenzee (Natura 2000)",
+        "type": "Natuurgebied",
+        "level": "restricted",
+        "color": "#16a34a",
+        "radius_km": 28.0,
+        "max_altitude_m": 0,
+        "description": "UNESCO Werelderfgoed en beschermd rustgebied voor zeehonden en wadvogels. Dronevluchten verboden zonder natuurvergunning.",
+        "authority": "Provincies Fryslân / Groningen / Noord-Holland",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.5000, 53.3000] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oostvaardersplassen (Natura 2000)",
+        "type": "Natuurgebied",
+        "level": "restricted",
+        "color": "#16a34a",
+        "radius_km": 6.0,
+        "max_altitude_m": 0,
+        "description": "Vogelbroedgebied van internationaal belang. Verstoring van vogels strafbaar onder Omgevingswet.",
+        "authority": "Staatsbosbeheer",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.3800, 52.4500] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nationaal Park De Hoge Veluwe",
+        "type": "Natuurgebied",
+        "level": "restricted",
+        "color": "#16a34a",
+        "radius_km": 8.0,
+        "max_altitude_m": 0,
+        "description": "Beschermd natuurgebied en stiltegebied. Recreatief dronevliegen niet toegestaan.",
+        "authority": "Stichting Het Nationale Park De Hoge Veluwe",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.8300, 52.0800] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nationaal Park De Biesbosch",
+        "type": "Natuurgebied",
+        "level": "restricted",
+        "color": "#16a34a",
+        "radius_km": 7.0,
+        "max_altitude_m": 0,
+        "description": "Zoetwatergetijdengebied met zeearenden en bevers. Dronevluchten verboden wegens vogelverstoring.",
+        "authority": "Parkschap Nationaal Park De Biesbosch",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [4.7700, 51.7500] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GLV-I Veluwe Laagvlieggebied",
+        "type": "Militaire Laagvliegroute",
+        "level": "restricted",
+        "color": "#eab308",
+        "radius_km": 14.0,
+        "max_altitude_m": 50,
+        "description": "Militaire gevechtsvliegtuigen en helikopters vliegen hier tot op boomtophoogte. Verhoogd risico; waarnemer verplicht.",
+        "authority": "Koninklijke Luchtmacht",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.7500, 52.1200] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "GLV-II Maasdal & De Peel",
+        "type": "Militaire Laagvliegroute",
+        "level": "restricted",
+        "color": "#eab308",
+        "radius_km": 15.0,
+        "max_altitude_m": 50,
+        "description": "Laagvlieggebied voor Defensie helikopters langs de Maas.",
+        "authority": "Koninklijke Luchtmacht",
+        "link": "https://map.godrone.nl"
+      },
+      "geometry": { "type": "Point", "coordinates": [5.9500, 51.5500] }
+    }
+  ]
+}

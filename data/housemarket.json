@@ -1,0 +1,82 @@
+[
+  {
+    "city": "Amsterdam",
+    "avg_m2_eur": 7850,
+    "avg_woz_eur": 512000,
+    "market_status": "Overspannen verkopersmarkt",
+    "trend_pct": 5.8,
+    "lat": 52.3675,
+    "lon": 4.9015,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22amsterdam%22%5D"
+  },
+  {
+    "city": "Utrecht",
+    "avg_m2_eur": 5420,
+    "avg_woz_eur": 448000,
+    "market_status": "Sterk concurrerend",
+    "trend_pct": 6.2,
+    "lat": 52.0902,
+    "lon": 5.1219,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22utrecht%22%5D"
+  },
+  {
+    "city": "Rotterdam",
+    "avg_m2_eur": 4650,
+    "avg_woz_eur": 365000,
+    "market_status": "Gematigd stijgend",
+    "trend_pct": 4.5,
+    "lat": 51.9225,
+    "lon": 4.4792,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22rotterdam%22%5D"
+  },
+  {
+    "city": "Den Haag",
+    "avg_m2_eur": 4500,
+    "avg_woz_eur": 372000,
+    "market_status": "Actieve markt",
+    "trend_pct": 4.8,
+    "lat": 52.0785,
+    "lon": 4.3185,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22den-haag%22%5D"
+  },
+  {
+    "city": "Eindhoven",
+    "avg_m2_eur": 4250,
+    "avg_woz_eur": 395000,
+    "market_status": "Hoge vraag door Brainport tech",
+    "trend_pct": 7.1,
+    "lat": 51.4412,
+    "lon": 5.4692,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22eindhoven%22%5D"
+  },
+  {
+    "city": "Groningen",
+    "avg_m2_eur": 3600,
+    "avg_woz_eur": 298000,
+    "market_status": "Stabiele studenten- en gezinsmarkt",
+    "trend_pct": 4.2,
+    "lat": 53.2192,
+    "lon": 6.5662,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22groningen%22%5D"
+  },
+  {
+    "city": "Haarlem",
+    "avg_m2_eur": 5850,
+    "avg_woz_eur": 485000,
+    "market_status": "Zeer populair als alternatief voor Amsterdam",
+    "trend_pct": 5.5,
+    "lat": 52.3812,
+    "lon": 4.6385,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22haarlem%22%5D"
+  },
+  {
+    "city": "Almere",
+    "avg_m2_eur": 3750,
+    "avg_woz_eur": 382000,
+    "market_status": "Veel eengezinswoningen, snelle doorloop",
+    "trend_pct": 5.1,
+    "lat": 52.3702,
+    "lon": 5.2142,
+    "funda_url": "https://www.funda.nl/zoeken/koop?selected_area=%5B%22almere%22%5D"
+  }
+]

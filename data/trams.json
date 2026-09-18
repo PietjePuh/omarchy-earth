@@ -1,0 +1,404 @@
+[
+  {
+    "network": "GVB Amsterdam",
+    "line": "1",
+    "name": "Tram 1: Muiderpoortstation &harr; Osdorp De Aker",
+    "city": "Amsterdam",
+    "color": "#22c55e",
+    "coords": [
+      [
+        52.3605,
+        4.9312
+      ],
+      [
+        52.3615,
+        4.9198
+      ],
+      [
+        52.3638,
+        4.9085
+      ],
+      [
+        52.3647,
+        4.8912
+      ],
+      [
+        52.3621,
+        4.8834
+      ],
+      [
+        52.3612,
+        4.8711
+      ],
+      [
+        52.3582,
+        4.8524
+      ],
+      [
+        52.3551,
+        4.8215
+      ],
+      [
+        52.3512,
+        4.7942
+      ]
+    ],
+    "stops": [
+      "Muiderpoortstation",
+      "Weesperplein",
+      "Leidseplein",
+      "Overtoom",
+      "Surinameplein",
+      "Osdorp De Aker"
+    ]
+  },
+  {
+    "network": "GVB Amsterdam",
+    "line": "2",
+    "name": "Tram 2: Centraal Station &harr; Nieuw Sloten",
+    "city": "Amsterdam",
+    "color": "#ef4444",
+    "coords": [
+      [
+        52.3785,
+        4.8998
+      ],
+      [
+        52.3742,
+        4.8912
+      ],
+      [
+        52.3685,
+        4.8872
+      ],
+      [
+        52.3621,
+        4.8834
+      ],
+      [
+        52.3581,
+        4.8772
+      ],
+      [
+        52.3515,
+        4.8621
+      ],
+      [
+        52.3481,
+        4.8421
+      ],
+      [
+        52.3412,
+        4.8185
+      ]
+    ],
+    "stops": [
+      "Centraal Station",
+      "Dam",
+      "Spui",
+      "Leidseplein",
+      "Museumplein",
+      "Hoofddorpplein",
+      "Nieuw Sloten"
+    ]
+  },
+  {
+    "network": "GVB Amsterdam",
+    "line": "5",
+    "name": "Tram 5: Westergasfabriek &harr; Amstelveen Stadshart",
+    "city": "Amsterdam / Amstelveen",
+    "color": "#3b82f6",
+    "coords": [
+      [
+        52.3852,
+        4.8712
+      ],
+      [
+        52.3785,
+        4.8792
+      ],
+      [
+        52.3621,
+        4.8834
+      ],
+      [
+        52.3581,
+        4.8772
+      ],
+      [
+        52.3412,
+        4.8721
+      ],
+      [
+        52.3021,
+        4.8612
+      ]
+    ],
+    "stops": [
+      "Westergasfabriek",
+      "Elandsgracht",
+      "Leidseplein",
+      "Museumplein",
+      "Station Zuid",
+      "Amstelveen Stadshart"
+    ]
+  },
+  {
+    "network": "GVB Amsterdam",
+    "line": "26",
+    "name": "Tram 26: IJtram Centraal Station &harr; IJburg",
+    "city": "Amsterdam",
+    "color": "#8b5cf6",
+    "coords": [
+      [
+        52.3785,
+        4.9015
+      ],
+      [
+        52.3775,
+        4.9215
+      ],
+      [
+        52.3762,
+        4.9482
+      ],
+      [
+        52.3651,
+        4.9782
+      ],
+      [
+        52.3581,
+        5.0085
+      ]
+    ],
+    "stops": [
+      "Centraal Station",
+      "Muziekgebouw",
+      "Rietlandpark",
+      "Zeeburgereiland",
+      "IJburg"
+    ]
+  },
+  {
+    "network": "RET Rotterdam",
+    "line": "7",
+    "name": "Tram 7: Willemsplein &harr; Woudestein (Erasmus Univ)",
+    "city": "Rotterdam",
+    "color": "#eab308",
+    "coords": [
+      [
+        51.9125,
+        4.4785
+      ],
+      [
+        51.9215,
+        4.4721
+      ],
+      [
+        51.9251,
+        4.4852
+      ],
+      [
+        51.9212,
+        4.5115
+      ],
+      [
+        51.9181,
+        4.5285
+      ]
+    ],
+    "stops": [
+      "Willemsplein",
+      "Eendrachtsplein",
+      "Centraal Station",
+      "Oostplein",
+      "Woudestein (Erasmus Univ)"
+    ]
+  },
+  {
+    "network": "RET Rotterdam",
+    "line": "23",
+    "name": "Tram 23: Marconiplein &harr; Beverwaard (De Kuip)",
+    "city": "Rotterdam",
+    "color": "#ec4899",
+    "coords": [
+      [
+        51.9152,
+        4.4325
+      ],
+      [
+        51.9215,
+        4.4721
+      ],
+      [
+        51.9151,
+        4.4892
+      ],
+      [
+        51.8941,
+        4.5215
+      ],
+      [
+        51.8785,
+        4.5512
+      ]
+    ],
+    "stops": [
+      "Marconiplein",
+      "Centraal Station",
+      "Leuvehaven",
+      "Stadion Feyenoord (De Kuip)",
+      "Beverwaard"
+    ]
+  },
+  {
+    "network": "HTM Den Haag",
+    "line": "1",
+    "name": "Tram 1: Scheveningen Noorderstrand &harr; Delft Tanthof",
+    "city": "Den Haag / Delft",
+    "color": "#06b6d4",
+    "coords": [
+      [
+        52.1145,
+        4.2812
+      ],
+      [
+        52.0915,
+        4.3015
+      ],
+      [
+        52.0785,
+        4.3185
+      ],
+      [
+        52.0512,
+        4.3512
+      ],
+      [
+        52.0085,
+        4.3582
+      ],
+      [
+        51.9892,
+        4.3412
+      ]
+    ],
+    "stops": [
+      "Scheveningen Strand",
+      "Vredespaleis",
+      "Centrum",
+      "Station Hollands Spoor",
+      "Delft Station",
+      "Delft Tanthof"
+    ]
+  },
+  {
+    "network": "HTM Den Haag",
+    "line": "9",
+    "name": "Tram 9: Scheveningen Noorderstrand &harr; Vrederust",
+    "city": "Den Haag",
+    "color": "#14b8a6",
+    "coords": [
+      [
+        52.1145,
+        4.2812
+      ],
+      [
+        52.1021,
+        4.2982
+      ],
+      [
+        52.0812,
+        4.3215
+      ],
+      [
+        52.0715,
+        4.3225
+      ],
+      [
+        52.0412,
+        4.2715
+      ]
+    ],
+    "stops": [
+      "Scheveningen Noorderstrand",
+      "Madurodam",
+      "Centraal Station",
+      "Station Hollands Spoor",
+      "Zuiderpark",
+      "Vrederust"
+    ]
+  },
+  {
+    "network": "U-OV Utrecht",
+    "line": "22",
+    "name": "Tram 22: Utrecht Centraal &harr; Science Park (Uithoflijn)",
+    "city": "Utrecht",
+    "color": "#f97316",
+    "coords": [
+      [
+        52.0885,
+        5.1102
+      ],
+      [
+        52.0851,
+        5.1215
+      ],
+      [
+        52.0825,
+        5.1482
+      ],
+      [
+        52.0841,
+        5.1685
+      ],
+      [
+        52.0862,
+        5.1852
+      ]
+    ],
+    "stops": [
+      "Utrecht Centraal Centrumzijde",
+      "Vaartsche Rijn",
+      "Galgenwaard",
+      "UMC Utrecht",
+      "Science Park P+R"
+    ]
+  },
+  {
+    "network": "De Lijn Antwerpen",
+    "line": "15",
+    "name": "Tram 15: Linkeroever P+R &harr; Boechout P+R",
+    "city": "Antwerpen",
+    "color": "#10b981",
+    "coords": [
+      [
+        51.2185,
+        4.3685
+      ],
+      [
+        51.2195,
+        4.4021
+      ],
+      [
+        51.2145,
+        4.4215
+      ],
+      [
+        51.1985,
+        4.4412
+      ],
+      [
+        51.1612,
+        4.4892
+      ]
+    ],
+    "stops": [
+      "Linkeroever",
+      "Groenplaats (Premetro)",
+      "Diamant (Centraal)",
+      "Mortsel",
+      "Boechout"
+    ]
+  }
+]

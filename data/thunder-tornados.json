@@ -1,0 +1,88 @@
+{
+  "blitzortung_source": "https://data.blitzortung.org",
+  "recent_strikes": [
+    {
+      "lat": 52.12,
+      "lon": 5.34,
+      "age_min": 8,
+      "current_ka": -24.5,
+      "city": "Amersfoort",
+      "type": "CG-"
+    },
+    {
+      "lat": 51.98,
+      "lon": 5.89,
+      "age_min": 14,
+      "current_ka": 38.2,
+      "city": "Arnhem",
+      "type": "CG+"
+    },
+    {
+      "lat": 51.68,
+      "lon": 5.29,
+      "age_min": 22,
+      "current_ka": -16.0,
+      "city": "'s-Hertogenbosch",
+      "type": "CG-"
+    },
+    {
+      "lat": 52.42,
+      "lon": 6.12,
+      "age_min": 31,
+      "current_ka": -31.4,
+      "city": "Zwolle",
+      "type": "CG-"
+    },
+    {
+      "lat": 51.45,
+      "lon": 5.52,
+      "age_min": 45,
+      "current_ka": 42.0,
+      "city": "Helmond",
+      "type": "CG+"
+    }
+  ],
+  "severe_convective_cells": [
+    {
+      "name": "Supercell Convective Cluster Gelderland",
+      "lat": 52.05,
+      "lon": 5.95,
+      "threat_level": "Orange",
+      "lightning_rate_per_min": 48,
+      "hail_risk_cm": 2.5,
+      "gust_kmh": 95,
+      "direction": "NNE",
+      "speed_kmh": 50,
+      "estofex_level": 2
+    }
+  ],
+  "historical_tornadoes": [
+    {
+      "name": "Tornado Chaam & Borculo (F4)",
+      "date": "1927-06-01 / 1925-08-10",
+      "f_scale": "F4 (Catastrofaal)",
+      "lat": 52.1167,
+      "lon": 6.5167,
+      "city": "Borculo / Chaam",
+      "description": "Zwaarste tornado's uit de Nederlandse geschiedenis. Kerken en honderden huizen volledig verwoest."
+    },
+    {
+      "name": "Windhoos Zierikzee (F2)",
+      "date": "2022-06-27",
+      "f_scale": "F2 (180-220 km/u)",
+      "lat": 51.6502,
+      "lon": 3.9167,
+      "city": "Zierikzee",
+      "description": "Destructieve windhoos door het centrum van Zierikzee met 1 dode en 150 beschadigde woningen."
+    },
+    {
+      "name": "Waterhoos & Windhoos Vlieland",
+      "date": "2023-08-14",
+      "f_scale": "F1 / Waterhoos",
+      "lat": 53.2985,
+      "lon": 5.0682,
+      "city": "Vlieland Strand",
+      "description": "Spectaculaire waterhoos die aan land kwam op het Noordzeestrand."
+    }
+  ]
+}

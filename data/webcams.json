@@ -1,0 +1,201 @@
+{
+  "$comment": "Curated HD live webcams across Netherlands, Europe and the World, including space (ISS) and key cities. GeoJSON points with live stream and embed links.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Internationaal Ruimtestation (ISS) Live Aarde",
+        "category": "Ruimte & Aarde",
+        "city": "Baan om de Aarde (400 km)",
+        "country": "Ruimte",
+        "stream_url": "https://www.youtube-nocookie.com/embed/P9C25Un7xaM?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live HD videobeeld van de Aarde vanuit het ISS ruimtestation."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.90, 52.37] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amsterdam - De Dam & Koninklijk Paleis",
+        "category": "Stad",
+        "city": "Amsterdam",
+        "country": "Nederland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/p1oEaI9A96E?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live uitzicht over het Nationaal Monument en De Dam in Amsterdam."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.8926, 52.3728] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scheveningen - Pier & Strand Live",
+        "category": "Kust & Strand",
+        "city": "Den Haag / Scheveningen",
+        "country": "Nederland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/8yV1uP6_p-s?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live strand- en golfcondities bij De Pier in Scheveningen."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.2811, 52.1172] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schiphol - Polderbaan Vliegtuigspotters",
+        "category": "Luchtvaart",
+        "city": "Haarlemmermeer / Schiphol",
+        "country": "Nederland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/h0K8LqA-ZzM?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live startende en landende passagiersvliegtuigen op baan 18R/36L."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.7125, 52.3486] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rotterdam - Erasmusbrug & Nieuwe Maas",
+        "category": "Haven & Stad",
+        "city": "Rotterdam",
+        "country": "Nederland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/fGf2xQf38uY?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Uitzicht over de skyline van Rotterdam, De Zwaan en scheepvaartverkeer."
+      },
+      "geometry": { "type": "Point", "coordinates": [4.4844, 51.9092] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Utrecht - Domtoren & Binnenstad",
+        "category": "Stad",
+        "city": "Utrecht",
+        "country": "Nederland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/mH8XyQzK6gU?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live uitzicht over het historische centrum van Utrecht en de Dom."
+      },
+      "geometry": { "type": "Point", "coordinates": [5.1214, 52.0907] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Londen - Tower Bridge & Theems",
+        "category": "Stad",
+        "city": "Londen",
+        "country": "Verenigd Koninkrijk",
+        "stream_url": "https://www.youtube-nocookie.com/embed/pEP4Lff_W2I?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live stream van Tower Bridge en scheepvaart over de rivier de Theems."
+      },
+      "geometry": { "type": "Point", "coordinates": [-0.0754, 51.5055] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parijs - Eiffeltoren & Trocadéro",
+        "category": "Stad",
+        "city": "Parijs",
+        "country": "Frankrijk",
+        "stream_url": "https://www.youtube-nocookie.com/embed/gUj_4P9r76E?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live panorama van de Eiffeltoren en de rivier de Seine in Parijs."
+      },
+      "geometry": { "type": "Point", "coordinates": [2.2945, 48.8584] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York - Times Square Live",
+        "category": "Stad",
+        "city": "New York",
+        "country": "Verenigde Staten",
+        "stream_url": "https://www.youtube-nocookie.com/embed/1-iS7LArMPA?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Het bruisende hart van Broadway en 42nd Street in New York City."
+      },
+      "geometry": { "type": "Point", "coordinates": [-73.9855, 40.7580] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tokio - Shibuya Kruispunt (Shibuya Crossing)",
+        "category": "Stad",
+        "city": "Tokio",
+        "country": "Japan",
+        "stream_url": "https://www.youtube-nocookie.com/embed/d3q_V0d19bE?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Het drukste voetgangerskruispunt ter wereld in Shibuya, Tokio."
+      },
+      "geometry": { "type": "Point", "coordinates": [139.7016, 35.6595] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Venetië - Canal Grande & Rialtobrug",
+        "category": "Stad",
+        "city": "Venetië",
+        "country": "Italië",
+        "stream_url": "https://www.youtube-nocookie.com/embed/ph1vpnYIxJk?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Gondels en vaporetto boten op het Canal Grande bij de Rialtobrug."
+      },
+      "geometry": { "type": "Point", "coordinates": [12.3359, 45.4380] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tromsø - Noorderlicht (Aurora Borealis)",
+        "category": "Natuur & Poollicht",
+        "city": "Tromsø",
+        "country": "Noorwegen",
+        "stream_url": "https://www.youtube-nocookie.com/embed/fD3071wUjXo?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live hemelcamera voor noorderlichtactiviteit boven de poolcirkel."
+      },
+      "geometry": { "type": "Point", "coordinates": [18.9553, 69.6492] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zermatt - Matterhorn Bergpanorama",
+        "category": "Natuur & Alpen",
+        "city": "Zermatt",
+        "country": "Zwitserland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/N-Zg_6QzI1Y?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live uitzicht op de iconische Matterhorn (4.478m) in de Zwitserse Alpen."
+      },
+      "geometry": { "type": "Point", "coordinates": [7.7491, 45.9765] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney - Haven & Opera House",
+        "category": "Stad & Oceaan",
+        "city": "Sydney",
+        "country": "Australië",
+        "stream_url": "https://www.youtube-nocookie.com/embed/bK9h4B2k8mE?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Panoramisch livebeeld van Sydney Harbour, Circular Quay en de Opera House."
+      },
+      "geometry": { "type": "Point", "coordinates": [151.2153, -33.8568] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "IJsland - Reykjanes Vulkaanvallei",
+        "category": "Natuur & Vulkanen",
+        "city": "Grindavík",
+        "country": "IJsland",
+        "stream_url": "https://www.youtube-nocookie.com/embed/804nPrL196Y?autoplay=1&mute=1",
+        "embed_type": "youtube",
+        "description": "Live geologische en vulkanische activiteit op het schiereiland Reykjanes."
+      },
+      "geometry": { "type": "Point", "coordinates": [-22.4333, 63.8500] }
+    }
+  ]
+}

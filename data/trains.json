@@ -1,0 +1,258 @@
+{
+  "$comment": "Curated live train lines and corridors with real rail route coordinates, speeds, headings, and destinations.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "Eurostar 9128",
+        "operator": "Eurostar",
+        "type": "Hogesnelheidstrein",
+        "from": "Amsterdam Centraal",
+        "to": "London St Pancras Intl",
+        "speed_kmh": 300,
+        "direction": "Londen (via Brussel)",
+        "heading": 210,
+        "status": "Rijdt (op tijd)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.9003, 52.3792],
+          [4.7642, 52.3086],
+          [4.4699, 51.9244],
+          [4.7797, 51.5954],
+          [4.4211, 51.2172],
+          [4.3364, 50.8357],
+          [1.8587, 50.9513],
+          [1.1595, 51.0827],
+          [-0.1260, 51.5317]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "Eurostar 9340",
+        "operator": "Eurostar (ex-Thalys)",
+        "type": "Hogesnelheidstrein",
+        "from": "Amsterdam Centraal",
+        "to": "Paris Gare du Nord",
+        "speed_kmh": 300,
+        "direction": "Parijs Noord",
+        "heading": 205,
+        "status": "Rijdt (op tijd)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.9003, 52.3792],
+          [4.7642, 52.3086],
+          [4.4699, 51.9244],
+          [4.4211, 51.2172],
+          [4.3364, 50.8357],
+          [3.0706, 50.6372],
+          [2.3553, 48.8809]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "ICE 123",
+        "operator": "Deutsche Bahn / NS International",
+        "type": "ICE International",
+        "from": "Amsterdam Centraal",
+        "to": "Frankfurt (Main) Hbf",
+        "speed_kmh": 250,
+        "direction": "Frankfurt Hbf (via Keulen)",
+        "heading": 135,
+        "status": "Rijdt (+4m vertraging)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.9003, 52.3792],
+          [5.1103, 52.0894],
+          [5.9015, 51.9851],
+          [6.1867, 51.8441],
+          [6.7735, 51.4344],
+          [6.7943, 51.2198],
+          [6.9583, 50.9413],
+          [8.6638, 50.1071]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "Nightjet NJ 402",
+        "operator": "ÖBB / NS",
+        "type": "Nachttrein",
+        "from": "Amsterdam Centraal",
+        "to": "Zürich HB / Wien Hbf",
+        "speed_kmh": 160,
+        "direction": "Zürich HB / Wien",
+        "heading": 140,
+        "status": "Rijdt nachttraject"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.9003, 52.3792],
+          [5.1103, 52.0894],
+          [5.9015, 51.9851],
+          [6.9583, 50.9413],
+          [7.6000, 47.5500],
+          [8.5400, 47.3780]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "IC Direct 9234",
+        "operator": "Nederlandse Spoorwegen (NS)",
+        "type": "Intercity Direct (HSL-Zuid)",
+        "from": "Amsterdam Centraal",
+        "to": "Breda",
+        "speed_kmh": 200,
+        "direction": "Breda (via Schiphol & Rotterdam)",
+        "heading": 195,
+        "status": "Rijdt (op tijd)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.9003, 52.3792],
+          [4.7642, 52.3086],
+          [4.4699, 51.9244],
+          [4.7797, 51.5954]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "IC 800",
+        "operator": "NS",
+        "type": "Intercity",
+        "from": "Alkmaar",
+        "to": "Maastricht",
+        "speed_kmh": 140,
+        "direction": "Maastricht (via Utrecht & Eindhoven)",
+        "heading": 165,
+        "status": "Rijdt (op tijd)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.7403, 52.6378],
+          [4.9003, 52.3792],
+          [5.1103, 52.0894],
+          [5.2936, 51.6905],
+          [5.4795, 51.4433],
+          [5.8569, 51.1925],
+          [5.7050, 50.8500]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "IC 500",
+        "operator": "NS",
+        "type": "Intercity",
+        "from": "Rotterdam Centraal",
+        "to": "Groningen",
+        "speed_kmh": 140,
+        "direction": "Groningen (via Utrecht & Zwolle)",
+        "heading": 45,
+        "status": "Rijdt (op tijd)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.4699, 51.9244],
+          [4.6975, 52.0167],
+          [5.1103, 52.0894],
+          [5.3878, 52.1539],
+          [6.0903, 52.5050],
+          [6.5644, 53.2117]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "Betuweroute Goederentrein 41088",
+        "operator": "DB Cargo / Lineas",
+        "type": "Goederentrein (Containertrein)",
+        "from": "Rotterdam Maasvlakte West",
+        "to": "Duisburg Ruhrort (Duitsland)",
+        "speed_kmh": 120,
+        "direction": "Duitsland / Ruhrgebied",
+        "heading": 105,
+        "status": "Rijdt (zware vracht 2.400 ton)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [4.0300, 51.9600],
+          [4.5400, 51.8700],
+          [5.0500, 51.8700],
+          [5.8600, 51.9100],
+          [6.0700, 51.9200],
+          [6.7500, 51.4400]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "TGV InOui 6612",
+        "operator": "SNCF",
+        "type": "TGV Duplex",
+        "from": "Paris Gare de Lyon",
+        "to": "Marseille Saint-Charles",
+        "speed_kmh": 320,
+        "direction": "Marseille / Middellandse Zee",
+        "heading": 170,
+        "status": "Rijdt op LGV Méditerranée (320 km/u)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [2.3734, 48.8443],
+          [4.8357, 45.7640],
+          [4.8055, 43.9493],
+          [5.3806, 43.3031]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "train_number": "Shinkansen Nozomi 23",
+        "operator": "JR Central",
+        "type": "Shinkansen Kogeltrein",
+        "from": "Tokyo Station",
+        "to": "Shin-Osaka",
+        "speed_kmh": 285,
+        "direction": "Osaka (via Nagoya & Kyoto)",
+        "heading": 240,
+        "status": "Rijdt Tokaido Shinkansen (stipt op de seconde)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [139.7671, 35.6812],
+          [139.6178, 35.5075],
+          [136.8815, 35.1709],
+          [135.7588, 34.9858],
+          [135.5003, 34.7335]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "$comment": "Curated World Timezones, UTC offsets, and representative cities for map overlay and clock visualization.",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC 0 / WET / GMT", "offset": 0, "abbr": "UTC", "label": "Londen, Dublin, Lissabon, Reykjavik", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [-0.1278, 51.5074] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+1 / CET (MET)", "offset": 1, "abbr": "CET", "label": "Amsterdam, Parijs, Berlijn, Rome, Madrid", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [4.9041, 52.3676] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+2 / EET", "offset": 2, "abbr": "EET", "label": "Kyiv, Helsinki, Athene, Caïro, Kaapstad", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [30.5234, 50.4501] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+3 / MSK / AST", "offset": 3, "abbr": "MSK", "label": "Moskou, Istanbul, Bagdad, Riyad, Nairobi", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [37.6173, 55.7558] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+3:30 / IRST", "offset": 3.5, "abbr": "IRST", "label": "Teheran", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [51.3890, 35.6892] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+4 / GST", "offset": 4, "abbr": "GST", "label": "Dubai, Abu Dhabi, Bakoe, Tbilisi", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [55.2708, 25.2048] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+5 / PKT", "offset": 5, "abbr": "PKT", "label": "Karachi, Islamabad, Tasjkent", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [67.0011, 24.8607] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+5:30 / IST", "offset": 5.5, "abbr": "IST", "label": "New Delhi, Mumbai, Bengaluru, Colombo", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [77.2090, 28.6139] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+6 / BST", "offset": 6, "abbr": "BST", "label": "Dhaka, Almaty, Astana", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [90.4125, 23.8103] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+7 / ICT", "offset": 7, "abbr": "ICT", "label": "Bangkok, Jakarta, Hanoi", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [100.5018, 13.7563] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+8 / CST / SGT", "offset": 8, "abbr": "CST", "label": "Peking, Shanghai, Singapore, Hongkong, Taipei, Perth", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [116.4074, 39.9042] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+9 / JST / KST", "offset": 9, "abbr": "JST", "label": "Tokio, Seoel, Osaka", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [139.6917, 35.6895] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+9:30 / ACST", "offset": 9.5, "abbr": "ACST", "label": "Adelaide, Darwin", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [138.6007, -34.9285] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+10 / AEST", "offset": 10, "abbr": "AEST", "label": "Sydney, Melbourne, Brisbane", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [151.2093, -33.8688] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC+12 / NZST", "offset": 12, "abbr": "NZST", "label": "Auckland, Wellington, Fiji", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [174.7633, -36.8485] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-10 / HST", "offset": -10, "abbr": "HST", "label": "Honolulu, Hawaï", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [-157.8583, 21.3069] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-9 / AKST", "offset": -9, "abbr": "AKST", "label": "Anchorage, Alaska", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [-149.9003, 61.2181] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-8 / PST", "offset": -8, "abbr": "PST", "label": "Los Angeles, San Francisco, Vancouver, Seattle", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [-118.2437, 34.0522] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-7 / MST", "offset": -7, "abbr": "MST", "label": "Denver, Phoenix, Salt Lake City, Calgary", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [-104.9903, 39.7392] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-6 / CST", "offset": -6, "abbr": "CST", "label": "Chicago, Houston, Dallas, Mexico-Stad", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [-87.6298, 41.8781] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-5 / EST", "offset": -5, "abbr": "EST", "label": "New York, Washington DC, Miami, Toronto, Bogota", "dst": true },
+      "geometry": { "type": "Point", "coordinates": [-74.0060, 40.7128] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-4 / AST / VET", "offset": -4, "abbr": "AST", "label": "Caracas, Santiago, Halifax, San Juan", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [-66.9036, 10.4806] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-3 / BRT / ART", "offset": -3, "abbr": "BRT", "label": "São Paulo, Buenos Aires, Rio de Janeiro", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [-46.6333, -23.5505] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "UTC-1 / AZOT", "offset": -1, "abbr": "AZOT", "label": "Azoren, Kaapverdië", "dst": false },
+      "geometry": { "type": "Point", "coordinates": [-25.6687, 37.7412] }
+    }
+  ]
+}

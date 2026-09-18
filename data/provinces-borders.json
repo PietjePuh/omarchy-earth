@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Noord-Holland",
+    "capital": "Haarlem",
+    "population": 2920000,
+    "area_km2": 4092,
+    "lat": 52.6,
+    "lon": 4.85,
+    "commissaris": "Arthur van Dijk",
+    "color": "#38bdf8",
+    "url": "https://www.noord-holland.nl",
+    "bounds": [
+      [
+        52.15,
+        4.5
+      ],
+      [
+        53.0,
+        5.3
+      ]
+    ]
+  },
+  {
+    "name": "Zuid-Holland",
+    "capital": "Den Haag",
+    "population": 3750000,
+    "area_km2": 3308,
+    "lat": 52.0,
+    "lon": 4.5,
+    "commissaris": "Jaap Smit",
+    "color": "#f59e0b",
+    "url": "https://www.zuid-holland.nl",
+    "bounds": [
+      [
+        51.7,
+        4.0
+      ],
+      [
+        52.3,
+        5.0
+      ]
+    ]
+  },
+  {
+    "name": "Utrecht",
+    "capital": "Utrecht",
+    "population": 1380000,
+    "area_km2": 1560,
+    "lat": 52.09,
+    "lon": 5.18,
+    "commissaris": "Hans Oosters",
+    "color": "#ef4444",
+    "url": "https://www.provincie-utrecht.nl",
+    "bounds": [
+      [
+        51.95,
+        4.85
+      ],
+      [
+        52.28,
+        5.5
+      ]
+    ]
+  },
+  {
+    "name": "Gelderland",
+    "capital": "Arnhem",
+    "population": 2110000,
+    "area_km2": 5136,
+    "lat": 52.05,
+    "lon": 5.95,
+    "commissaris": "John Berends",
+    "color": "#22c55e",
+    "url": "https://www.gelderland.nl",
+    "bounds": [
+      [
+        51.75,
+        5.0
+      ],
+      [
+        52.45,
+        6.75
+      ]
+    ]
+  },
+  {
+    "name": "Noord-Brabant",
+    "capital": "'s-Hertogenbosch",
+    "population": 2600000,
+    "area_km2": 5082,
+    "lat": 51.55,
+    "lon": 5.15,
+    "commissaris": "Ina Adema",
+    "color": "#ec4899",
+    "url": "https://www.brabant.nl",
+    "bounds": [
+      [
+        51.25,
+        4.2
+      ],
+      [
+        51.85,
+        6.0
+      ]
+    ]
+  },
+  {
+    "name": "Limburg",
+    "capital": "Maastricht",
+    "population": 1120000,
+    "area_km2": 2210,
+    "lat": 51.05,
+    "lon": 5.85,
+    "commissaris": "Emile Roemer",
+    "color": "#eab308",
+    "url": "https://www.limburg.nl",
+    "bounds": [
+      [
+        50.75,
+        5.6
+      ],
+      [
+        51.75,
+        6.2
+      ]
+    ]
+  },
+  {
+    "name": "Overijssel",
+    "capital": "Zwolle",
+    "population": 1175000,
+    "area_km2": 3421,
+    "lat": 52.45,
+    "lon": 6.45,
+    "commissaris": "Andries Heidema",
+    "color": "#8b5cf6",
+    "url": "https://www.overijssel.nl",
+    "bounds": [
+      [
+        52.15,
+        5.85
+      ],
+      [
+        52.75,
+        7.05
+      ]
+    ]
+  },
+  {
+    "name": "Friesland (Fryslân)",
+    "capital": "Leeuwarden",
+    "population": 655000,
+    "area_km2": 5749,
+    "lat": 53.15,
+    "lon": 5.8,
+    "commissaris": "Arno Brok",
+    "color": "#06b6d4",
+    "url": "https://www.fryslan.frl",
+    "bounds": [
+      [
+        52.8,
+        5.2
+      ],
+      [
+        53.5,
+        6.4
+      ]
+    ]
+  },
+  {
+    "name": "Groningen",
+    "capital": "Groningen",
+    "population": 590000,
+    "area_km2": 2960,
+    "lat": 53.25,
+    "lon": 6.75,
+    "commissaris": "René Paas",
+    "color": "#14b8a6",
+    "url": "https://www.provinciegroningen.nl",
+    "bounds": [
+      [
+        53.05,
+        6.2
+      ],
+      [
+        53.5,
+        7.2
+      ]
+    ]
+  },
+  {
+    "name": "Drenthe",
+    "capital": "Assen",
+    "population": 495000,
+    "area_km2": 2680,
+    "lat": 52.85,
+    "lon": 6.6,
+    "commissaris": "Jetta Klijnsma",
+    "color": "#f97316",
+    "url": "https://www.provinciedrenthe.nl",
+    "bounds": [
+      [
+        52.6,
+        6.2
+      ],
+      [
+        53.2,
+        7.0
+      ]
+    ]
+  },
+  {
+    "name": "Zeeland",
+    "capital": "Middelburg",
+    "population": 388000,
+    "area_km2": 2933,
+    "lat": 51.5,
+    "lon": 3.8,
+    "commissaris": "Han Polman",
+    "color": "#3b82f6",
+    "url": "https://www.zeeland.nl",
+    "bounds": [
+      [
+        51.2,
+        3.35
+      ],
+      [
+        51.75,
+        4.3
+      ]
+    ]
+  },
+  {
+    "name": "Flevoland",
+    "capital": "Lelystad",
+    "population": 435000,
+    "area_km2": 2412,
+    "lat": 52.55,
+    "lon": 5.55,
+    "commissaris": "Arjen Gerritsen",
+    "color": "#a855f7",
+    "url": "https://www.flevoland.nl",
+    "bounds": [
+      [
+        52.25,
+        5.2
+      ],
+      [
+        52.85,
+        5.95
+      ]
+    ]
+  }
+]
