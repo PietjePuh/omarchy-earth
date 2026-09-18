@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "io.github.pietjepuh.earth",
   "name": "Earth & World Monitor",
-  "version": "2.1.0",
-  "description": "Alles-in-één interactieve wereldkaart, weer, buienradar, burger & militaire vluchten, geopolitieke hotspots, knelpunten en live RSS nieuws",
+  "version": "2.2.0",
+  "description": "All-in-one interactive world map: live weather, radar, civil & military aircraft, geopolitical hotspots, chokepoints, and live RSS news",
   "author": "PietjePuh",
   "license": "MIT",
   "kinds": ["bar-widget"],
@@ -11,12 +11,12 @@
     "barWidget": "BarWidget.qml"
   },
   "settings": [
-    { "key": "lat", "type": "number", "label": "Breedtegraad", "default": 52.0907 },
-    { "key": "lon", "type": "number", "label": "Lengtegraad", "default": 5.1214 },
-    { "key": "span", "type": "number", "label": "Windraster (graden)", "default": 4.0,
-      "description": "Hoe groot het gebied is waarover het windraster wordt opgehaald" },
-    { "key": "radiusNm", "type": "number", "label": "Vluchtradius (nm)", "default": 50 },
-    { "key": "intervalSec", "type": "number", "label": "Verversen (s)", "default": 300, "min": 60 },
-    { "key": "showLabel", "type": "boolean", "label": "Tekst in de balk", "default": true }
+    { "key": "lat", "type": "number", "label": "Latitude", "default": 52.0907 },
+    { "key": "lon", "type": "number", "label": "Longitude", "default": 5.1214 },
+    { "key": "span", "type": "number", "label": "Wind grid (degrees)", "default": 4.0,
+      "description": "Area size for fetching the wind grid" },
+    { "key": "radiusNm", "type": "number", "label": "Flight radius (nm)", "default": 50 },
+    { "key": "intervalSec", "type": "number", "label": "Refresh (s)", "default": 300, "min": 60 },
+    { "key": "showLabel", "type": "boolean", "label": "Bar label text", "default": true }
   ]
 }

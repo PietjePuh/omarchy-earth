@@ -6446,6 +6446,47 @@ document.getElementById("play").addEventListener("click", () => {
 });
 
 load();
+// --- Keyboard map navigation (WASD pan, Q/E zoom, R reset view) ---
+// Lets the map be fully driven without leaving the keyboard. Ignored
+// whenever focus is inside a text input/textarea/contenteditable (the
+// search box, the route-planner AI input, etc.) so typing "w" or "e"
+// there still types the letter instead of panning the map.
+(function setupKeyboardNav() {
+  const PAN_FRACTION = 0.18; // fraction of current viewport per keypress
+  function isTypingTarget(el) {
+    if (!el) return false;
+    const tag = (el.tagName || "").toUpperCase();
+    return tag === "INPUT" || tag === "TEXTAREA" || el.isContentEditable;
+  }
+  window.addEventListener("keydown", (ev) => {
+    if (isTypingTarget(document.activeElement)) return;
+    if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    const key = ev.key.toLowerCase();
+    const size = map.getSize();
+    const dx = size.x * PAN_FRACTION;
+    const dy = size.y * PAN_FRACTION;
+    switch (key) {
+      case "w": case "arrowup":
+        map.panBy([0, -dy]); break;
+      case "s": case "arrowdown":
+        map.panBy([0, dy]); break;
+      case "a": case "arrowleft":
+        map.panBy([-dx, 0]); break;
+      case "d": case "arrowright":
+        map.panBy([dx, 0]); break;
+      case "e": case "+": case "=":
+        map.zoomIn(); break;
+      case "q": case "-": case "_":
+        map.zoomOut(); break;
+      case "r":
+        map.setView([52.37, 4.90], 7); break;
+      default:
+        return; // not one of ours -- don't preventDefault
+    }
+    ev.preventDefault();
+  });
+})();
+
 // One-off, fire-and-forget region-currency detection using the map's own
 // home lat/lon (embedded in EMBEDDED / window.lastData). Never awaited --
 // route costs just render in the NL/EUR default first and switch to the
