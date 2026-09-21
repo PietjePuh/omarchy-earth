@@ -1464,7 +1464,7 @@ def sample_vessels(user_lat: float, user_lon: float) -> dict:
             if sog and sog > 0.5:
                 out["active_moving"] += 1
 
-            mmsi = feat.get("mmsi")
+            mmsi = feat.get("mmsi") or props.get("mmsi")
             meta = ves_map.get(mmsi, {})
             name = meta.get("name") or f"MMSI {mmsi}"
             stype = meta.get("shipType", 0)
@@ -1496,9 +1496,9 @@ def sample_vessels(user_lat: float, user_lon: float) -> dict:
                 "cog": round(props.get("cog", 0), 1),
                 "heading": props.get("heading", 0),
                 "type": type_name,
-                "destination": meta.get("destination", "").strip(),
-                "callsign": meta.get("callSign", "").strip(),
-                "dist_km": round(dist_km, 1),
+                "destination": (meta.get("destination") or "").strip(),
+                "callsign": (meta.get("callSign") or "").strip(),
+                "dist_km": round(haversine_km(user_lat, user_lon, lat, lon), 1),
                 "trail": v_trail
             })
 
@@ -1506,8 +1506,9 @@ def sample_vessels(user_lat: float, user_lon: float) -> dict:
         if vessels:
             out["nearest"] = vessels[0]
         out["vessels"] = vessels[:150]
-    except Exception:
-        pass
+    except Exception as exc:
+        # Never fail the whole build over one feed, but never fail silently either.
+        print(f"[earth-sampler] vessel feed error: {exc!r}", file=sys.stderr)
     return out
 
 

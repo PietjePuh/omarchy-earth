@@ -669,7 +669,7 @@ Panel {
           Item {
             Layout.fillWidth: true
             implicitHeight: 66
-            visible: root.nowcast && root.nowcast.series && root.nowcast.series.length > 0
+            visible: !!root.nowcast && !!root.nowcast.series && root.nowcast.series.length > 0
 
             ColumnLayout {
               anchors.fill: parent

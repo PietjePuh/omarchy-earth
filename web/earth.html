@@ -594,6 +594,120 @@
   .drone-guide-modal { border: 1px solid rgba(245, 158, 11, 0.4); }
   .iss-modal { border: 1px solid rgba(56, 189, 248, 0.4); }
 
+  /* --- UX: Nav group separators --- */
+  .nav-group-sep {
+    width: 1px; align-self: stretch; margin: 2px 3px; flex: 0 0 1px;
+    background: rgba(255,255,255,0.12);
+  }
+  .nav-group-label {
+    font-size: 8.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #6b7f90; align-self: center; padding: 0 2px; user-select: none; white-space: nowrap;
+  }
+
+  /* --- UX: View Widget Rail (right dock) --- */
+  .widget-rail {
+    position: absolute; top: 64px; right: 10px; z-index: 940;
+    display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+  }
+  .widget-rail-btn {
+    width: 44px; height: 44px; border-radius: 10px; cursor: pointer;
+    background: rgba(13, 16, 20, 0.92); border: 1px solid rgba(255,255,255,0.14);
+    color: #e2e8f0; font-size: 19px; line-height: 1; backdrop-filter: blur(10px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.45); transition: all 0.15s ease;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .widget-rail-btn:hover { transform: translateY(-1px); border-color: rgba(56,189,248,0.55); }
+  .widget-rail-btn.active {
+    background: rgba(56,189,248,0.22); border-color: #38bdf8; color: #7dd3fc;
+    box-shadow: 0 0 14px rgba(56,189,248,0.35);
+  }
+  .widget-rail-btn.w-parcels.active { background: rgba(251,191,36,0.2); border-color: #fbbf24; color: #fbbf24; box-shadow: 0 0 14px rgba(251,191,36,0.3); }
+  .widget-rail-btn.w-3d.active { background: rgba(56,189,248,0.2); border-color: #38bdf8; color: #7dd3fc; }
+  .widget-rail-btn .rail-key {
+    position: absolute; bottom: 1px; right: 3px; font-size: 7.5px; color: #6b7f90; font-weight: 700;
+  }
+  .widget-rail-btn.w-layers.active { background: rgba(167,139,250,0.2); border-color:#a78bfa; color:#c4b5fd; box-shadow: 0 0 14px rgba(167,139,250,0.3); }
+  .rail-panel {
+    position: absolute; top: 0; right: 54px; width: 262px; max-height: 76vh;
+    background: rgba(10,14,18,0.97); border: 1px solid rgba(167,139,250,0.4); border-radius: 10px;
+    padding: 10px; display: none; flex-direction: column; overflow: hidden;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.65); backdrop-filter: blur(12px); color: #cacccc; z-index: 5;
+  }
+  .rail-panel.open { display: flex; }
+  .rail-panel-hd {
+    display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700;
+    color: #a78bfa; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 6px; margin-bottom: 7px;
+  }
+  .rail-panel-close { background: none; border: none; color: #6b7f90; font-size: 14px; cursor: pointer; padding: 0; }
+  .rail-panel-close:hover { color: #fff; }
+  .rail-presets { display: flex; gap: 4px; margin-bottom: 8px; }
+  .rail-presets button {
+    flex: 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #8fa8bd;
+    font-size: 9.5px; font-weight: 700; padding: 4px 2px; border-radius: 5px; cursor: pointer; white-space: nowrap;
+  }
+  .rail-presets button:hover { border-color: #a78bfa; color: #fff; }
+  .rail-presets button.active { background: rgba(167,139,250,0.25); border-color: #a78bfa; color: #fff; }
+  #layersPanelBody { overflow-y: auto; display: flex; flex-direction: column; gap: 9px; padding-right: 2px; }
+  .rail-sec-title {
+    font-size: 9.5px; font-weight: 700; color: #7dd3fc; letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 3px;
+  }
+  .rail-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .rail-chip {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: #9fb3c8;
+    font-size: 10px; padding: 3px 8px; border-radius: 12px; cursor: pointer; transition: all 0.12s ease;
+  }
+  .rail-chip:hover { border-color: #38bdf8; color: #fff; }
+  .rail-chip.on { background: rgba(56,189,248,0.2); border-color: #38bdf8; color: #7dd3fc; }
+  .rail-chip.core { border-style: dashed; }
+  /* --- Vessel range toast (AIS feed covers the Baltic; NL views see none) --- */
+  .lm-toast {
+    position: fixed; left: 50%; transform: translateX(-50%) translateY(8px); bottom: 16px; z-index: 9000;
+    background: rgba(10,14,18,0.95); border: 1px solid rgba(56,189,248,0.45);
+    border-radius: 10px; padding: 8px 10px; color: #cacccc; font-size: 11px;
+    display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    opacity: 0; transition: opacity 0.25s ease, transform 0.25s ease; max-width: 72vw;
+  }
+  .lm-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .lm-toast button {
+    background: rgba(56,189,248,0.15); border: 1px solid #38bdf8; color: #7dd3fc;
+    font-size: 10.5px; font-weight: 700; border-radius: 6px; padding: 3px 8px; cursor: pointer; white-space: nowrap;
+  }
+  .lm-toast button.lm-toast-x { border-color: transparent; background: transparent; color: #6b7f90; }
+  .lm-toast button:hover { filter: brightness(1.3); }
+
+  /* --- UX: Intel HUD (top-left telemetry card, GEV-style) --- */
+  .intel-hud {
+    position: absolute; top: 64px; left: 10px; z-index: 930; width: 235px;
+    background: rgba(8, 12, 16, 0.9); border: 1px solid rgba(56,189,248,0.3);
+    border-radius: 8px; padding: 8px 10px; backdrop-filter: blur(12px);
+    box-shadow: 0 8px 26px rgba(0,0,0,0.6); color: #cacccc;
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+    display: none; flex-direction: column; gap: 3px;
+  }
+  .intel-hud.on { display: flex; }
+  .intel-hud-hd {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(56,189,248,0.25); padding-bottom: 4px; margin-bottom: 3px;
+  }
+  .intel-hud-title { font-size: 10px; font-weight: 700; color: #38bdf8; letter-spacing: 0.1em; }
+  .intel-hud-close { background: none; border: none; color: #6b7f90; cursor: pointer; font-size: 13px; padding: 0; }
+  .intel-hud-close:hover { color: #fff; }
+  .hud-row { display: flex; justify-content: space-between; font-size: 10px; line-height: 1.5; }
+  .hud-row .hk { color: #5f7486; text-transform: uppercase; letter-spacing: 0.06em; font-size: 9px; }
+  .hud-row .hv { color: #c9f2ff; font-variant-numeric: tabular-nums; }
+  .hud-tag {
+    display: inline-block; font-size: 8.5px; font-weight: 700; padding: 1px 5px; border-radius: 3px;
+    background: rgba(56,189,248,0.15); color: #7dd3fc; border: 1px solid rgba(56,189,248,0.3);
+  }
+
+  /* --- GEV-style sensor filter looks (CSS only, view = cosmetic) --- */
+  .sensor-nvg #map .leaflet-tile-pane { filter: grayscale(1) brightness(1.55) contrast(1.25) sepia(1) hue-rotate(55deg) saturate(4.5); }
+  .sensor-flir #map .leaflet-tile-pane { filter: grayscale(1) invert(1) brightness(1.15) contrast(1.6) sepia(1) hue-rotate(160deg) saturate(5); }
+  .sensor-noir #map .leaflet-tile-pane { filter: grayscale(1) contrast(1.35) brightness(0.92); }
+  .sensor-thermal #map .leaflet-tile-pane { filter: grayscale(1) brightness(1.1) contrast(1.4) sepia(1) hue-rotate(-30deg) saturate(6); }
+  body.sensor-nvg #map, body.sensor-flir #map, body.sensor-noir #map, body.sensor-thermal #map { background: #05070a; }
+
   /* Interactive Map Legend Modal */
   .legend-modal {
     position: absolute; top: 52px; right: 20px; width: 480px; max-width: 95vw;
@@ -652,28 +766,41 @@
 <body>
 <div class="top-nav" id="topNav">
   <button id="viewLeafletBtn" class="nav-btn active">🗺️ 2D Intel Map</button>
-  <button id="viewStationsBtn" class="nav-btn" title="Railway Stations & 9292 Departures">🚆 Stations & 9292</button>
   <button id="routePlannerBtn" class="nav-btn" style="color:#4ade80;border-color:rgba(74,222,128,0.3)" title="Multi-modal routing (Car, Bike, Transit, GPX)">🗺️ Route</button>
   <button id="legendBtn" class="nav-btn" style="color:#a78bfa;border-color:rgba(167,139,250,0.4)" title="Map Legend & Symbols Guide">📖 Legend</button>
   <button id="newsToggleBtn" class="nav-btn" style="color:#eab308;border-color:rgba(234,179,8,0.4)" title="World headlines and CISA known-exploited-vulnerabilities feed">📰 News<span class="badge" id="newsBadge" style="display:none">0</span></button>
-  <button id="viewWigleBtn" class="nav-btn" title="Open WiGLE Wireless Geographic Logging Engine">📡 WiGLE</button>
+  <div class="nav-group-sep"></div><span class="nav-group-label" data-i18n="grpViews">Views</span>
   <button id="viewOsintBtn" class="nav-btn" title="Open OSINT Framework & Intel Toolkit">🔎 OSINT</button>
   <button id="viewWindyBtn" class="nav-btn">🌀 Windy Weather</button>
   <button id="viewMarineBtn" class="nav-btn">🚢 Marine Live</button>
-  <button id="viewDroneBtn" class="nav-btn">🚁 GoDrone (NL)</button>
-  <button id="droneRulesBtn" class="nav-btn" style="color:#f59e0b;border-color:rgba(245,158,11,0.3)" title="EASA Drone Regulations & Airspace Guide">🚁 Drone Guide</button>
-  <button id="issLiveBtn" class="nav-btn" style="color:#38bdf8;border-color:rgba(56,189,248,0.3)" title="Live ISS Orbit & NASA HD Stream">🛰️ ISS</button>
-  <button id="viewGalaxyBtn" class="nav-btn">🌌 Galaxy & Space</button>
+  <button id="viewGalaxyBtn" class="nav-btn">🌌 Galaxy</button>
+  <button id="hudToggleBtn" class="nav-btn hud-toggle-btn" title="Intel HUD — live map telemetry (position, zoom, weather, flights)">🖥️ HUD</button>
+  <div class="nav-group-sep"></div><span class="nav-group-label" data-i18n="grpOsint">OSINT</span>
+  <button id="wigleOsintBtn" class="nav-btn" title="WiGLE Wireless Geographic Logging Engine — WiFi & cell tower map at current view">📡 WiGLE</button>
+  <button id="godroneOsintBtn" class="nav-btn" title="GoDrone (NL) live airspace map — no-fly zones & altitude rules">🚁 GoDrone</button>
+  <button id="droneRulesBtn" class="nav-btn" style="color:#f59e0b;border-color:rgba(245,158,11,0.3)" title="EASA Drone Regulations & Airspace Guide">📜 Rules & Legal</button>
+  <div class="nav-group-sep"></div><span class="nav-group-label" data-i18n="grpMap">Map</span>
   <button id="upsideDownBtn" class="nav-btn flip-btn" title="Rotate map upside-down (South-up)">🔄 South-Up</button>
-  <button id="cadastreInspectorBtn" class="nav-btn" style="color:#fbbf24;border-color:rgba(251,191,36,0.35)" title="Cadastre & BAG Parcel and House Number Inspector">🏛️ Parcels & Numbers</button>
-  <button id="view3dBtn" class="nav-btn" style="color:#38bdf8;border-color:rgba(56,189,248,0.35)" title="Interactive 3D Buildings & Cities View">🏢 3D View</button>
-  <button id="streetViewToggleBtn" class="nav-btn" title="Click on map for Google Street View, Apple Look Around & Mapillary">🚶 Street View Tool</button>
-  <a id="flightSimBtn" href="https://earth.google.com/web/" target="_blank" class="nav-btn sim-btn" title="Open 3D Flight Simulator in Google Earth">✈️ 3D Flight (Google) ↗</a>
-  <div class="three-d-quick-bar" id="threeDBar" style="display:none">
-    <button class="layer-btn active" data-tdmode="f4map">🏙️ F4Map 3D</button>
-    <button class="layer-btn" data-tdmode="3dbag">📐 3D BAG (TU Delft)</button>
-    <button class="layer-btn" data-tdmode="osm3d">🏢 OSM Buildings 3D</button>
+  <button id="flightSimBtn" href="https://earth.google.com/web/" target="_blank" class="nav-btn sim-btn" title="Open 3D Flight Simulator in Google Earth">✈️ 3D Flight (Google) ↗</button>
+  <div class="nav-group-sep"></div><span class="nav-group-label" data-i18n="grpLayers">Layers</span>
+  <button id="trafficToggleBtn" class="nav-btn traffic-btn" title="Toggle Live Traffic">🚦 Traffic</button>
+  <button id="topCamsBtn" class="nav-btn" style="border-color:rgba(239,68,68,0.4);color:#f87171;font-weight:700" title="Most Active Speed Cameras (CJIB Top) & Heaviest ANPR Corridors">🚨 Top Speedcams & ANPR</button>
+  <button id="satToggleBtn" class="nav-btn sat-toggle-btn" title="Live satellites above the current view (CelesTrak TLE / SGP4)">🛰️ Satellites</button>
+  <button id="firesToggleBtn" class="nav-btn fires-toggle-btn" title="Active fire detections, last 24h (NASA FIRMS)">🔥 Fire Spots</button>
+  <button id="launchesBtn" class="nav-btn launches-btn" title="Space launches, next 7 days (Launch Library 2)">🚀 Launches</button>
+  <button id="sensorBtn" class="nav-btn" title="Sensor look: cycle Normal → NVG → Thermal → FLIR → Noir (visual filter)">🎛️ Sensor: Normal</button>
+  <button id="favoritesBtn" class="nav-btn fav-btn" title="Favorite Places">⭐ Favorites</button>
+  <button id="langToggleBtn" class="nav-btn" style="border-color:rgba(56,189,248,0.4);color:#38bdf8;font-weight:700" title="Switch Language / Wissel Taal">🌐 EN</button>
+
+  <div class="search-container" id="searchContainer">
+    <div class="search-input-wrap">
+      <input type="text" id="searchInput" placeholder="🔍 Search place, station, zip, flight, ship..." autocomplete="off" />
+      <button id="searchClearBtn" style="display:none" title="Clear">&times;</button>
+    </div>
+    <div id="searchResults" class="search-results-dropdown" style="display:none"></div>
   </div>
+
+  <a id="windyGlobeLink" href="https://www.windy.com" target="_blank" class="nav-btn globe-btn" title="Open 3D live globe in browser">🌐 Windy 3D ↗</a>
   <div class="windy-quick-layers" id="windyLayers" style="display:none">
     <button class="layer-btn active" data-wlayer="wind">💨 Wind</button>
     <button class="layer-btn" data-wlayer="gust">🌪️ Gusts</button>
@@ -695,19 +822,72 @@
     <button class="layer-btn" data-wlayer="fires">🔥 Fires</button>
     <button class="layer-btn" data-wlayer="uv">☀️ UV Index</button>
   </div>
-  <a id="windyGlobeLink" href="https://www.windy.com" target="_blank" class="nav-btn globe-btn" title="Open 3D live globe in browser">🌐 Windy 3D ↗</a>
+</div>
 
-  <button id="trafficToggleBtn" class="nav-btn traffic-btn" title="Toggle Live Traffic">🚦 Traffic</button>
-  <button id="topCamsBtn" class="nav-btn" style="border-color:rgba(239,68,68,0.4);color:#f87171;font-weight:700" title="Most Active Speed Cameras (CJIB Top) & Heaviest ANPR Corridors">🚨 Top Speedcams & ANPR</button>
-  <button id="favoritesBtn" class="nav-btn fav-btn" title="Favorite Places">⭐ Favorites</button>
-  <button id="langToggleBtn" class="nav-btn" style="border-color:rgba(56,189,248,0.4);color:#38bdf8;font-weight:700" title="Switch Language / Wissel Taal">🌐 EN</button>
-
-  <div class="search-container" id="searchContainer">
-    <div class="search-input-wrap">
-      <input type="text" id="searchInput" placeholder="🔍 Search place, station, zip, flight, ship..." autocomplete="off" />
-      <button id="searchClearBtn" style="display:none" title="Clear">&times;</button>
+<!-- View Widget Rail: Street View / Parcels / 3D as dockable widgets -->
+<div class="widget-rail" id="widgetRail">
+  <button id="widgetStreetViewBtn" class="widget-rail-btn w-streetview" title="Street View widget — click the map for Google Street View, Apple Look Around & Mapillary">🚶<span class="rail-key">W1</span></button>
+  <button id="widgetParcelsBtn" class="widget-rail-btn w-parcels" title="Parcels & Numbers widget — Kadaster/BAG parcel & address inspector">🏛️<span class="rail-key">W2</span></button>
+  <button id="widget3dBtn" class="widget-rail-btn w-3d" title="3D View widget — F4Map / 3D BAG / OSM Buildings">🏢<span class="rail-key">W3</span></button>
+  <div class="three-d-quick-bar" id="threeDBar" style="display:none">
+    <button class="layer-btn active" data-tdmode="f4map">🏙️ F4Map 3D</button>
+    <button class="layer-btn" data-tdmode="3dbag">📐 3D BAG (TU Delft)</button>
+    <button class="layer-btn" data-tdmode="osm3d">🏢 OSM Buildings 3D</button>
+  </div>
+  <button id="widgetLayersBtn" class="widget-rail-btn w-layers" title="Layer Manager — every layer as a chip, with Clean / Intel / Space presets">🗂️<span class="rail-key">W4</span></button>
+  <div class="rail-panel" id="layersPanel">
+    <div class="rail-panel-hd"><span>🗂️ Layer Manager</span><button id="layersPanelClose" class="rail-panel-close">&times;</button></div>
+    <div class="rail-presets" id="layerPresets">
+      <button data-lpreset="clean">✨ Clean</button>
+      <button data-lpreset="intel">🛰️ Intel</button>
+      <button data-lpreset="space">🚀 Space</button>
     </div>
-    <div id="searchResults" class="search-results-dropdown" style="display:none"></div>
+    <div id="layersPanelBody"></div>
+  </div>
+</div>
+
+<!-- Intel HUD (GEV-style live telemetry, top-left) -->
+<div class="intel-hud" id="intelHud">
+  <div class="intel-hud-hd">
+    <span class="intel-hud-title">▍INTEL · LIVE</span>
+    <button id="closeIntelHudBtn" class="intel-hud-close">&times;</button>
+  </div>
+  <div class="hud-row"><span class="hk">POS</span><span class="hv" id="hudPos">—</span></div>
+  <div class="hud-row"><span class="hk">Zoom</span><span class="hv" id="hudZoom">—</span></div>
+  <div class="hud-row"><span class="hk">WX</span><span class="hv" id="hudWx">—</span></div>
+  <div class="hud-row"><span class="hk">Wind</span><span class="hv" id="hudWind">—</span></div>
+  <div class="hud-row"><span class="hk">Aircraft</span><span class="hv" id="hudFlights">—</span></div>
+  <div class="hud-row"><span class="hk">Vessels</span><span class="hv" id="hudVessels">—</span></div>
+  <div class="hud-row"><span class="hk">Quakes 24h</span><span class="hv" id="hudQuakes">—</span></div>
+  <div class="hud-row"><span class="hk">Sat pass</span><span class="hv" id="hudSat">—</span></div>
+  <div class="hud-row"><span class="hk">Drone</span><span class="hv" id="hudDrone">—</span></div>
+  <div style="margin-top:3px"><span class="hud-tag" id="hudBase">GOOGLE SAT</span> <span class="hud-tag" id="hudSensor">NORMAL</span></div>
+</div>
+
+<!-- Hidden legacy buttons: their original handlers stay alive; the new
+     grouped nav + widget rail proxy-click them. Keep IDs stable. -->
+<div id="legacyDock" style="display:none">
+  <button id="viewWigleBtn" class="nav-btn">📡 WiGLE</button>
+  <button id="viewDroneBtn" class="nav-btn">🚁 GoDrone (NL)</button>
+  <button id="cadastreInspectorBtn" class="nav-btn">🏛️ Parcels & Numbers</button>
+  <button id="view3dBtn" class="nav-btn">🏢 3D View</button>
+  <button id="streetViewToggleBtn" class="nav-btn">🚶 Street View Tool</button>
+  <button id="viewStationsBtn" class="nav-btn">🚆 Stations & 9292</button>
+</div>
+
+<!-- Space Launches Modal (Launch Library 2) -->
+<div id="launchesModal" class="legend-modal" style="display:none;max-width:560px">
+  <div class="legend-header">
+    <div style="font-weight:700;font-size:13px;color:#facc15;display:flex;align-items:center;gap:6px">
+      <span>🚀 Upcoming Launches — Next 7 Days</span>
+      <span style="font-size:10px;color:#8fa8bd;font-weight:400">Launch Library 2</span>
+    </div>
+    <button id="closeLaunchesBtn" class="fav-close-btn">&times;</button>
+  </div>
+  <div id="launchesList" style="padding:10px 0;max-height:62vh;overflow-y:auto"></div>
+  <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:8px">
+    <div style="font-size:10px;font-weight:700;color:#38bdf8;margin-bottom:4px">🛰️ MINI TRACKER · KEYLESS LIVE</div>
+    <div id="satMini" style="font-size:11px"><span style="color:#8fa8bd">Toggle 🛰️ Satellites to load TLE data…</span></div>
   </div>
 </div>
 
@@ -744,6 +924,7 @@
     <button class="legend-filter-btn" data-legcat="weather">⚡ Weather &amp; Storms</button>
     <button class="legend-filter-btn" data-legcat="marine">🚢 Maritime &amp; Cables</button>
     <button class="legend-filter-btn" data-legcat="aero">✈️ Aviation &amp; ISS</button>
+    <button class="legend-filter-btn" data-legcat="space">🛰️ Space &amp; Orbital</button>
     <button class="legend-filter-btn" data-legcat="sports">🚴 Sports &amp; Outdoors</button>
     <button class="legend-filter-btn" data-legcat="civic">🎓 Civic &amp; Education</button>
     <button class="legend-filter-btn" data-legcat="gov">🗺️ Governance &amp; Borders</button>
@@ -804,6 +985,14 @@
     </div>
 
     <!-- Sports & Outdoor -->
+    <div class="legend-group" data-legcat="space">
+      <div class="legend-group-title">🛰️ Space &amp; Orbital (GEV-inspired)</div>
+      <div class="legend-item"><span class="legend-symbol">🛰️</span><div class="legend-desc"><b>Live Satellites (TLE / SGP4)</b><span class="legend-sub">ISS, Starlink shells, weather &amp; navigation constellations propagated live from CelesTrak — satellite layer or HUD</span></div></div>
+      <div class="legend-item"><span class="legend-symbol">🔥</span><div class="legend-desc"><b>Active Fire Detections (NASA EONET)</b><span class="legend-sub">Open wildfire events, trailing 10 days, with FIRMS hand-off per popup</span></div></div>
+      <div class="legend-item"><span class="legend-symbol">🚀</span><div class="legend-desc"><b>Upcoming Launches (Launch Library 2)</b><span class="legend-sub">Next 7 days of global launches with pad links via the Launches button</span></div></div>
+      <div class="legend-item"><span class="legend-symbol">🎛️</span><div class="legend-desc"><b>Sensor Looks</b><span class="legend-sub">Cosmetic map filters: NVG green, thermal, FLIR invert, noir — cycle with the Sensor button</span></div></div>
+      <div class="legend-item"><span class="legend-symbol">🖥️</span><div class="legend-desc"><b>Intel HUD</b><span class="legend-sub">Live telemetry card: position, zoom, weather, aircraft/vessel/quakes counts, nearest tracked satellite</span></div></div>
+    </div>
     <div class="legend-group" data-legcat="sports">
       <div class="legend-group-title">🚴 Sports, Cycling &amp; Recreation</div>
       <div class="legend-item"><span class="legend-symbol" style="color:#fc5200">🚴</span><div class="legend-desc"><b>Strava Famous Cycling Segments &amp; KOMs</b><span class="legend-sub">Cauberg, Posbank, Amerongse Berg, Alpe d'Huez with gradient %, KOM/QOM and Strava links</span></div></div>
@@ -1056,23 +1245,6 @@
   </div>
 </div>
 
-<!-- NASA ISS Live Stream & Orbit Telemetry Modal -->
-<div id="issModal" class="iss-modal" style="display:none">
-  <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:8px;margin-bottom:10px">
-    <div style="font-weight:700;font-size:14px;color:#38bdf8;display:flex;align-items:center;gap:8px">
-      <span>🛰️ Live International Space Station (ISS) Stream</span>
-    </div>
-    <button id="closeIssBtn" style="background:none;border:none;color:#8fa8bd;cursor:pointer;font-size:18px">&times;</button>
-  </div>
-  <div style="position:relative;width:100%;height:440px;background:#000;border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,0.15)">
-    <iframe id="issVideoFrame" style="width:100%;height:100%;border:none" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center;font-size:11px">
-    <span style="color:#8fa8bd">Source: NASA HD Earth Viewing Experiment (HDEV)</span>
-    <a href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank" class="popup-btn" style="background:#0284c7;color:#fff">NASA ISS Mission ↗</a>
-  </div>
-</div>
-
 <!-- Floating Local Intel Card (Active when zoomed in) -->
 <div id="localIntelCard" class="local-intel-card" style="display:none">
   <div class="local-intel-header">
@@ -1141,6 +1313,7 @@ const EMBEDDED = /*__EARTH_DATA__*/null;
 
 const map = L.map("map", { zoomControl: true, attributionControl: true, maxZoom: 20 })
   .setView([52.37, 4.90], 7);
+window.__earthMap = map; // debug/QA handle
 
 // --- Base Layers (Google Maps, OpenStreetMap, Topo, Esri) ---
 const baseLayers = {
@@ -1178,7 +1351,7 @@ const baseLayers = {
     maxNativeZoom: 16, maxZoom: 20, attribution: 'Esri'
   })
 };
-baseLayers.dark.addTo(map);
+baseLayers.gsat.addTo(map); // UX default: Google Satellite first (was Esri dark)
 
 let trafficTileLayer = L.tileLayer(
   "https://mt1.google.com/vt/lyrs=traffic&x={x}&y={y}&z={z}",
@@ -1221,7 +1394,6 @@ let bagLayer = L.tileLayer.wms(
   });
 let openRailwayLayer = L.tileLayer("https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
   { subdomains: ["a", "b", "c"], maxNativeZoom: 19, maxZoom: 20, opacity: 0.85, attribution: "OpenRailwayMap" });
-openRailwayLayer.addTo(map);
 
 let radarLayer = L.layerGroup();
 let radarFrames = [], frameIndex = 0, playing = false, playTimer = null;
@@ -1260,15 +1432,151 @@ let metarGroup = L.layerGroup(), quakeGroup = L.layerGroup(), disasterGroup = L.
 let droneGroup = L.layerGroup(), vesselGroup = L.layerGroup();
 let trainGroup = L.layerGroup(), webcamGroup = L.layerGroup(), newsGroup = L.layerGroup(), timezoneGroup = L.layerGroup();
 let mtbGroup = L.layerGroup(), wildlifeGroup = L.layerGroup(), wikiGroup = L.layerGroup();
-let stationGroup = L.layerGroup().addTo(map), speedcamGroup = L.layerGroup().addTo(map), anprGroup = L.layerGroup().addTo(map), trafficIncidentGroup = L.layerGroup().addTo(map);
-let tramGroup = L.layerGroup().addTo(map), festivalGroup = L.layerGroup().addTo(map), waterHealthGroup = L.layerGroup().addTo(map), radioGroup = L.layerGroup().addTo(map);
+let stationGroup = L.layerGroup(), speedcamGroup = L.layerGroup(), anprGroup = L.layerGroup(), trafficIncidentGroup = L.layerGroup();
+let tramGroup = L.layerGroup(), festivalGroup = L.layerGroup(), waterHealthGroup = L.layerGroup(), radioGroup = L.layerGroup();
 let globalRadioGroup = L.layerGroup();
 let civicGroup = L.layerGroup(), sportsGroup = L.layerGroup(), housemarketGroup = L.layerGroup(), companyGroup = L.layerGroup(), cruiseGroup = L.layerGroup(), religionGroup = L.layerGroup();
-let solarTerminatorGroup = L.layerGroup().addTo(map), issGroup = L.layerGroup().addTo(map), routeGroup = L.layerGroup().addTo(map);
-let gasGroup = L.layerGroup().addTo(map), stravaGroup = L.layerGroup().addTo(map);
-let tunnelGroup = L.layerGroup().addTo(map), thunderGroup = L.layerGroup().addTo(map);
-let schoolGroup = L.layerGroup(), fbEventGroup = L.layerGroup(), provinceGroup = L.layerGroup().addTo(map);
-let sightGroup = L.layerGroup().addTo(map);
+let solarTerminatorGroup = L.layerGroup(), issGroup = L.layerGroup(), routeGroup = L.layerGroup().addTo(map);
+
+// --- GEV-inspired keyless layers: live satellites (TLE/SGP4) + fire detections (EONET) ---
+let satGroup = L.layerGroup(), firesGroup = L.layerGroup();
+let satData = { sats: [], fetchedAt: 0 };
+let satTickTimer = null;
+const SAT_CATEGORIES = [
+  { key: "stations", label: "ISS / Crewed", noradIds: [25544], color: "#38bdf8", group: "STATIONS" },
+  { key: "starlink", label: "Starlink", noradIds: null, color: "#a78bfa", group: "STARLINK" },
+  { key: "weather",  label: "Weather", noradIds: null, color: "#4ade80", group: "WEATHER" },
+  { key: "gps",      label: "Navigation", noradIds: null, color: "#facc15", group: "GPS-OPS" }
+];
+function satPropagate(noradId, when) {
+  try {
+    const rec = satData.sats.find(s => s.norad === noradId);
+    if (!rec || !window.satellite) return null;
+    const satrec = window.satellite.twoline2satrec(rec.tle1, rec.tle2);
+    const pv = window.satellite.propagate(satrec, when);
+    if (!pv || !pv.position) return null;
+    const gd = window.satellite.gstime(when);
+    const geo = window.satellite.eciToGeodetic(pv.position, gd);
+    return {
+      lat: window.satellite.degreesLat(geo.latitude),
+      lon: window.satellite.degreesLong(geo.longitude),
+      altKm: geo.height
+    };
+  } catch (e) { return null; }
+}
+function drawLiveSats() {
+  if (!window.lastData) return;
+  const now = new Date();
+  const c = map.getCenter();
+  const home = [window.lastData.lat, window.lastData.lon];
+  satGroup.clearLayers();
+  let passNote = "";
+  SAT_CATEGORIES.forEach(cat => {
+    (cat.noradIds || []).forEach(id => {
+      const p = satPropagate(id, now);
+      if (!p || !isFinite(p.lat) || !isFinite(p.lon)) return;
+      satGroup.addLayer(L.circleMarker([p.lat, p.lon], {
+        radius: 6, color: cat.color, weight: 2, fillColor: cat.color, fillOpacity: 0.9
+      }).bindTooltip(`🛰️ ${cat.label} · ${p.altKm.toFixed(0)} km`));
+      const dHome = haversineKm(home[0], home[1], p.lat, p.lon);
+      if (!passNote || dHome < passNote.d) passNote = { d: dHome, label: cat.label, altKm: p.altKm, lat: p.lat, lon: p.lon };
+      const dView = haversineKm(c.lat, c.lng, p.lat, p.lon);
+      if (dView < 1200) satGroup.addLayer(L.polyline([home, [p.lat, p.lon]], { color: cat.color, weight: 1, opacity: 0.35, dashArray: "4 6" }));
+    });
+  });
+  const el = document.getElementById("hudSat");
+  if (el) el.textContent = passNote ? `${passNote.label} ${passNote.d.toFixed(0)}km` : "—";
+}
+async function ensureSatData() {
+  if (satData.fetchedAt && Date.now() - satData.fetchedAt < 6 * 3600 * 1000) return;
+  try {
+    // Sequential with a pause: CelesTrak 403s bursts of parallel group fetches.
+    const groups = ["stations", "weather", "gps-ops", "starlink"];
+    const sats = [];
+    for (const g of groups) {
+      let txt = "";
+      try {
+        const r = await fetch(`https://celestrak.org/NORAD/elements/gp.php?GROUP=${g}&FORMAT=tle`);
+        if (r.ok) txt = await r.text();
+      } catch (e) { /* group skipped */ }
+      if (txt) {
+        const lines = txt.split("\n").map(l => l.trimEnd());
+        for (let i = 0; i < lines.length - 2; i++) {
+          if (lines[i + 1] && lines[i + 1].startsWith("1 ") && lines[i + 2] && lines[i + 2].startsWith("2 ")) {
+            const name = lines[i].trim();
+            const m = lines[i + 1].match(/^1 (\d{1,5})/);
+            if (m) sats.push({ name, norad: parseInt(m[1], 10), tle1: lines[i + 1], tle2: lines[i + 2], g });
+            i += 2;
+          }
+        }
+      }
+      await new Promise(res => setTimeout(res, 1500));
+    }
+    if (sats.length) { satData = { sats, fetchedAt: Date.now() }; drawLiveSats(); }
+  } catch (e) { console.warn("TLE fetch failed:", e); }
+}
+function drawFires() {
+  firesGroup.clearLayers();
+  const d = window.lastData;
+  if (!d) return;
+  const isNl = currentLang === "nl";
+  (d.fire_events || []).forEach(f => {
+    if (!isFinite(f.lat) || !isFinite(f.lon)) return;
+    firesGroup.addLayer(L.circleMarker([f.lat, f.lon], {
+      radius: 5, color: "#ef4444", weight: 1.5, fillColor: "#f97316", fillOpacity: 0.75
+    }).bindPopup(
+      `<div style="font-size:12px;min-width:200px"><b style="color:#f87171">🔥 ${f.title || (isNl ? 'Brandhaard' : 'Fire Detection')}</b><br>` +
+      `<span style="color:#8fa8bd">${f.category || ""}</span><br>` +
+      `${(f.date || "").slice(0, 16).replace("T", " ")} UTC<br>` +
+      `<div style="margin-top:5px;display:flex;gap:4px">` +
+      `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${f.lat},${f.lon}" target="_blank" class="popup-btn">🚶 Street View ↗</a>` +
+      `<a href="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@${f.lon},${f.lat},9z" target="_blank" class="popup-btn">🛰️ FIRMS ↗</a></div></div>`
+    ));
+  });
+}
+async function refreshFireEvents() {
+  try {
+    const res = await fetch("https://eonet.gsfc.nasa.gov/api/v2.1/events?status=open&days=10&limit=300");
+    if (!res.ok) return;
+    const json = await res.json();
+    const evs = (json.events || []).map(e => {
+      const geo = e.categories && e.categories[0] ? e.categories[0].title : "";
+      if (!/wildfire/i.test(geo)) return null;
+      const geom = (e.geometries && e.geometries[e.geometries.length - 1]) || {};
+      const co = geom.coordinates || [];
+      return { title: e.title, category: geo, date: geom.date || "", lat: co[1], lon: co[0] };
+    }).filter(Boolean);
+    if (window.lastData) window.lastData.fire_events = evs;
+    drawFires();
+  } catch (e) { console.warn("EONET fetch failed:", e); }
+}
+function drawSatMini() {
+  const el = document.getElementById("satMini");
+  if (!el) return;
+  const now = new Date();
+  const c = map.getCenter();
+  const viewKm = 40000 / Math.pow(2, map.getZoom());
+  const rows = [];
+  SAT_CATEGORIES.forEach(cat => {
+    (cat.noradIds || []).forEach(id => {
+      const p = satPropagate(id, now);
+      if (p && isFinite(p.lat)) {
+        const d = haversineKm(c.lat, c.lng, p.lat, p.lon);
+        rows.push(`<div class="row"><span class="k">🛰️ ${cat.label}</span><span style="color:${cat.color}">${p.altKm.toFixed(0)}km · ${d < viewKm ? d.toFixed(0) + "km" : "off-view"}</span></div>`);
+      }
+    });
+  });
+  const d = window.lastData || {};
+  const fires = (d.fire_events || []).length;
+  rows.push(`<div class="row"><span class="k">🔥 Fire spots (10d)</span><span>${fires}</span></div>`);
+  const ll = (d.launches_upcoming || []).slice(0, 3);
+  ll.forEach(l => rows.push(`<div class="row"><span class="k">🚀 ${l.name.slice(0, 26)}</span><span>${(l.net || "").slice(5, 16).replace("T", " ")}</span></div>`));
+  el.innerHTML = rows.join("") || '<span class="dim">no orbital data</span>';
+}
+let gasGroup = L.layerGroup(), stravaGroup = L.layerGroup();
+let tunnelGroup = L.layerGroup(), thunderGroup = L.layerGroup();
+let schoolGroup = L.layerGroup(), fbEventGroup = L.layerGroup(), provinceGroup = L.layerGroup();
+let sightGroup = L.layerGroup();
 let activeTrailLayer = null;
 
 const I18N = {
@@ -1282,9 +1590,16 @@ const I18N = {
     navWindy: "🌀 Windy Weather",
     navMarine: "🚢 Marine Live",
     navDrone: "🚁 GoDrone (NL)",
-    navDroneRules: "🚁 Drone Guide",
+    navDroneRules: "📜 Rules & Legal",
     navIss: "🛰️ ISS",
-    navGalaxy: "🌌 Galaxy & Space",
+    grpViews: "Views",
+    grpOsint: "OSINT",
+    grpMap: "Map",
+    grpLayers: "Layers",
+    lmLive: "LIVE TRACKING",
+    lmOsint: "OSINT & MAP DATA",
+    lmNl: "NL & MISC",
+    navGalaxy: "🌌 Galaxy",
     navFlip: "🔄 South-Up",
     navFlipActive: "🔄 South-Up (Active)",
     navStreetView: "🚶 Street View Tool",
@@ -1389,9 +1704,16 @@ const I18N = {
     navWindy: "🌀 Windy Weer",
     navMarine: "🚢 Marine Live",
     navDrone: "🚁 GoDrone",
-    navDroneRules: "🚁 Regels",
+    navDroneRules: "📜 Regels & Legal",
     navIss: "🛰️ ISS",
-    navGalaxy: "🌌 Galaxy & Heelal",
+    grpViews: "Weergaven",
+    grpOsint: "OSINT",
+    grpMap: "Kaart",
+    grpLayers: "Lagen",
+    lmLive: "LIVE TRACKING",
+    lmOsint: "OSINT & KAARTDATA",
+    lmNl: "NL & DIVERS",
+    navGalaxy: "🌌 Galaxy",
     navFlip: "🔄 Zuid-Boven",
     navFlipActive: "🔄 Zuid-Boven (Actief)",
     navStreetView: "🚶 Street View Tool",
@@ -1566,62 +1888,21 @@ function initOrUpdateLayerControl() {
     [isNl ? "☀️ Licht (Positron)" : "☀️ Light (Positron)"]: baseLayers.light
   };
 
+  // Core overlay set for Leaflet's layer control — the Layer Manager (W5)
+  // owns everything else, so this list stays short and scannable.
   const currentOverlays = {
-    [t("solarTerminatorLayer")]: solarTerminatorGroup,
     [t("issLayer")]: issGroup,
     [t("trafficLayer")]: trafficTileLayer,
-    [t("gasLayer")]: gasGroup,
-    [t("stravaLayer")]: stravaGroup,
-    [t("tunnelLayer")]: tunnelGroup,
-    [t("thunderLayer")]: thunderGroup,
-    [t("schoolLayer")]: schoolGroup,
-    [t("fbEventLayer")]: fbEventGroup,
-    [t("provinceLayer")]: provinceGroup,
-    [t("stationLayer")]: stationGroup,
-    [t("tramLayer")]: tramGroup,
-    [t("speedcamLayer")]: speedcamGroup,
-    [t("anprLayer")]: anprGroup,
-    [t("trafficIncidentLayer")]: trafficIncidentGroup,
-    [t("railwayLayer")]: openRailwayLayer,
-    [t("festivalLayer")]: festivalGroup,
-    [t("waterHealthLayer")]: waterHealthGroup,
-    [t("radioLayer")]: radioGroup,
-    [t("globalRadioLayer")]: globalRadioGroup,
-    [t("civicLayer")]: civicGroup,
-    [t("sportsLayer")]: sportsGroup,
-    [t("housemarketLayer")]: housemarketGroup,
-    [t("companyLayer")]: companyGroup,
-    [t("cruiseLayer")]: cruiseGroup,
-    [t("religionLayer")]: religionGroup,
-    [t("sightsLayer")]: sightGroup,
-    [t("wikiLayer")]: wikiGroup,
-    [t("mtbLayer")]: mtbGroup,
-    [t("wildlifeLayer")]: wildlifeGroup,
-    [t("droneLayer")]: droneGroup,
-    [t("vesselLayer")]: vesselGroup,
-    [t("trainLayer")]: trainGroup,
-    [t("webcamLayer")]: webcamGroup,
-    [t("newsLayer")]: newsGroup,
-    [t("timezoneLayer")]: timezoneGroup,
+    [t("quakeLayer")]: quakeGroup,
     [t("windLayer")]: windGroup,
     [t("civilFlightLayer")]: planeGroup,
     [t("milFlightLayer")]: milPlaneGroup,
-    [t("chokepointLayer")]: waterwayGroup,
-    [t("hotspotLayer")]: hotspotGroup,
-    [t("nuclearLayer")]: nuclearGroup,
-    [t("baseLayer")]: baseGroup,
-    [t("cableLayer")]: cableGroup,
-    [t("pipelineLayer")]: pipelineGroup,
-    [t("datacenterLayer")]: datacenterGroup,
-    [t("metarLayer")]: metarGroup,
-    [t("quakeLayer")]: quakeGroup,
-    [t("disasterLayer")]: disasterGroup,
-    [isNl ? "Satellietbeeld (NASA)" : "Satellite (NASA)"]: nasaModisLayer || L.layerGroup(),
-    [isNl ? "🌌 NASA Stadslichten bij Nacht" : "🌌 NASA City Lights at Night"]: nasaViirsLayer,
-    [isNl ? "⚓ Zeekaart (OpenSeaMap)" : "⚓ Nautical Chart (OpenSeaMap)"]: openSeaMapLayer,
-    [isNl ? "🌲 Natura 2000 (PDOK)" : "🌲 Protected Sites (Natura 2000)"]: natura2000Layer,
+    [t("vesselLayer")]: vesselGroup,
+    [t("solarTerminatorLayer")]: solarTerminatorGroup,
     [t("kadasterLayer")]: kadasterLayer,
-    [t("bagLayer")]: bagLayer
+    [t("bagLayer")]: bagLayer,
+    [isNl ? "🛰️ Live Satellites (TLE)" : "🛰️ Live Satellites (TLE)"]: satGroup,
+    [isNl ? "🔥 Actieve Brandhaarden (EONET)" : "🔥 Active Fire Detections (EONET)"]: firesGroup
   };
 
   if (radarFrames && radarFrames.length > 0) {
@@ -1667,6 +1948,10 @@ function applyLanguage(lang) {
   if (el("droneRulesBtn")) el("droneRulesBtn").textContent = t("navDroneRules");
   if (el("issLiveBtn")) el("issLiveBtn").textContent = t("navIss");
   if (el("viewGalaxyBtn")) el("viewGalaxyBtn").textContent = t("navGalaxy");
+  document.querySelectorAll("#topNav .nav-group-label").forEach(s => {
+    const k = s.getAttribute("data-i18n");
+    if (k) s.textContent = t(k);
+  });
   if (el("upsideDownBtn")) el("upsideDownBtn").textContent = mapUpsideDown ? t("navFlipActive") : t("navFlip");
   if (el("cadastreInspectorBtn")) el("cadastreInspectorBtn").textContent = t("navCadastre");
   if (el("view3dBtn")) el("view3dBtn").textContent = t("nav3d");
@@ -3005,7 +3290,6 @@ async function fetchIssPosition() {
         <b>${isNl ? 'Snelheid' : 'Velocity'}:</b> <span style="color:#38bdf8;font-weight:700">${vel.toLocaleString()} km/u</span><br>
         <b>${isNl ? 'Zonstatus' : 'Visibility'}:</b> ${vis === 'daylight' ? '☀️ ' + (isNl ? 'In daglicht' : 'Daylight') : '🌑 ' + (isNl ? 'In aardschaduw' : 'In Earth shadow')}<br>
         <div style="margin-top:8px;display:flex;gap:4px">
-          <button onclick="window.openIssModal()" class="popup-btn" style="background:#0284c7;color:#fff;font-weight:700">📺 ${isNl ? 'NASA Live Earth Stream' : 'NASA Live Earth Stream'}</button>
           <a href="https://spotthestation.nasa.gov" target="_blank" class="popup-btn">🔭 Spot The Station ↗</a>
         </div>
       </div>
@@ -3027,23 +3311,8 @@ function initIssTracker() {
   }
 }
 
-window.openIssModal = function() {
-  const modal = document.getElementById("issModal");
-  const frame = document.getElementById("issVideoFrame");
-  if (modal && frame) {
-    frame.src = "https://www.youtube-nocookie.com/embed/O9mYwRlucZE?autoplay=1&mute=1";
-    modal.style.display = "block";
-  }
-};
-
-window.closeIssModal = function() {
-  const modal = document.getElementById("issModal");
-  const frame = document.getElementById("issVideoFrame");
-  if (modal && frame) {
-    frame.src = "about:blank";
-    modal.style.display = "none";
-  }
-};
+// (ISS video modal removed — NASA HDEV feed is dead. The live ISS orbit
+// tracker above stays; replacement live feeds can hook in here later.)
 
 // Live Radio Streaming
 window.playRadioStream = function(name, streamUrl, genre, freq) {
@@ -4578,7 +4847,7 @@ function switchTimelineMode(mode) {
   if (mode === "radar") {
     const btn = document.getElementById("tlModeRadar");
     if (btn) btn.classList.add("active");
-    if (!map.hasLayer(radarLayer) && radarFrames.length) radarLayer.addTo(map);
+    if (!map.hasLayer(radarLayer) && radarFrames.length && window.__radarOptIn) radarLayer.addTo(map);
     sl.min = 0;
     sl.max = radarFrames.length ? radarFrames.length - 1 : 0;
     sl.value = frameIndex;
@@ -4707,6 +4976,11 @@ async function load() {
   drawProvinces(d.provinces || []);
   drawSolarTerminator();
   initIssTracker();
+  // GEV-inspired bootstraps: fetch launch schedule + TLE set early (non-blocking),
+  // so the Launches modal opens instantly and the HUD/sat layer have data.
+  fetchLaunches().then(rows => { window.__launchRows = rows; }).catch(() => {});
+  ensureSatelliteJs(() => { ensureSatData(); });
+  refreshFireEvents();
   drawDroneZones(d.drone_zones || []);
   drawVessels(d.vessels || {});
   drawTrains(d.trains || []);
@@ -4732,40 +5006,13 @@ async function load() {
   drawWildlife(d.wildlife || []);
   loadWikipediaArticles(d.lat, d.lon);
 
-  // Add default active layers to map
-  gasGroup.addTo(map);
-  stravaGroup.addTo(map);
-  tunnelGroup.addTo(map);
-  thunderGroup.addTo(map);
-  provinceGroup.addTo(map);
-  stationGroup.addTo(map);
-  speedcamGroup.addTo(map);
-  anprGroup.addTo(map);
-  trafficIncidentGroup.addTo(map);
-  tramGroup.addTo(map);
-  festivalGroup.addTo(map);
-  waterHealthGroup.addTo(map);
-  radioGroup.addTo(map);
-  solarTerminatorGroup.addTo(map);
-  issGroup.addTo(map);
-  routeGroup.addTo(map);
-  droneGroup.addTo(map);
-  vesselGroup.addTo(map);
-  trainGroup.addTo(map);
-  webcamGroup.addTo(map);
-  newsGroup.addTo(map);
-  windGroup.addTo(map);
+  // Clean default: only the essential live layers on load. Everything else
+  // stays one click away in the Layer Manager / layer control — no clutter.
   planeGroup.addTo(map);
   milPlaneGroup.addTo(map);
-  waterwayGroup.addTo(map);
-  hotspotGroup.addTo(map);
-  cableGroup.addTo(map);
-  metarGroup.addTo(map);
+  windGroup.addTo(map);
+  quakeGroup.addTo(map);
   trafficTileLayer.addTo(map);
-  mtbGroup.addTo(map);
-  wildlifeGroup.addTo(map);
-  wikiGroup.addTo(map);
-  if (radarFrames.length) radarLayer.addTo(map);
 
   initOrUpdateLayerControl();
 
@@ -4940,21 +5187,414 @@ async function load() {
     });
   }
 
-  // --- ISS Live Modal ---
-  const issLiveBtn = document.getElementById("issLiveBtn");
-  const issModal = document.getElementById("issModal");
-  const closeIssBtn = document.getElementById("closeIssBtn");
+  // --- ISS Live Modal (removed: dead NASA HDEV feed) ---
 
-  if (issLiveBtn) {
-    issLiveBtn.addEventListener("click", () => {
-      window.openIssModal();
+  // ================= UX OVERHAUL: new handlers (GEV-inspired, keyless) =================
+
+  // --- Satellite.js loader (lazy, on first Satellites toggle) ---
+  function ensureSatelliteJs(cb) {
+    if (window.satellite) { cb(); return; }
+    const s = document.createElement("script");
+    s.src = "https://cdn.jsdelivr.net/npm/satellite.js@5.0.0/dist/satellite.min.js";
+    s.onload = cb;
+    s.onerror = () => console.warn("satellite.js failed to load");
+    document.head.appendChild(s);
+  }
+
+  const satToggleBtn = document.getElementById("satToggleBtn");
+  if (satToggleBtn) {
+    satToggleBtn.addEventListener("click", () => {
+      const active = satToggleBtn.classList.toggle("active");
+      if (active) {
+        ensureSatelliteJs(() => {
+          ensureSatData().then(() => {
+            if (!map.hasLayer(satGroup)) satGroup.addTo(map);
+            drawLiveSats();
+            if (!satTickTimer) satTickTimer = setInterval(() => {
+              if (map.hasLayer(satGroup)) drawLiveSats();
+            }, 15000);
+          });
+        });
+      } else {
+        map.removeLayer(satGroup);
+        if (satTickTimer) { clearInterval(satTickTimer); satTickTimer = null; }
+      }
     });
   }
-  if (closeIssBtn) {
-    closeIssBtn.addEventListener("click", () => {
-      window.closeIssModal();
+
+  // --- Fire detections toggle ---
+  const firesToggleBtn = document.getElementById("firesToggleBtn");
+  if (firesToggleBtn) {
+    firesToggleBtn.addEventListener("click", () => {
+      const active = firesToggleBtn.classList.toggle("active");
+      if (active) {
+        refreshFireEvents().then(() => { if (!map.hasLayer(firesGroup)) firesGroup.addTo(map); });
+      } else {
+        map.removeLayer(firesGroup);
+      }
     });
   }
+
+  // --- Launches modal (Launch Library 2, next 7 days) ---
+  const launchesBtn = document.getElementById("launchesBtn");
+  const launchesModal = document.getElementById("launchesModal");
+  const closeLaunchesBtn = document.getElementById("closeLaunchesBtn");
+  const launchesList = document.getElementById("launchesList");
+  let launchesCache = null;
+
+  async function fetchLaunches() {
+    if (launchesCache && Date.now() - launchesCache.at < 1800000) return launchesCache.data;
+    const res = await fetch("https://ll.thespacedevs.com/2.2.0/launch/upcoming/?limit=20&hide_recent_previous=true", {
+      headers: { "Accept": "application/json" }
+    });
+    if (!res.ok) throw new Error("LL2 " + res.status);
+    const json = await res.json();
+    const week = Date.now() + 7 * 86400000;
+    const rows = (json.results || [])
+      .filter(l => l.net && new Date(l.net).getTime() < week)
+      .slice(0, 12)
+      .map(l => ({
+        name: l.name || "?",
+        net: l.net || "",
+        pad: ((l.pad || {}).location || {}).name || "",
+        provider: ((l.launch_service_provider || {}).name) || "",
+        status: ((l.status || {}).abbrev) || "",
+        slug: l.slug || "",
+        lat: (l.pad || {}).latitude, lon: (l.pad || {}).longitude
+      }));
+    launchesCache = { at: Date.now(), data: rows };
+    return rows;
+  }
+
+  function renderLaunches(rows) {
+    const isNl = currentLang === "nl";
+    if (!rows.length) { launchesList.innerHTML = `<div style="color:#8fa8bd;font-size:12px">${isNl ? 'Geen lanceringen binnen 7 dagen.' : 'No launches within 7 days.'}</div>`; return; }
+    launchesList.innerHTML = rows.map(l => {
+      const when = (l.net || "").slice(0, 16).replace("T", " ") + " UTC";
+      const maps = isFinite(l.lat) && isFinite(l.lon)
+        ? `<a href="https://www.google.com/maps/@?api=1&map_action=map&center=${l.lat},${l.lon}&zoom=13&basemap=satellite" target="_blank" class="popup-btn">🛰️ ${isNl ? 'Pad' : 'Pad'} ↗</a>
+           <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${l.lat},${l.lon}" target="_blank" class="popup-btn">🚶 Street View ↗</a>`
+        : "";
+      return `<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:8px;margin-bottom:6px">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline">
+          <b style="color:#facc15;font-size:12px">🚀 ${l.name}</b>
+          <span style="font-size:10px;color:#38bdf8;white-space:nowrap">${when}</span>
+        </div>
+        <div style="font-size:10.5px;color:#8fa8bd;margin-top:2px">${l.provider ? l.provider + " · " : ""}${l.pad}</div>
+        <div style="display:flex;gap:4px;margin-top:5px;flex-wrap:wrap">
+          <span class="hud-tag">${l.status || "TBD"}</span>
+          <a href="https://ll.thespacedevs.com${l.slug ? "/2.2.0/launch/upcoming/?search=" + encodeURIComponent(l.slug) : ""}" target="_blank" class="popup-btn">📖 LL2 ↗</a>
+          ${maps}
+        </div>
+      </div>`;
+    }).join("");
+  }
+
+  if (launchesBtn && launchesModal) {
+    launchesBtn.addEventListener("click", () => {
+      const open = launchesModal.style.display === "flex" || launchesModal.style.display === "block";
+      launchesModal.style.display = open ? "none" : "flex";
+      launchesBtn.classList.toggle("active", !open);
+      if (!open) {
+        launchesList.innerHTML = '<div style="color:#8fa8bd;font-size:12px">⏳ loading…</div>';
+        fetchLaunches().then(renderLaunches).catch(() => {
+          launchesList.innerHTML = '<div style="color:#f87171;font-size:12px">Launch Library 2 unreachable — try again later.</div>';
+        });
+      }
+    });
+  }
+  if (closeLaunchesBtn && launchesModal) {
+    closeLaunchesBtn.addEventListener("click", () => {
+      launchesModal.style.display = "none";
+      launchesBtn.classList.remove("active");
+    });
+  }
+
+  // --- Sensor look cycler: Normal → NVG → Thermal → FLIR → Noir ---
+  const sensorBtn = document.getElementById("sensorBtn");
+  const SENSOR_MODES = ["normal", "nvg", "thermal", "flir", "noir"];
+  const SENSOR_LABELS = { normal: "Normal", nvg: "NVG", thermal: "Thermal", flir: "FLIR", noir: "Noir" };
+  let sensorMode = "normal";
+  if (sensorBtn) {
+    sensorBtn.addEventListener("click", () => {
+      sensorMode = SENSOR_MODES[(SENSOR_MODES.indexOf(sensorMode) + 1) % SENSOR_MODES.length];
+      document.body.classList.remove("sensor-nvg", "sensor-flir", "sensor-noir", "sensor-thermal");
+      if (sensorMode !== "normal") document.body.classList.add("sensor-" + sensorMode);
+      sensorBtn.textContent = "🎛️ Sensor: " + SENSOR_LABELS[sensorMode];
+      sensorBtn.classList.toggle("active", sensorMode !== "normal");
+      const tag = document.getElementById("hudSensor");
+      if (tag) tag.textContent = SENSOR_LABELS[sensorMode].toUpperCase();
+    });
+  }
+
+  // --- Intel HUD ---
+  const hudToggleBtn = document.getElementById("hudToggleBtn");
+  const intelHud = document.getElementById("intelHud");
+  const closeIntelHudBtn = document.getElementById("closeIntelHudBtn");
+  let hudTimer = null;
+
+  function hudRefresh() {
+    const d = window.lastData;
+    if (!d || !intelHud || intelHud.style.display === "none") return;
+    const c = map.getCenter();
+    const z = map.getZoom();
+    const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    set("hudPos", `${c.lat.toFixed(4)}, ${c.lng.toFixed(4)}`);
+    set("hudZoom", `Z${z}`);
+    const cw = d.weather && d.weather.current;
+    set("hudWx", cw && cw.temp != null ? `${cw.temp}°C ${cw.description || ""}` : "—");
+    set("hudWind", cw && cw.wind_speed_kmh != null ? `${cw.wind_speed_kmh} km/h B${cw.wind_bft || "?"}` : "—");
+    set("hudFlights", String(planeGroup.getLayers().length + milPlaneGroup.getLayers().length));
+    set("hudVessels", String(vesselGroup.getLayers().length));
+    set("hudQuakes", String(quakeGroup.getLayers().length));
+    const ds = d.drone_status || {};
+    set("hudDrone", ds.headline ? ds.headline.slice(0, 26) : "—");
+    drawSatMini();
+    const baseTag = document.getElementById("hudBase");
+    if (baseTag) {
+      const nm = Object.entries(baseLayers).find(([, l]) => map.hasLayer(l));
+      baseTag.textContent = nm ? nm[0].toUpperCase() : "?";
+    }
+  }
+
+  function hudStart() {
+    if (hudTimer) return;
+    hudTimer = setInterval(hudRefresh, 3000);
+    hudRefresh();
+  }
+  if (hudToggleBtn && intelHud) {
+    hudToggleBtn.addEventListener("click", () => {
+      const on = intelHud.classList.toggle("on");
+      intelHud.style.display = on ? "flex" : "none";
+      hudToggleBtn.classList.toggle("active", on);
+      if (on) hudStart();
+      else if (hudTimer) { clearInterval(hudTimer); hudTimer = null; }
+    });
+  }
+  if (closeIntelHudBtn && intelHud) {
+    closeIntelHudBtn.addEventListener("click", () => {
+      intelHud.classList.remove("on");
+      intelHud.style.display = "none";
+      if (hudToggleBtn) hudToggleBtn.classList.remove("active");
+      if (hudTimer) { clearInterval(hudTimer); hudTimer = null; }
+    });
+  }
+
+  // --- Proxy buttons (hidden originals keep their original handlers) ---
+  function wireProxy(newId, oldId) {
+    const n = document.getElementById(newId);
+    const o = document.getElementById(oldId);
+    if (n && o) n.addEventListener("click", () => o.click());
+  }
+  wireProxy("widgetStreetViewBtn", "streetViewToggleBtn");
+  wireProxy("widgetParcelsBtn", "cadastreInspectorBtn");
+  wireProxy("widget3dBtn", "view3dBtn");
+  wireProxy("wigleOsintBtn", "viewWigleBtn");
+  wireProxy("godroneOsintBtn", "viewDroneBtn");
+  // Mirror active-state from proxies back onto the rail buttons
+  [["streetViewToggleBtn", "widgetStreetViewBtn"], ["cadastreInspectorBtn", "widgetParcelsBtn"], ["view3dBtn", "widget3dBtn"]].forEach(([o, n]) => {
+    const ob = document.getElementById(o), nb = document.getElementById(n);
+    if (ob && nb) new MutationObserver(() => nb.classList.toggle("active", ob.classList.contains("active")))
+      .observe(ob, { attributes: true, attributeFilter: ["class"] });
+  });
+
+  // --- Layer Manager (W5): every layer as a categorized chip + presets ---
+  // NOTE: layers are `let`-bound in this script scope, so capture them here
+  // (window[...] would NOT resolve them).
+  const LM_LAYERS = {
+    planeGroup, milPlaneGroup, vesselGroup, trainGroup, stationGroup,
+    trafficIncidentGroup, radarLayer, windGroup, quakeGroup, thunderGroup,
+    metarGroup, hotspotGroup, satGroup, firesGroup, issGroup,
+    solarTerminatorGroup, droneGroup, gasGroup, tunnelGroup, cableGroup,
+    stravaGroup, waterwayGroup, openRailwayLayer, speedcamGroup, anprGroup,
+    kadasterLayer, bagLayer, provinceGroup, festivalGroup, waterHealthGroup,
+    radioGroup, schoolGroup, fbEventGroup, tramGroup, mtbGroup,
+    wildlifeGroup, wikiGroup, webcamGroup, sightGroup, timezoneGroup,
+    newsGroup, civicGroup, sportsGroup, trafficTileLayer,
+  };
+  window.__lm = { map, layers: LM_LAYERS }; // debug/QA bridge
+  const LM_SECTIONS = [
+    { key: "live",   i18n: "lmLive",   items: [
+      ["planeGroup",       "✈️ " + (currentLang === "nl" ? "Vluchten" : "Flights"), true],
+      ["milPlaneGroup",    "🪖 " + (currentLang === "nl" ? "Militair" : "Military"), true],
+      ["vesselGroup",      "🚢 " + (currentLang === "nl" ? "Schepen" : "Vessels")],
+      ["trainGroup",       "🚆 " + (currentLang === "nl" ? "Treinen" : "Trains")],
+      ["stationGroup",     "🚉 " + (currentLang === "nl" ? "Stations" : "Stations")],
+      ["trafficIncidentGroup", "🚧 Incidents"],
+      ["trafficTileLayer", "🚗 " + (currentLang === "nl" ? "Verkeer" : "Traffic"), true],
+      ["radarLayer",       "🌧️ " + (currentLang === "nl" ? "Regenradar" : "Rain radar")],
+      ["windGroup",        "💨 Wind", true],
+      ["quakeGroup",       "🫨 Quakes", true],
+      ["thunderGroup",     "⛈️ Lightning"],
+      ["metarGroup",       "🌡️ METAR"],
+      ["hotspotGroup",     "🔥 Hotspots"],
+    ]},
+    { key: "osint",  i18n: "lmOsint",  items: [
+      ["satGroup",         "🛰️ Satellites"],
+      ["firesGroup",       "🔥 Fire spots"],
+      ["issGroup",         "🛰️ ISS orbit"],
+      ["milPlaneGroup",    null], // dedupe filler (see build below)
+      ["solarTerminatorGroup", "🌗 Day/night"],
+      ["droneGroup",       "🛩️ " + (currentLang === "nl" ? "Droneluchtruimte" : "Drone zones")],
+      ["gasGroup",         "⛽ " + (currentLang === "nl" ? "Brandstof" : "Fuel")],
+      ["tunnelGroup",      "🕳️ Tunnels"],
+      ["cableGroup",       "🚡 Cable/parks"],
+      ["stravaGroup",      "🏃 Strava"],
+      ["waterwayGroup",    "🛶 Waterways"],
+      ["openRailwayLayer", "🛤️ Railways"],
+      ["speedcamGroup",    "📸 Speedcams"],
+      ["anprGroup",        "📷 ANPR"],
+    ]},
+    { key: "nl",     i18n: "lmNl",     items: [
+      ["kadasterLayer",    "🗂️ Kadaster"],
+      ["bagLayer",         "🏠 BAG"],
+      ["provinceGroup",    "🗺️ Provinces"],
+      ["festivalGroup",    "🎪 Festivals"],
+      ["waterHealthGroup", "🏊 Water safety"],
+      ["radioGroup",       "📡 Radio towers"],
+      ["schoolGroup",      "🏫 Schools"],
+      ["fbEventGroup",     "📅 Events"],
+      ["tramGroup",        "🚋 Trams"],
+      ["mtbGroup",         "🚵 MTB"],
+      ["wildlifeGroup",    "🦌 Wildlife"],
+      ["wikiGroup",        "📖 Wikipedia"],
+      ["webcamGroup",      "📹 Webcams"],
+      ["sightGroup",       "🗽 Sights"],
+      ["timezoneGroup",    "🕐 Timezones"],
+      ["newsGroup",        "📰 News"],
+      ["civicGroup",       "🏛️ Civic"],
+      ["sportsGroup",      "⚽ Sports"],
+    ]},
+  ];
+  // Build sections dynamically, skipping empty/duplicate ids
+  (function buildLayersPanel() {
+    const body = document.getElementById("layersPanelBody");
+    if (!body) return;
+    body.innerHTML = "";
+    LM_SECTIONS.forEach(sec => {
+      const seen = new Set();
+      const items = sec.items.filter(([id, label]) => {
+        if (!label || !LM_LAYERS[id]) return false;
+        if (seen.has(id)) return false;
+        seen.add(id); return true;
+      });
+      if (!items.length) return;
+      const t = document.createElement("div");
+      t.className = "rail-sec-title";
+      t.textContent = (typeof i18n === "object" && i18n && i18n[sec.i18n]) ? i18n[sec.i18n] : sec.key.toUpperCase();
+      body.appendChild(t);
+      const wrap = document.createElement("div");
+      wrap.className = "rail-chips";
+      items.forEach(([id, label, core]) => {
+        const b = document.createElement("button");
+        b.className = "rail-chip" + (core ? " core" : "");
+        b.dataset.lmid = id;
+        b.textContent = label;
+        b.addEventListener("click", () => lmToggle(id, b));
+        wrap.appendChild(b);
+      });
+      body.appendChild(wrap);
+    });
+    lmSync();
+  })();
+  function lmToggle(id, btn) {
+    const layer = LM_LAYERS[id];
+    if (!layer) return;
+    if (id === "radarLayer" && !map.hasLayer(radarLayer)) window.__radarOptIn = true;
+    if (map.hasLayer(layer)) map.removeLayer(layer); else layer.addTo(map);
+    lmSync();
+  }
+  function lmSync() {
+    document.querySelectorAll("#layersPanelBody .rail-chip").forEach(b => {
+      const layer = LM_LAYERS[b.dataset.lmid];
+      if (layer) b.classList.toggle("on", map.hasLayer(layer));
+    });
+  }
+  (function wireLayerManager() {
+    const openBtn = document.getElementById("widgetLayersBtn");
+    const panel = document.getElementById("layersPanel");
+    const closeBtn = document.getElementById("layersPanelClose");
+    if (!openBtn || !panel) return;
+    openBtn.addEventListener("click", () => {
+      const open = panel.classList.toggle("open");
+      openBtn.classList.toggle("active", open);
+      if (open) lmSync();
+    });
+    if (closeBtn) closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open"); openBtn.classList.remove("active");
+    });
+    const PRESETS = {
+      clean: ["planeGroup", "milPlaneGroup", "windGroup", "quakeGroup", "trafficTileLayer"],
+      intel: ["planeGroup", "milPlaneGroup", "vesselGroup", "windGroup", "quakeGroup", "thunderGroup",
+              "satGroup", "issGroup", "solarTerminatorGroup", "speedcamGroup", "trafficTileLayer", "radarLayer"],
+      space: ["satGroup", "firesGroup", "issGroup", "solarTerminatorGroup"],
+    };
+    document.querySelectorAll("#layerPresets button").forEach(pb => {
+      pb.addEventListener("click", () => {
+        const on = new Set(PRESETS[pb.dataset.lpreset] || []);
+        Object.keys(PRESETS).forEach(k => {
+          (PRESETS[k] || []).forEach(id => {
+            const layer = LM_LAYERS[id];
+            if (!layer) return;
+            const want = on.has(id);
+            if (want && !map.hasLayer(layer)) {
+              if (id === "radarLayer") window.__radarOptIn = true;
+              layer.addTo(map);
+            } else if (!want && map.hasLayer(layer)) map.removeLayer(layer);
+          });
+        });
+        document.querySelectorAll("#layerPresets button").forEach(x => x.classList.toggle("active", x === pb));
+        lmSync();
+      });
+    });
+  })();
+
+  // --- Vessel range helper: the live AIS feed (Digitraffic) covers Finnish/
+  // Baltic waters; from a NL-centered view the pins sit ~1000 km away and the
+  // layer looks dead. If vessels are on but none are in view, say so and offer
+  // a one-click jump to the nearest ship. Fires whenever the layer is switched
+  // on (chip, preset, or layer control), not just at boot.
+  function checkVesselRange() {
+    try {
+      if (!map.hasLayer(vesselGroup) || !vesselGroup.getLayers().length) return;
+      const b = map.getBounds().pad(0.35);
+      const inView = vesselGroup.getLayers().some(m => {
+        const ll = m.getLatLng && m.getLatLng();
+        return ll && b.contains(ll);
+      });
+      if (inView) return;
+      let nearest = null, best = Infinity;
+      const c = map.getCenter();
+      vesselGroup.getLayers().forEach(m => {
+        const ll = m.getLatLng && m.getLatLng();
+        if (!ll) return;
+        const d = map.distance(c, ll);
+        if (d < best) { best = d; nearest = ll; }
+      });
+      if (!nearest) return;
+      document.querySelectorAll(".lm-toast").forEach(x => x.remove());
+      const t = document.createElement("div");
+      t.className = "lm-toast";
+      const isNl = currentLang === "nl";
+      t.innerHTML = `<span>🚢 ${isNl ? "0 schepen in beeld — de live AIS-feed dekt de Oostzee. Dichtstbijzijnde schip" : "0 ships in view — the live AIS feed covers the Baltic. Nearest vessel"} ≈ ${Math.round(best / 1000)} km.</span>`;
+      const go = document.createElement("button");
+      go.textContent = isNl ? "✈ Vlieg naar schip" : "✈ Fly to ship";
+      go.addEventListener("click", () => { map.flyTo(nearest, 7); t.classList.remove("show"); });
+      t.appendChild(go);
+      const x = document.createElement("button");
+      x.className = "lm-toast-x"; x.textContent = "✕";
+      x.addEventListener("click", () => t.classList.remove("show"));
+      t.appendChild(x);
+      document.body.appendChild(t);
+      requestAnimationFrame(() => t.classList.add("show"));
+      setTimeout(() => t.classList.remove("show"), 14000);
+    } catch (e) { /* hint only — never break the map */ }
+  }
+  map.on("layeradd", e => {
+    if (e.layer === vesselGroup) setTimeout(checkVesselRange, 1200);
+  });
+
+  // ================= END UX OVERHAUL handlers =================
 
   // --- Legend Modal Handlers ---
   const legendBtn = document.getElementById("legendBtn");
