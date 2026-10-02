@@ -1,0 +1,131 @@
+# Minimum CI floor for omarchy-earth.
+#
+# Before this file there were zero automated checks: a syntax error in
+# bin/*.py or a trailing comma in one of the 30 data/*.json files would reach
+# master and then the live plugin clone with no gate at all.
+#
+# Scope is deliberately narrow -- compile-and-parse only, no test framework.
+# Three jobs mirror the cheap half of omarchy-toolbelt's ci.yml:
+#   compile  -- py_compile over every tracked *.py
+#   data     -- json.load over every tracked *.json
+#              (NO drift/catalog gate -- data/*.json are static, hand-authored
+#               datasets with no live upstream mirror; adding one would be the
+#               PLU-41 mistake in reverse)
+#   qml      -- brace-balance + duplicate-id check on BarWidget.qml
+#              (a duplicate id: silently kills the plugin -- the check earns its keep)
+#
+# shell: there are no tracked shell scripts in this repo today; if one is ever
+# added with a bash/sh shebang, the step below will catch it automatically.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.11'
+
+      - name: Every tracked Python file compiles
+        run: |
+          errfile=$(mktemp)
+          fail=0
+          for f in $(git ls-files '*.py'); do
+            if python -m py_compile "$f" 2>"$errfile"; then
+              echo "ok    $f"
+            else
+              echo "FAIL  $f"; cat "$errfile"; fail=1
+            fi
+          done
+          exit $fail
+
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: Tracked JSON parses
+        run: |
+          # manifest.json is read at plugin load; data/*.json are loaded on
+          # demand. A trailing comma in any of them is a dead dataset the user
+          # never sees an error for -- just missing markers on the map.
+          # NO drift/catalog gate here: these are static datasets with no live
+          # upstream mirror (PLU-46 scope note).
+          fail=0
+          for f in $(git ls-files '*.json'); do
+            if python3 -c "import json,sys; json.load(open('$f'))"; then
+              echo "ok    $f"
+            else
+              echo "FAIL  $f"; fail=1
+            fi
+          done
+          exit $fail
+
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: Tracked shell scripts parse
+        run: |
+          errfile=$(mktemp)
+          fail=0
+          for f in $(git ls-files); do
+            [ -f "$f" ] || continue
+            case "$(head -c 2 "$f" 2>/dev/null)" in '#!') ;; *) continue ;; esac
+            head -1 "$f" | grep -qE '^#!.*(bash|/bin/sh)' || continue
+            if bash -n "$f" 2>"$errfile"; then echo "ok    $f"; else echo "FAIL  $f"; cat "$errfile"; fail=1; fi
+          done
+          exit $fail
+
+  qml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+
+      - name: QML brace balance and duplicate-id check
+        run: |
+          # Two known failure modes for this plugin:
+          #
+          # 1. Unbalanced braces: QML is brace-delimited; a missing } means the
+          #    whole component tree fails to parse and the widget never appears.
+          #
+          # 2. Duplicate id: values: QML silently deduplicates them at load
+          #    time, which means the second element with that id is unreachable.
+          #    This is a silent kill -- no error, the feature just disappears.
+          #    Recorded as a known trap for this stack in PLU-46.
+          fail=0
+          for f in $(git ls-files '*.qml'); do
+            echo "--- $f"
+
+            # Brace balance
+            opens=$(grep -o '{' "$f" | wc -l)
+            closes=$(grep -o '}' "$f" | wc -l)
+            if [ "$opens" -eq "$closes" ]; then
+              echo "ok    brace balance ($opens open, $closes close)"
+            else
+              echo "FAIL  brace balance: $opens '{' vs $closes '}' in $f"
+              fail=1
+            fi
+
+            # Duplicate id: check
+            # Extract 'id: <name>' values, sort, find dupes.
+            dupes=$(grep -oP '(?<=\bid:\s)\w+' "$f" | sort | uniq -d)
+            if [ -z "$dupes" ]; then
+              echo "ok    no duplicate id: values"
+            else
+              echo "FAIL  duplicate id: values in $f: $dupes"
+              fail=1
+            fi
+          done
+          exit $fail
