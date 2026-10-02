@@ -120,7 +120,10 @@ jobs:
 
             # Duplicate id: check
             # Extract 'id: <name>' values, sort, find dupes.
-            dupes=$(grep -oP '(?<=\bid:\s)\w+' "$f" | sort | uniq -d)
+            # \s* not \s: QML accepts 'id:foo' with no space, and a lookbehind
+            # requiring exactly one space skips those lines entirely -- a
+            # duplicate written that way would pass this gate green.
+            dupes=$(grep -oP '\bid:\s*\K\w+' "$f" | sort | uniq -d)
             if [ -z "$dupes" ]; then
               echo "ok    no duplicate id: values"
             else
