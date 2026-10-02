@@ -19,4 +19,4 @@
     { "key": "intervalSec", "type": "number", "label": "Refresh (s)", "default": 300, "min": 60 },
     { "key": "showLabel", "type": "boolean", "label": "Bar label text", "default": true }
   ]
-}
+, "_BREAK": }
