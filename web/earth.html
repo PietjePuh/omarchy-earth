@@ -4252,6 +4252,96 @@ async function loadWikipediaArticles(lat, lon) {
 window.planePhotoCache = {};
 window.planeTrails = {};
 
+// --- AirTrail integration: one-click "log this live sighting" ---
+// Resolves the live ADSB callsign to a route via adsbdb.com (free, keyless,
+// CORS: *) then POSTs to your own self-hosted AirTrail instance's legacy
+// /api/flight/save endpoint -- it takes plain ICAO airport/airline/aircraft
+// code strings, no numeric ID lookups needed like the newer v1 API would.
+// Config (base URL + API key) lives in localStorage only: it goes straight
+// from this browser to your own AirTrail server, never anywhere else.
+// Expect frequent "no route found" results for military/GA/private
+// callsigns -- adsbdb only resolves scheduled commercial routes.
+function getAirtrailConfig() {
+  try {
+    const raw = localStorage.getItem("omarchy_earth_airtrail");
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return null;
+}
+
+function promptAirtrailConfig() {
+  const isNl = currentLang === "nl";
+  const url = prompt(isNl ? "AirTrail server-URL (bv. https://airtrail.thuis.lan):" : "AirTrail server URL (e.g. https://airtrail.home.lan):");
+  if (!url) return null;
+  const key = prompt(isNl ? "AirTrail API key (Settings > Security > API Keys):" : "AirTrail API key (Settings > Security > API Keys):");
+  if (!key) return null;
+  const cfg = { url: url.replace(/\/+$/, ""), key: key.trim() };
+  try { localStorage.setItem("omarchy_earth_airtrail", JSON.stringify(cfg)); } catch (e) {}
+  return cfg;
+}
+
+async function logFlightToAirTrail(hex) {
+  const isNl = currentLang === "nl";
+  const statusEl = document.getElementById("at-status-" + hex);
+  const meta = window.planeTrails[hex] || {};
+  const setStatus = (msg) => { if (statusEl) statusEl.textContent = msg; };
+
+  let cfg = getAirtrailConfig();
+  if (!cfg) cfg = promptAirtrailConfig();
+  if (!cfg) return;
+
+  const callsign = (meta.callsign || "").trim();
+  if (!callsign) {
+    setStatus(isNl ? "❌ Geen callsign, kan geen route opzoeken" : "❌ No callsign, can't look up a route");
+    return;
+  }
+
+  setStatus(isNl ? "⏳ Route opzoeken…" : "⏳ Looking up route…");
+  let route = null;
+  try {
+    const r = await fetch(`https://api.adsbdb.com/v0/callsign/${encodeURIComponent(callsign)}`);
+    if (r.ok) {
+      const d = await r.json();
+      route = (d.response && d.response.flightroute) || null;
+    }
+  } catch (e) {}
+
+  if (!route || !route.origin || !route.destination) {
+    setStatus(isNl ? "❌ Geen route gevonden voor deze callsign (vaak bij militair/GA)" : "❌ No route found for this callsign (common for military/GA)");
+    return;
+  }
+
+  setStatus(isNl ? "⏳ Loggen naar AirTrail…" : "⏳ Logging to AirTrail…");
+  const today = new Date().toISOString().slice(0, 10);
+  const payload = {
+    from: route.origin.icao_code,
+    to: route.destination.icao_code,
+    departure: today,
+    airline: route.airline && route.airline.icao,
+    flightNumber: route.callsign_iata || route.callsign,
+    aircraft: meta.type || undefined,
+    aircraftReg: meta.reg || undefined,
+    passengers: [{}],
+    note: (isNl ? "Live gespot via Earth Monitor, " : "Live-spotted via Earth Monitor, ") + new Date().toLocaleString(isNl ? "nl-NL" : "en-US")
+  };
+
+  try {
+    const res = await fetch(`${cfg.url}/api/flight/save`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Authorization": "Bearer " + cfg.key },
+      body: JSON.stringify(payload)
+    });
+    const body = await res.json().catch(() => ({}));
+    if (res.ok && body.success) {
+      setStatus(isNl ? `✅ Gelogd: ${payload.from} → ${payload.to}` : `✅ Logged: ${payload.from} → ${payload.to}`);
+    } else {
+      setStatus((isNl ? "❌ AirTrail wees af: " : "❌ AirTrail rejected it: ") + (body.message || (body.errors || []).join(", ") || res.status));
+    }
+  } catch (e) {
+    setStatus(isNl ? "❌ Kan AirTrail-server niet bereiken" : "❌ Can't reach AirTrail server");
+  }
+}
+
 function headingToCompass(deg) {
   if (deg == null) return "";
   const dirsEn = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
@@ -4341,7 +4431,10 @@ function drawPlanes(items) {
     });
 
     const fullTrack = a.trail && a.trail.length > 0 ? [[a.lat, a.lon], ...a.trail] : [];
-    window.planeTrails[a.hex] = { trail: fullTrack, col: col, label: `✈️ ${isNl ? 'Vluchtspoor van' : 'Flight trail of'} ${a.callsign || a.hex}` };
+    window.planeTrails[a.hex] = {
+      trail: fullTrack, col: col, label: `✈️ ${isNl ? 'Vluchtspoor van' : 'Flight trail of'} ${a.callsign || a.hex}`,
+      callsign: a.callsign, type: a.type, model_name: a.model_name, reg: a.reg
+    };
 
     const speedUnit = isNl ? "km/u" : "km/h";
     const statusText = vspeed > 100 ? '⬆️ +' + vspeed + ' ft/m' : (vspeed < -100 ? '⬇️ ' + vspeed + ' ft/m' : '➡️ ' + t("level"));
@@ -4378,7 +4471,8 @@ function drawPlanes(items) {
         `<a href="https://www.flightradar24.com/${a.callsign || a.hex}" target="_blank" class="popup-btn">📡 FR24 ↗</a>` +
         `<button class="popup-btn" onclick="addFavorite('${(a.callsign || a.hex).replace(/'/g, "")} (${(a.model_name || a.type || 'Aircraft').replace(/'/g, "")})', ${a.lat}, ${a.lon}, 13)">⭐ ${t("btnSaveFav")}</button>` +
         `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lon}" target="_blank" class="popup-btn">🚶 ${t("btnStreetView")}</a>` +
-        `</div></div>`
+        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'}</button>` +
+        `</div><div id="at-status-${a.hex}" style="font-size:10px;color:#8fa8bd;margin-top:4px"></div></div>`
       ).addTo(planeGroup);
 
     m.on("popupopen", () => loadPlanePhoto(a.hex, "ac-img-" + a.hex, "ac-ph-" + a.hex, "ac-cr-" + a.hex, "ac-lk-" + a.hex));
@@ -4408,7 +4502,10 @@ function drawMilPlanes(items) {
     });
 
     const fullTrack = a.trail && a.trail.length > 0 ? [[a.lat, a.lon], ...a.trail] : [];
-    window.planeTrails[a.hex] = { trail: fullTrack, col: "#f59e0b", label: `🎖️ ${isNl ? 'Militaire patrouilleroute' : 'Military patrol route'} ${a.callsign || a.hex}` };
+    window.planeTrails[a.hex] = {
+      trail: fullTrack, col: "#f59e0b", label: `🎖️ ${isNl ? 'Militaire patrouilleroute' : 'Military patrol route'} ${a.callsign || a.hex}`,
+      callsign: a.callsign, type: a.type, model_name: a.model_name, reg: a.reg
+    };
 
     const speedUnit = isNl ? "km/u" : "km/h";
     const statusText = vspeed > 100 ? '⬆️ +' + vspeed + ' ft/m' : (vspeed < -100 ? '⬇️ ' + vspeed + ' ft/m' : '➡️ ' + t("level"));
@@ -4444,7 +4541,8 @@ function drawMilPlanes(items) {
         `<a href="https://globe.adsb.lol/?icao=${a.hex}" target="_blank" class="popup-btn">📡 adsb.lol ↗</a>` +
         `<button class="popup-btn" onclick="addFavorite('${(a.callsign || a.hex).replace(/'/g, "")} (${(a.model_name || a.type || 'Military').replace(/'/g, "")})', ${a.lat}, ${a.lon}, 13)">⭐ ${t("btnSaveFav")}</button>` +
         `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lon}" target="_blank" class="popup-btn">🚶 ${t("btnStreetView")}</a>` +
-        `</div></div>`
+        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'}</button>` +
+        `</div><div id="at-status-${a.hex}" style="font-size:10px;color:#8fa8bd;margin-top:4px"></div></div>`
       ).addTo(milPlaneGroup);
 
     m.on("popupopen", () => loadPlanePhoto(a.hex, "ac-img-" + a.hex, "ac-ph-" + a.hex, "ac-cr-" + a.hex, "ac-lk-" + a.hex));

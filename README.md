@@ -55,6 +55,15 @@ Open-Meteo, RainViewer, NOAA/NWS MRMS (opengeo.ncep.noaa.gov GeoServer, CONUS hi
 
 Both regional overlays stack on top of the RainViewer timeline and are useful when travelling in/near their coverage area for sharper detail than RainViewer's global tiles offer; outside their footprint they render nothing (transparent).
 
+### Log a live sighting to AirTrail (optional)
+
+If you self-host [AirTrail](https://github.com/johanohly/AirTrail) (an open-source personal flight log), every civil and military aircraft popup gets a **📝 Log to AirTrail** button. On click it:
+
+1. Resolves the aircraft's live callsign to a route via [adsbdb.com](https://api.adsbdb.com) (free, keyless).
+2. POSTs a flight entry (route, aircraft type/registration, a timestamped note) to your AirTrail instance's `/api/flight/save` endpoint.
+
+Expect frequent "no route found" results for military, GA, and private flights — adsbdb only resolves scheduled commercial callsigns, there's no way around that from a single live ADS-B snapshot. The first click prompts for your AirTrail server URL and an API key (create one under AirTrail's Settings → Security → API Keys); both are stored in this browser's `localStorage` only and sent straight to your own server, never anywhere else.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
