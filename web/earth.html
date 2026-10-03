@@ -1395,6 +1395,32 @@ let bagLayer = L.tileLayer.wms(
 let openRailwayLayer = L.tileLayer("https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png",
   { subdomains: ["a", "b", "c"], maxNativeZoom: 19, maxZoom: 20, opacity: 0.85, attribution: "OpenRailwayMap" });
 
+// High-res regional radar (govt, keyless) -- latest frame only, no historical
+// scrubber: unlike RainViewer's own frame index these GeoServers don't expose
+// a cheap client-side time-dimension list, so these are single-frame toggles
+// that complement (not replace) the RainViewer timeline below. See
+// docs inspiration: https://github.com/jpettitt/weather-radar-card
+let noaaRadarLayer = L.tileLayer.wms(
+  "https://opengeo.ncep.noaa.gov/geoserver/conus/conus_bref_qcd/ows?", {
+    layers: "conus_bref_qcd",
+    format: "image/png",
+    transparent: true,
+    opacity: 0.65,
+    maxNativeZoom: 7,
+    maxZoom: 20,
+    attribution: "NOAA/NWS MRMS (CONUS only)"
+  });
+let dwdRadarLayer = L.tileLayer.wms(
+  "https://maps.dwd.de/geoserver/dwd/ows?", {
+    layers: "Niederschlagsradar",
+    format: "image/png",
+    transparent: true,
+    opacity: 0.65,
+    maxNativeZoom: 10,
+    maxZoom: 20,
+    attribution: "DWD Niederschlagsradar (DE + buren)"
+  });
+
 let radarLayer = L.layerGroup();
 let radarFrames = [], frameIndex = 0, playing = false, playTimer = null;
 let layerControl = null;
@@ -1688,6 +1714,8 @@ const I18N = {
     provinceLayer: "🗺️ Provinces & Administrative Borders",
     kadasterLayer: "🏛️ Kadaster Parcels & Boundaries (BRK)",
     bagLayer: "🏠 BAG Buildings & House Numbers",
+    noaaRadarLayer: "📡 NOAA Hi-res Radar (US only, latest frame)",
+    dwdRadarLayer: "📡 DWD Hi-res Radar (DE + neighbours, latest frame)",
     navCadastre: "🏛️ Parcels & Numbers",
     nav3d: "🏢 3D View",
     cadastreBanner: "🏛️ Cadastre & BAG Mode: Click any building or parcel for cadastral ID, house number, details & 3D view",
@@ -1802,6 +1830,8 @@ const I18N = {
     provinceLayer: "🗺️ Provincies & Bestuursgrenzen",
     kadasterLayer: "🏛️ Kadastrale Percelen & Grenzen (BRK)",
     bagLayer: "🏠 BAG Panden & Huisnummers",
+    noaaRadarLayer: "📡 NOAA Hi-res Radar (alleen VS, laatste frame)",
+    dwdRadarLayer: "📡 DWD Hi-res Radar (DE + buren, laatste frame)",
     navCadastre: "🏛️ Percelen & Huisnummers",
     nav3d: "🏢 3D View",
     cadastreBanner: "🏛️ Kadaster & BAG Modus: Klik op een pand of perceel voor kadastrale gegevens, perceelnummers, huisnummers en 3D View",
@@ -1901,6 +1931,8 @@ function initOrUpdateLayerControl() {
     [t("solarTerminatorLayer")]: solarTerminatorGroup,
     [t("kadasterLayer")]: kadasterLayer,
     [t("bagLayer")]: bagLayer,
+    [t("noaaRadarLayer")]: noaaRadarLayer,
+    [t("dwdRadarLayer")]: dwdRadarLayer,
     [isNl ? "🛰️ Live Satellites (TLE)" : "🛰️ Live Satellites (TLE)"]: satGroup,
     [isNl ? "🔥 Actieve Brandhaarden (EONET)" : "🔥 Active Fire Detections (EONET)"]: firesGroup
   };

@@ -14,7 +14,7 @@ Collects and emits one comprehensive JSON object per line on stdout:
   - Geopolitical conflict hotspots & flashpoints (Ukraine, Gaza, Red Sea, etc.)
   - METAR airfields with FAA flight categories (aviationweather.gov)
   - Global rain radar timeline frames (RainViewer)
-  - Wind field grid 36 points worldwide (Open-Meteo)
+  - Wind field grid 81 points worldwide (Open-Meteo)
   - Air quality & ammonia & pollen index (Open-Meteo)
   - Significant earthquakes past 24h (USGS)
   - Orange and Red disaster alerts worldwide (GDACS)
@@ -504,7 +504,22 @@ def evaluate_advice(weather: dict, nowcast: dict, solar: dict) -> list[dict]:
 
 
 def radar_frames() -> dict:
-    out = {"host": "", "frames": [], "satellite": [], "error": ""}
+    out = {
+        "host": "", "frames": [], "satellite": [], "error": "",
+        # Per-source capability caps, documented alongside the two
+        # regional hi-res WMS toggles (web/earth.html: noaaRadarLayer /
+        # dwdRadarLayer) -- RainViewer stays the only source with a real
+        # frame-index timeline (see setRadarFrame() in earth.html); NOAA
+        # and DWD are latest-frame-only WMS overlays, no historical
+        # scrubber, so they carry no frame caps of their own.
+        # Pattern lifted from github.com/jpettitt/weather-radar-card's
+        # data-sources.md per-source cap table.
+        "sources": {
+            "rainviewer": {"coverage": "global", "native_interval_min": 10, "max_past_min": 120},
+            "noaa": {"coverage": "US (CONUS)", "native_interval_min": None, "max_past_min": 0},
+            "dwd": {"coverage": "DE + neighbours", "native_interval_min": None, "max_past_min": 0},
+        },
+    }
     try:
         d = fetch_json(RAINVIEWER_INDEX, timeout=12)
     except Exception as e:
@@ -513,6 +528,12 @@ def radar_frames() -> dict:
     out["host"] = d.get("host", "")
     radar = d.get("radar") or {}
     frames = list(radar.get("past") or []) + list(radar.get("nowcast") or [])
+    # RainViewer's own cap: keep at most 120 minutes of past + nowcast frames
+    # (its native interval is 10 min, so that's at most 13 frames) rather
+    # than trusting whatever the index happens to return.
+    max_frames = 13
+    if len(frames) > max_frames:
+        frames = frames[-max_frames:]
     for f in frames:
         out["frames"].append({"time": f.get("time"), "path": f.get("path")})
     sat = (d.get("satellite") or {}).get("infrared") or []
@@ -520,7 +541,7 @@ def radar_frames() -> dict:
     return out
 
 
-def wind_grid(lat: float, lon: float, span: float, n: int = 6) -> dict:
+def wind_grid(lat: float, lon: float, span: float, n: int = 9) -> dict:
     lats, lons = [], []
     for i in range(n):
         for j in range(n):

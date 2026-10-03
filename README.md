@@ -45,7 +45,15 @@ No other files are created or modified outside this plugin's own directory and i
 
 All data sources are free, public, keyless APIs/feeds. This plugin performs light, infrequent polling (default every 5 minutes) and does not require or store any account credentials:
 
-Open-Meteo, RainViewer, ADSB.lol, USGS Earthquakes, GDACS, NOAA SWPC, Radio Browser (radio-browser.info), CISA KEV, NCSC-NL advisories, aviationweather.gov, Digitraffic (Finland), NDW (Dutch road data), Buienradar, OpenStreetMap/Nominatim, OSRM, and public RSS feeds from NOS, BBC, Al Jazeera, Reuters/DW/Euronews/Guardian/Politico and other named outlets for the news layer.
+Open-Meteo, RainViewer, NOAA/NWS MRMS (opengeo.ncep.noaa.gov GeoServer, CONUS hi-res radar), DWD (maps.dwd.de GeoServer, German + neighbouring hi-res radar), ADSB.lol, USGS Earthquakes, GDACS, NOAA SWPC, Radio Browser (radio-browser.info), CISA KEV, NCSC-NL advisories, aviationweather.gov, Digitraffic (Finland), NDW (Dutch road data), Buienradar, OpenStreetMap/Nominatim, OSRM, and public RSS feeds from NOS, BBC, Al Jazeera, Reuters/DW/Euronews/Guardian/Politico and other named outlets for the news layer.
+
+### Radar layers
+
+- **Rain Radar** (default on, in the timeline bar): RainViewer, global coverage, ~10-minute frames, up to 2h of history + short nowcast — the only source with a historical scrubber.
+- **📡 NOAA Hi-res Radar** (Layer Manager, opt-in): US/CONUS-only MRMS composite reflectivity, ~1km resolution. Latest frame only, no scrubber.
+- **📡 DWD Hi-res Radar** (Layer Manager, opt-in): German `Niederschlagsradar`, covers Germany and its immediate neighbours. Latest frame only, no scrubber.
+
+Both regional overlays stack on top of the RainViewer timeline and are useful when travelling in/near their coverage area for sharper detail than RainViewer's global tiles offer; outside their footprint they render nothing (transparent).
 
 ## License
 
