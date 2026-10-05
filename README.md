@@ -28,6 +28,28 @@ A single, always-available bar widget for [Omarchy](https://omarchy.org) that pu
 
 No external accounts, API keys, or paid services are required — every data source used is free and keyless (see **Data sources & attribution** below).
 
+## Layer & Data Source Key Inventory
+
+The plugin defaults to keyless, open endpoints for all layers. No mandatory API keys are required for standard operation.
+
+| Layer / Feature | Default Source | Status / Keyless Equivalent | Optional Keyed Source |
+| :--- | :--- | :--- | :--- |
+| **Base Map Tiles** | Esri World Imagery, OpenStreetMap, OpenTopoMap, Carto/Esri Dark/Light, Google Maps public tiles | Keyless / Open Tiles | None required |
+| **Rain Radar (Global Timeline)** | RainViewer Public API | Keyless / Open API | None required |
+| **High-res Radar (US CONUS)** | NOAA/NWS MRMS GeoServer | Keyless / Open WMS | None required |
+| **High-res Radar (DE/Central EU)** | DWD Niederschlagsradar GeoServer | Keyless / Open WMS | None required |
+| **Weather & Nowcast** | Open-Meteo & Buienradar raintext | Keyless / Open API | None required |
+| **Air Quality & Pollen** | Open-Meteo Air Quality API | Keyless / Open API | None required |
+| **Civil & Military Flights** | ADSB.lol public API (`/v2/point`, `/v2/mil`) | Keyless / Open API | None required |
+| **Vessels & Maritime Traffic** | Digitraffic Finland Marine AIS API | Keyless / Open API | None required |
+| **Trains & Rail Disruptions** | TrainsTracking Realtime & Rijden de Treinen RSS | Keyless / Open Feeds | None required |
+| **Earthquakes & Disasters** | USGS GeoJSON & GDACS Events API | Keyless / Open Feeds | None required |
+| **Satellites & ISS Tracking** | CelesTrak TLE GP & WhereTheISS.at | Keyless / Open API | None required |
+| **Fire Detections** | NASA EONET v2.1 Events API | Keyless / Open API | NASA FIRMS (Optional Keyed) |
+| **Internet Radio Directory** | Radio Browser (`de1.api.radio-browser.info`) | Keyless / Open Directory | None required |
+| **News Feeds & Threat Intel** | Public RSS Feeds (NOS, BBC, Al Jazeera, Reuters/DW, CISA, NCSC-NL) | Keyless / Open RSS | None required |
+| **Flight Log Sighting** | AirTrail Personal Instance (`/api/flight/save`) | Keyed Opt-in (User self-hosted server token) | AirTrail Server API Key |
+
 ## Removal
 
 ```bash

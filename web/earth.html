@@ -4471,7 +4471,7 @@ function drawPlanes(items) {
         `<a href="https://www.flightradar24.com/${a.callsign || a.hex}" target="_blank" class="popup-btn">📡 FR24 ↗</a>` +
         `<button class="popup-btn" onclick="addFavorite('${(a.callsign || a.hex).replace(/'/g, "")} (${(a.model_name || a.type || 'Aircraft').replace(/'/g, "")})', ${a.lat}, ${a.lon}, 13)">⭐ ${t("btnSaveFav")}</button>` +
         `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lon}" target="_blank" class="popup-btn">🚶 ${t("btnStreetView")}</a>` +
-        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'}</button>` +
+        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'} <span style="font-size:9px;opacity:0.75;margin-left:2px">(🔑 ${isNl ? 'Sleutel vereist' : 'Keyed Opt-in'})</span></button>` +
         `</div><div id="at-status-${a.hex}" style="font-size:10px;color:#8fa8bd;margin-top:4px"></div></div>`
       ).addTo(planeGroup);
 
@@ -4541,7 +4541,7 @@ function drawMilPlanes(items) {
         `<a href="https://globe.adsb.lol/?icao=${a.hex}" target="_blank" class="popup-btn">📡 adsb.lol ↗</a>` +
         `<button class="popup-btn" onclick="addFavorite('${(a.callsign || a.hex).replace(/'/g, "")} (${(a.model_name || a.type || 'Military').replace(/'/g, "")})', ${a.lat}, ${a.lon}, 13)">⭐ ${t("btnSaveFav")}</button>` +
         `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lon}" target="_blank" class="popup-btn">🚶 ${t("btnStreetView")}</a>` +
-        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'}</button>` +
+        `<button class="popup-btn" onclick="logFlightToAirTrail('${a.hex}')">📝 ${isNl ? 'Log naar AirTrail' : 'Log to AirTrail'} <span style="font-size:9px;opacity:0.75;margin-left:2px">(🔑 ${isNl ? 'Sleutel vereist' : 'Keyed Opt-in'})</span></button>` +
         `</div><div id="at-status-${a.hex}" style="font-size:10px;color:#8fa8bd;margin-top:4px"></div></div>`
       ).addTo(milPlaneGroup);
 
