@@ -7060,6 +7060,15 @@ async function load() {
     }, 450);
   };
 
+  function escapeSearchHtml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
   window.searchPdokKadaster = async function(encQuery) {
     const q = decodeURIComponent(encQuery);
     const isNl = currentLang === "nl";
@@ -7070,7 +7079,7 @@ async function load() {
       const data = await res.json();
       const docs = (data.response && data.response.docs) || [];
       if (!docs.length) {
-        searchResults.innerHTML = `<div style="padding:10px;color:#f87171;font-size:11px">${isNl ? 'Geen adressen of percelen gevonden voor "' + q + '"' : 'No addresses or parcels found for "' + q + '"'}</div>`;
+        searchResults.innerHTML = `<div style="padding:10px;color:#f87171;font-size:11px">${isNl ? 'Geen adressen of percelen gevonden voor "' + escapeSearchHtml(q) + '"' : 'No addresses or parcels found for "' + escapeSearchHtml(q) + '"'}</div>`;
         return;
       }
       searchResults.innerHTML = docs.map(d => {
@@ -7084,8 +7093,8 @@ async function load() {
         const icon = isPerceel ? '🏛️' : '🏠';
         return `
           <div class="search-item" onclick="window.flyToSearchItem(${lat}, ${lon}, 18); window.openCadastreAt(${lat}, ${lon});">
-            <div class="search-item-title" style="color:#fbbf24">${icon} ${d.weergavenaam}</div>
-            <div class="search-item-sub">Type: ${d.type} · ${d.bron || 'PDOK'}</div>
+            <div class="search-item-title" style="color:#fbbf24">${icon} ${escapeSearchHtml(d.weergavenaam)}</div>
+            <div class="search-item-sub">Type: ${escapeSearchHtml(d.type)} · ${escapeSearchHtml(d.bron || 'PDOK')}</div>
           </div>
         `;
       }).join("");
@@ -7103,13 +7112,13 @@ async function load() {
       if (!res.ok) throw new Error();
       const results = await res.json();
       if (!results || !results.length) {
-        searchResults.innerHTML = `<div style="padding:10px;color:#f87171;font-size:11px">${isNl ? 'Geen locaties gevonden voor "' + q + '"' : 'No locations found for "' + q + '"'}</div>`;
+        searchResults.innerHTML = `<div style="padding:10px;color:#f87171;font-size:11px">${isNl ? 'Geen locaties gevonden voor "' + escapeSearchHtml(q) + '"' : 'No locations found for "' + escapeSearchHtml(q) + '"'}</div>`;
         return;
       }
       searchResults.innerHTML = results.map(r => `
         <div class="search-item" onclick="window.flyToSearchItem(${r.lat}, ${r.lon}, 13)">
-          <div class="search-item-title">📍 ${r.display_name.split(',')[0]}</div>
-          <div class="search-item-sub">${r.display_name}</div>
+          <div class="search-item-title">📍 ${escapeSearchHtml(r.display_name.split(',')[0])}</div>
+          <div class="search-item-sub">${escapeSearchHtml(r.display_name)}</div>
         </div>
       `).join("");
     } catch (e) {
