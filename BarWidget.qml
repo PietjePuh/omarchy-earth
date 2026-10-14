@@ -339,6 +339,56 @@ Panel {
     }
   }
 
+  // Live ADS-B poller: fetches adsb.lol every 30s and writes a JSONP file
+  // next to the built page (see bin/adsb-poller.py). api.adsb.lol has no
+  // CORS headers, so the page cannot fetch it directly -- this file is the
+  // bridge. Skipped while the map data is still locating (lat NaN).
+  Process {
+    id: adsbPoller
+    running: false
+    command: ["python3", root.pluginDir + "/bin/adsb-poller.py",
+              "--lat", String(root.lat), "--lon", String(root.lon),
+              "--radius", String(root.radiusNm),
+              "--interval", "30", "--once"]
+    stdout: StdioCollector {
+      waitForEnd: true
+      onStreamFinished: {
+        if (root.destroying) return
+        var obj
+        try {
+          var lines = text.trim().split("\n")
+          obj = JSON.parse(lines[lines.length - 1])
+        } catch (e) { return }
+        if (!obj || obj.error) return
+        // Live-refresh the panel's Vluchten tab from the same poll that
+        // feeds the map -- no extra network call.
+        root.aircraft         = (obj.aircraft && obj.aircraft.items) || []
+        root.planeCount       = (obj.aircraft && obj.aircraft.count) || 0
+        root.emergencies      = (obj.aircraft && obj.aircraft.emergencies) || []
+        root.militaryAircraft = (obj.military_aircraft && obj.military_aircraft.items) || []
+        root.militaryCount    = (obj.military_aircraft && obj.military_aircraft.count) || 0
+        root.militaryNearby   = (obj.military_aircraft && obj.military_aircraft.nearby) || []
+      }
+    }
+    onExited: function(code) {
+      if (root.destroying) return
+      // Non-zero just means this poll failed (network/adsb.lol hiccup);
+      // the poller keeps the last good file on disk, the map shows a
+      // stale-data toast on its own. Never surface this as a panel error.
+    }
+  }
+
+  Timer {
+    id: adsbTimer
+    interval: 30000
+    running: root.configured && !root.destroying && !isNaN(root.lat)
+    repeat: true
+    triggeredOnStart: true
+    onTriggered: {
+      if (!adsbPoller.running) adsbPoller.running = true
+    }
+  }
+
   Timer {
     interval: Math.max(60, root.intervalSec) * 1000
     running: root.configured && !root.destroying
@@ -351,6 +401,7 @@ Panel {
     root.destroying = true
     sampler.running = false
     builder.running = false
+    adsbPoller.running = false
   }
 
   WidgetButton {
