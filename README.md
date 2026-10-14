@@ -11,6 +11,7 @@ A single, always-available bar widget for [Omarchy](https://omarchy.org) that pu
 
 - **Interactive world map** (Leaflet) with multiple base layers: dark, OpenStreetMap, topo, Google Maps/Satellite/Hybrid/Terrain, Esri Satellite, light.
 - **50+ opt-in overlay layers**, including: live weather radar, wind, air quality, civil and military aircraft, maritime/AIS traffic, trains and rail disruptions, drone no-fly zones, earthquakes and natural disasters, nuclear facilities, military bases, conflict/geopolitical hotspots, submarine communication cables, oil/gas pipelines, cyber security advisories (CISA KEV feed), geotagged breaking news, worldwide internet radio stations, public webcams, solar day/night terminator, and live ISS orbit tracking.
+- **Live ADS-B aircraft (adsb.lol)**: the bar widget polls adsb.lol every 30s and the map's 📡 ADS-B Live toggle refreshes civil + military aircraft positions continuously while it runs — planes actually move on the map, and open popups stay open between refreshes. Without the poller (e.g. a standalone browser viewing the built page), the layer falls back to the build-time snapshot.
 - **Route planner**: multi-modal directions (car/bike/foot) via OSRM, with region-aware fuel/EV/transit/taxi cost estimates and one-click hand-off to Google Maps, TomTom, Waze, Apple Maps.
 - **Live curated news & radio panel**, filterable by category, with a "open in real browser" fallback for sites that block being embedded.
 - Full English/Dutch UI.

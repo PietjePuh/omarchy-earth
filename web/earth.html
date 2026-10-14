@@ -788,6 +788,7 @@
   <button id="satToggleBtn" class="nav-btn sat-toggle-btn" title="Live satellites above the current view (CelesTrak TLE / SGP4)">🛰️ Satellites</button>
   <button id="firesToggleBtn" class="nav-btn fires-toggle-btn" title="Active fire detections, last 24h (NASA FIRMS)">🔥 Fire Spots</button>
   <button id="launchesBtn" class="nav-btn launches-btn" title="Space launches, next 7 days (Launch Library 2)">🚀 Launches</button>
+  <button id="adsbLiveBtn" class="nav-btn adsb-live-btn" title="Live ADS-B aircraft (adsb.lol, refresh 30s)">📡 ADS-B Live</button>
   <button id="sensorBtn" class="nav-btn" title="Sensor look: cycle Normal → NVG → Thermal → FLIR → Noir (visual filter)">🎛️ Sensor: Normal</button>
   <button id="favoritesBtn" class="nav-btn fav-btn" title="Favorite Places">⭐ Favorites</button>
   <button id="langToggleBtn" class="nav-btn" style="border-color:rgba(56,189,248,0.4);color:#38bdf8;font-weight:700" title="Switch Language / Wissel Taal">🌐 EN</button>
@@ -1695,6 +1696,8 @@ const I18N = {
     windLayer: "Wind",
     civilFlightLayer: "Civilian Flights",
     milFlightLayer: "Military Flights (live)",
+    adsbLiveBtn: "📡 ADS-B Live",
+    adsbLiveBtnOff: "📡 ADS-B Snapshot",
     chokepointLayer: "Maritime Chokepoints",
     hotspotLayer: "Conflict Hotspots",
     nuclearLayer: "Nuclear Facilities",
@@ -1811,6 +1814,8 @@ const I18N = {
     windLayer: "Wind",
     civilFlightLayer: "Burgerluchtvaart",
     milFlightLayer: "Militaire Vluchten (live)",
+    adsbLiveBtn: "📡 ADS-B Live",
+    adsbLiveBtnOff: "📡 ADS-B Momentopname",
     chokepointLayer: "Maritieme Knelpunten",
     hotspotLayer: "Conflict Hotspots",
     nuclearLayer: "Nucleaire Faciliteiten",
@@ -1990,6 +1995,7 @@ function applyLanguage(lang) {
   if (el("flightSimBtn")) el("flightSimBtn").textContent = t("navFlightSim");
   if (el("trafficToggleBtn")) el("trafficToggleBtn").textContent = t("navTraffic");
   if (el("topCamsBtn")) el("topCamsBtn").textContent = t("navTopCams");
+  if (el("adsbLiveBtn")) el("adsbLiveBtn").textContent = liveAdsbState && liveAdsbState.active ? t("adsbLiveBtn") : t("adsbLiveBtnOff");
   if (el("favoritesBtn")) el("favoritesBtn").textContent = t("navFav");
 
   if (el("topCamTabFines")) el("topCamTabFines").textContent = isNl ? "🔥 Top 15 Meest Actieve Flitspalen (CJIB)" : "🔥 Top 15 Most Active Cameras (CJIB)";
@@ -4412,6 +4418,129 @@ function showTrailForPlane(hex) {
   }
 }
 
+// --- Live ADS-B (adsb.lol via local poller file; see bin/adsb-poller.py) ---
+// api.adsb.lol has no CORS headers, so the page cannot fetch it directly.
+// The bar widget's poller writes a JSONP file next to this page and we
+// hot-swap a <script> tag to reload it (script tags are CORS-exempt).
+let liveAdsbState = {
+  timer: null,          // setInterval id for the script reload
+  active: false,        // toggle state
+  lastTs: 0,            // ts of the freshest payload applied
+  lastOkTs: 0,          // ts of the last payload that actually redrew
+  markerPos: new Map(), // hex -> [lat, lon] of previous frame (motion detect)
+  fails: 0
+};
+window.liveAdsbState = liveAdsbState; // debug/QA bridge
+
+function liveAdsbUrl() {
+  // Cache-buster: a file:// URL would otherwise serve the cached copy.
+  return "live-adsb.js?_=" + Date.now();
+}
+
+function loadLiveAdsbOnce() {
+  return new Promise(resolve => {
+    const old = document.getElementById("liveAdsbscript");
+    if (old) old.remove();
+    const s = document.createElement("script");
+    s.id = "liveAdsbscript";
+    s.src = liveAdsbUrl();
+    s.onload = () => resolve(window.__LIVE_ADSB__ || null);
+    s.onerror = () => resolve(null);
+    document.head.appendChild(s);
+  });
+}
+
+function applyLiveAdsb(d) {
+  if (!d) return false;
+  // A stale file (poller down / just started) must not rewind live planes.
+  if (!(d.ts > liveAdsbState.lastTs)) return false;
+
+  // Don't yank an open aircraft popup out from under the user every 30s:
+  // defer this frame (lastTs untouched, so it applies once the popup closes).
+  if (document.querySelector(".leaflet-popup .ac-card")) return false;
+  liveAdsbState.lastTs = d.ts;
+
+  const prev = liveAdsbState.markerPos;
+  const civil = (d.aircraft && d.aircraft.items) || [];
+  const mil = (d.military_aircraft && d.military_aircraft.items) || [];
+  if (window.lastData) {
+    window.lastData.aircraft = d.aircraft || window.lastData.aircraft;
+    window.lastData.military_aircraft = d.military_aircraft || window.lastData.military_aircraft;
+  }
+
+  drawPlanes(civil);
+  drawMilPlanes(mil);
+
+  // HUD + search index pick up counts automatically (they read the groups /
+  // lastData), but hudRefresh() only runs on map events — poke it here so
+  // the flight count ticks with every live poll.
+  if (typeof hudRefresh === "function") hudRefresh();
+
+  const moved = [];
+  civil.forEach(a => {
+    const p = prev.get(a.hex);
+    if (p && (Math.abs(p[0] - a.lat) > 1e-4 || Math.abs(p[1] - a.lon) > 1e-4)) moved.push(a.hex);
+    prev.set(a.hex, [a.lat, a.lon]);
+  });
+  mil.forEach(a => prev.set(a.hex, [a.lat, a.lon]));
+  if (moved.length || civil.length || mil.length) {
+    liveAdsbState.lastOkTs = d.ts;
+    liveAdsbState.fails = 0;
+  }
+  return true;
+}
+
+function adsbStatusToast(isNl, staleSec, liveN) {
+  document.querySelectorAll(".lm-toast").forEach(x => x.remove());
+  const t = document.createElement("div");
+  t.className = "lm-toast";
+  const mins = Math.max(1, Math.round(staleSec / 60));
+  t.innerHTML = `<span>📡 ${isNl
+    ? `Live ADS-B staat aan maar de data is ${mins} min oud — de adsb.lol-poller draait niet of heeft geen netwerk. ${liveN} vliegtuigen uit de laatste build.`
+    : `Live ADS-B is on but data is ${mins} min old — the adsb.lol poller is not running or has no network. ${liveN} aircraft from the last build.`}</span>`;
+  const x = document.createElement("button");
+  x.className = "lm-toast-x"; x.textContent = "✕";
+  x.addEventListener("click", () => t.classList.remove("show"));
+  t.appendChild(x);
+  document.body.appendChild(t);
+  requestAnimationFrame(() => t.classList.add("show"));
+  setTimeout(() => t.classList.remove("show"), 15000);
+}
+
+function tickLiveAdsb() {
+  loadLiveAdsbOnce().then(d => {
+    if (!liveAdsbState.active) return;
+    if (d) {
+      // File loaded: not a failure, even if we deferred the draw (open
+      // popup) or the payload was stale — those retry on the next tick.
+      liveAdsbState.fails = 0;
+      applyLiveAdsb(d);
+      return;
+    }
+    liveAdsbState.fails++;
+    // Only nag after ~3 failed loads AND 5+ minutes without a good frame:
+    // a single glitch would otherwise toast on every transient hiccup.
+    const stale = Math.floor(Date.now() / 1000) - liveAdsbState.lastOkTs;
+    if (liveAdsbState.fails >= 3 && stale > 300) {
+      adsbStatusToast(currentLang === "nl",
+        Math.floor(Date.now() / 1000) - liveAdsbState.lastTs,
+        planeGroup.getLayers().length + milPlaneGroup.getLayers().length);
+    }
+  });
+}
+
+function startLiveAdsb() {
+  if (liveAdsbState.timer) return;
+  liveAdsbState.active = true;
+  tickLiveAdsb();
+  liveAdsbState.timer = setInterval(tickLiveAdsb, 30000);
+}
+
+function stopLiveAdsb() {
+  liveAdsbState.active = false;
+  if (liveAdsbState.timer) { clearInterval(liveAdsbState.timer); liveAdsbState.timer = null; }
+}
+
 function drawPlanes(items) {
   planeGroup.clearLayers();
   const isNl = currentLang === "nl";
@@ -5122,6 +5251,17 @@ async function load() {
   drawWind((d.wind && d.wind.points) || []);
   drawPlanes((d.aircraft && d.aircraft.items) || []);
   drawMilPlanes((d.military_aircraft && d.military_aircraft.items) || []);
+  // If the bar widget's ADS-B poller is alive (fresh JSONP file next to this
+  // page), go live immediately — planes that actually move. No fresh file =
+  // poller not deployed/running: stay in snapshot mode until the user opts
+  // in with the 📡 button.
+  loadLiveAdsbOnce().then(d => {
+    if (d && d.ts && (Date.now() / 1000 - d.ts) < 120) {
+      const btn = document.getElementById("adsbLiveBtn");
+      if (btn) { btn.classList.add("active"); btn.textContent = t("adsbLiveBtn"); }
+      startLiveAdsb();
+    }
+  });
   drawWaterways(d.waterways || []);
   drawNuclear(d.nuclear || []);
   drawMilitaryBases(d.military_bases || []);
@@ -5348,6 +5488,27 @@ async function load() {
       } else {
         map.removeLayer(satGroup);
         if (satTickTimer) { clearInterval(satTickTimer); satTickTimer = null; }
+      }
+    });
+  }
+
+  // --- Live ADS-B toggle (adsb.lol via local poller; see startLiveAdsb) ---
+  const adsbLiveBtn = document.getElementById("adsbLiveBtn");
+  if (adsbLiveBtn) {
+    adsbLiveBtn.addEventListener("click", () => {
+      const active = adsbLiveBtn.classList.toggle("active");
+      if (active) {
+        startLiveAdsb();
+        adsbLiveBtn.textContent = t("adsbLiveBtn");
+        adsbLiveBtn.title = currentLang === "nl"
+          ? "Live ADS-B vliegtuigen (adsb.lol, elke 30s ververst)"
+          : "Live ADS-B aircraft (adsb.lol, refresh 30s)";
+      } else {
+        stopLiveAdsb();
+        adsbLiveBtn.textContent = t("adsbLiveBtnOff");
+        adsbLiveBtn.title = currentLang === "nl"
+          ? "Live ADS-B vliegtuigen (adsb.lol, elke 30s ververst)"
+          : "Live ADS-B aircraft (adsb.lol, refresh 30s)";
       }
     });
   }
